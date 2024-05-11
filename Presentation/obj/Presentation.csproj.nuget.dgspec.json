@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\Presentation.csproj": {}
+    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\DataAccess\\DataAccess.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\DataAccess\\DataAccess.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -19,16 +19,16 @@
         "net48": {}
       }
     },
-    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Domain\\Domain.csproj": {
+    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Domain\\Domain.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Domain\\Domain.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -38,14 +38,14 @@
         "net48": {}
       }
     },
-    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\Presentation.csproj": {
+    "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\Presentation.csproj",
+        "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Presentation.csproj",
         "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\obj\\",
+        "outputPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,8 +66,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Domain\\Domain.csproj"
+              "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Domain\\Domain.csproj"
               }
             }
           }
