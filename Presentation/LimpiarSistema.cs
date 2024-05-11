@@ -5,6 +5,7 @@ namespace Presentation
 {
     public partial class LimpiarSistema : Form
     {
+        public Panel MenuVertical2;
 
         public LimpiarSistema()
         {
@@ -13,7 +14,7 @@ namespace Presentation
 
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo
-
+            MenuVertical2 = MenuVertical;
         }
 
 

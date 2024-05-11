@@ -1,12 +1,12 @@
 ﻿using Domain;
 using System.Runtime.InteropServices;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace Presentation
 {
     public partial class AgregarComando : Form
     {
+        public Panel MenuVertical2;
 
         public AgregarComando()
         {
@@ -15,6 +15,8 @@ namespace Presentation
 
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo 
+            MenuVertical2 = MenuVertical;
+
 
         }
 
@@ -78,7 +80,7 @@ namespace Presentation
         }
 
         private void btnRepararSistema_Click(object sender, EventArgs e)
-        {
+        { 
             Ventana.repararSistema();
             Close();
         }

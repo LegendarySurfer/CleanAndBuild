@@ -10,18 +10,16 @@ namespace Presentation
         public static string username; // mostrar nombre de usuario
         public static string nombreEquipo = Environment.MachineName;
         public static UserModel usuario = new UserModel();
-        public static Panel menu;
+        public Panel MenuVertical2;
+
 
         public MenuPrincipal(string name)
         {
             InitializeComponent();
-            menu.Width = MenuVertical.Width;
             StartPosition = FormStartPosition.CenterScreen; // centrar ventana
-
             username = name;
             infoUser(name);
-
-
+            MenuVertical2 = MenuVertical;
         }
 
         //---------------------------------------------------- mostrar informacion de usuario ----------------------------------------------------
@@ -32,8 +30,6 @@ namespace Presentation
 
             DataSet datos = usuario.ObtenerUsuarios();
             dataUser.DataSource = datos.Tables[0]; // datos de todos los usuarios
-
-
         }
 
 
@@ -65,7 +61,6 @@ namespace Presentation
         private void btnSide_Click(object sender, EventArgs e)
         {
             MenuVertical = Ventana.sideBar(MenuVertical);
-            menu = MenuVertical;
         }
 
 

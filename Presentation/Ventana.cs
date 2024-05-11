@@ -5,6 +5,7 @@ namespace Presentation
 {
     public partial class Ventana
     {
+        public static bool PanelContraido = false;
 
         public static void salir()
         {
@@ -20,67 +21,78 @@ namespace Presentation
 
         public static Panel sideBar(Panel MenuVertical)
         {
-            MenuVertical.Width = (MenuVertical.Width == 333) ? 70 : 333;
+            PanelContraido = MenuVertical.Width != 333; //esta contraido
+            MenuVertical.Width = PanelContraido ? 333 : 70;
             return MenuVertical;
         }
     
         public static void historial()
         {
             var historial = new Historial();
+            historial.MenuVertical2.Width = PanelContraido ? 333 : 70;
             historial.Show();
         }
 
         public static void opciones()
         {
             var opciones = new Ajustes();
+            opciones.MenuVertical2.Width = PanelContraido ? 333 : 70;
             opciones.Show();
         }
 
         public static void repararSistema()
         {
             var reparar = new RepararSistema();
+            reparar.MenuVertical2.Width = PanelContraido ? 333 : 70;
             reparar.Show();
         }
 
         public static void actualziarAplicaciones()
         {
             var actualizar = new ActualizarAplicacion();
+            actualizar.MenuVertical2.Width = PanelContraido ? 333 : 70;
             actualizar.Show();
         }
 
         public static void desfragmentarDisco()
         {
             var desfragmentar = new DesfragmentarDisco();
+            desfragmentar.MenuVertical2.Width = PanelContraido ? 333 : 70;
             desfragmentar.Show();
         }
 
         public static void limpiarSistema()
         {
             var limpiar = new LimpiarSistema();
+            limpiar.MenuVertical2.Width = PanelContraido ? 333 : 70;
             limpiar.Show();
         }
 
         public static void liberarEspacio()
         {
             var liberar = new LiberarEspacio();
+            liberar.MenuVertical2.Width = PanelContraido ? 333 : 70;
             liberar.Show();
         }
 
         public static void antivirus()
         {
             var antivirus = new Antivirus();
+            antivirus.MenuVertical2.Width = PanelContraido ? 333 : 70;
             antivirus.Show();
         }
 
         public static void instalarAplicaciones()
         {
             var instalar = new InstalarAplicaciones();
+            instalar.MenuVertical2.Width = PanelContraido ? 333 : 70;
             instalar.Show();
         }
 
         public static void menuPrincipal()
         {
             MenuPrincipal a = new MenuPrincipal(MenuPrincipal.username);
+            a.MenuVertical2.Width = PanelContraido ? 333 : 70;
             a.Show();
         }
 

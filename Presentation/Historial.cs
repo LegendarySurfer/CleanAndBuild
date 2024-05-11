@@ -1,12 +1,13 @@
 ﻿using System.Runtime.InteropServices;
 using Domain;
 using System.Data;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Presentation
 {
     public partial class Historial : Form
     {
+        public Panel MenuVertical2;
+
         public Historial()
         {
             InitializeComponent();
@@ -15,6 +16,7 @@ namespace Presentation
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo 
 
+            MenuVertical2 = MenuVertical;
         }
 
         //---------------------------------------------------- muestra las operaciones realizadas ----------------------------------------------------
@@ -87,7 +89,6 @@ namespace Presentation
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
-
 
 
         //---------------------------------------------------- Botones laterales ----------------------------------------------------

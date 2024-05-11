@@ -36,6 +36,7 @@
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
             PanelContenedor = new Panel();
+            btn_volver = new Button();
             imagen_help = new PictureBox();
             label8 = new Label();
             button2 = new Button();
@@ -70,8 +71,8 @@
             panel6 = new Panel();
             panel7 = new Panel();
             panel8 = new Panel();
-            panel9 = new Panel();
             MenuVertical = new Panel();
+            panel9 = new Panel();
             textNameEquipo = new Label();
             panel1 = new Panel();
             textName = new Label();
@@ -185,6 +186,7 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(imagen_help);
             PanelContenedor.Controls.Add(label8);
             PanelContenedor.Controls.Add(button2);
@@ -216,6 +218,24 @@
             PanelContenedor.Name = "PanelContenedor";
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
+            // 
+            // btn_volver
+            // 
+            btn_volver.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_volver.FlatAppearance.BorderSize = 0;
+            btn_volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btn_volver.FlatStyle = FlatStyle.Flat;
+            btn_volver.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_volver.ForeColor = Color.White;
+            btn_volver.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_volver.Location = new Point(43, 659);
+            btn_volver.Margin = new Padding(3, 4, 3, 4);
+            btn_volver.Name = "btn_volver";
+            btn_volver.Size = new Size(239, 60);
+            btn_volver.TabIndex = 44;
+            btn_volver.Text = "Volver Al Menu";
+            btn_volver.UseVisualStyleBackColor = true;
+            btn_volver.Click += btn_volver_Click_1;
             // 
             // imagen_help
             // 
@@ -279,7 +299,7 @@
             // 
             // cb_steam
             // 
-            cb_steam.Anchor = AnchorStyles.Right;
+            cb_steam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_steam.AutoSize = true;
             cb_steam.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_steam.ForeColor = SystemColors.ButtonFace;
@@ -293,7 +313,7 @@
             // 
             // cb_vscode
             // 
-            cb_vscode.Anchor = AnchorStyles.Right;
+            cb_vscode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_vscode.AutoSize = true;
             cb_vscode.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_vscode.ForeColor = SystemColors.ButtonFace;
@@ -307,7 +327,7 @@
             // 
             // cb_Eclipse
             // 
-            cb_Eclipse.Anchor = AnchorStyles.Right;
+            cb_Eclipse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_Eclipse.AutoSize = true;
             cb_Eclipse.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_Eclipse.ForeColor = SystemColors.ButtonFace;
@@ -321,7 +341,7 @@
             // 
             // cb_putty
             // 
-            cb_putty.Anchor = AnchorStyles.Right;
+            cb_putty.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_putty.AutoSize = true;
             cb_putty.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_putty.ForeColor = SystemColors.ButtonFace;
@@ -335,7 +355,7 @@
             // 
             // cb_skype
             // 
-            cb_skype.Anchor = AnchorStyles.Bottom;
+            cb_skype.Anchor = AnchorStyles.Top;
             cb_skype.AutoSize = true;
             cb_skype.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_skype.ForeColor = SystemColors.ButtonFace;
@@ -349,7 +369,7 @@
             // 
             // cb_discord
             // 
-            cb_discord.Anchor = AnchorStyles.Bottom;
+            cb_discord.Anchor = AnchorStyles.Top;
             cb_discord.AutoSize = true;
             cb_discord.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_discord.ForeColor = SystemColors.ButtonFace;
@@ -363,7 +383,7 @@
             // 
             // cb_zoom
             // 
-            cb_zoom.Anchor = AnchorStyles.Bottom;
+            cb_zoom.Anchor = AnchorStyles.Top;
             cb_zoom.AutoSize = true;
             cb_zoom.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_zoom.ForeColor = SystemColors.ButtonFace;
@@ -377,7 +397,7 @@
             // 
             // cb_gimp
             // 
-            cb_gimp.Anchor = AnchorStyles.Bottom;
+            cb_gimp.Anchor = AnchorStyles.Top;
             cb_gimp.AutoSize = true;
             cb_gimp.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_gimp.ForeColor = SystemColors.ButtonFace;
@@ -391,7 +411,7 @@
             // 
             // cb_blender
             // 
-            cb_blender.Anchor = AnchorStyles.Bottom;
+            cb_blender.Anchor = AnchorStyles.Top;
             cb_blender.AutoSize = true;
             cb_blender.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_blender.ForeColor = SystemColors.ButtonFace;
@@ -405,7 +425,7 @@
             // 
             // cb_winrar
             // 
-            cb_winrar.Anchor = AnchorStyles.Left;
+            cb_winrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_winrar.AutoSize = true;
             cb_winrar.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_winrar.ForeColor = SystemColors.ButtonFace;
@@ -419,7 +439,7 @@
             // 
             // cb_vlc
             // 
-            cb_vlc.Anchor = AnchorStyles.Right;
+            cb_vlc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_vlc.AutoSize = true;
             cb_vlc.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_vlc.ForeColor = SystemColors.ButtonFace;
@@ -433,7 +453,7 @@
             // 
             // cb_opera
             // 
-            cb_opera.Anchor = AnchorStyles.Left;
+            cb_opera.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_opera.AutoSize = true;
             cb_opera.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_opera.ForeColor = SystemColors.ButtonFace;
@@ -447,7 +467,7 @@
             // 
             // cb_firefox
             // 
-            cb_firefox.Anchor = AnchorStyles.Left;
+            cb_firefox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_firefox.AutoSize = true;
             cb_firefox.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_firefox.ForeColor = SystemColors.ButtonFace;
@@ -461,7 +481,7 @@
             // 
             // cb_google
             // 
-            cb_google.Anchor = AnchorStyles.Left;
+            cb_google.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_google.AutoSize = true;
             cb_google.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_google.ForeColor = SystemColors.ButtonFace;
@@ -475,7 +495,7 @@
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.Right;
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
@@ -487,7 +507,7 @@
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.Bottom;
+            label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonFace;
@@ -499,7 +519,7 @@
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Left;
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ButtonFace;
@@ -511,7 +531,7 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Right;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
@@ -523,7 +543,7 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Bottom;
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonFace;
@@ -535,7 +555,7 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Left;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
@@ -657,18 +677,10 @@
             panel8.Size = new Size(5, 60);
             panel8.TabIndex = 15;
             // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(0, 80, 200);
-            panel9.Location = new Point(0, 644);
-            panel9.Margin = new Padding(3, 4, 3, 4);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(5, 42);
-            panel9.TabIndex = 17;
-            // 
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(26, 32, 40);
+            MenuVertical.Controls.Add(panel9);
             MenuVertical.Controls.Add(textNameEquipo);
             MenuVertical.Controls.Add(panel1);
             MenuVertical.Controls.Add(textName);
@@ -677,7 +689,6 @@
             MenuVertical.Controls.Add(btnOtros);
             MenuVertical.Controls.Add(btnInstalarAplicaciones);
             MenuVertical.Controls.Add(btnAntivirus);
-            MenuVertical.Controls.Add(panel9);
             MenuVertical.Controls.Add(btnLiberarEspacio);
             MenuVertical.Controls.Add(panel8);
             MenuVertical.Controls.Add(btnLimpiarSistema);
@@ -696,6 +707,15 @@
             MenuVertical.Size = new Size(333, 764);
             MenuVertical.TabIndex = 1;
             // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(0, 80, 200);
+            panel9.Location = new Point(0, 644);
+            panel9.Margin = new Padding(3, 4, 3, 4);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(5, 60);
+            panel9.TabIndex = 31;
+            // 
             // textNameEquipo
             // 
             textNameEquipo.AutoSize = true;
@@ -710,7 +730,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 80, 200);
-            panel1.Location = new Point(3, 160);
+            panel1.Location = new Point(0, 160);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(5, 60);
@@ -729,6 +749,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             button1.FlatStyle = FlatStyle.Flat;
@@ -971,7 +992,6 @@
         private Panel panel6;
         private Panel panel7;
         private Panel panel8;
-        private Panel panel9;
         private Panel MenuVertical;
         private Panel panel1;
         private Button button1;
@@ -995,6 +1015,8 @@
         private PictureBox pictureBox2;
         private Label label8;
         private PictureBox imagen_help;
+        private Button btn_volver;
+        private Panel panel9;
     }
 }
 

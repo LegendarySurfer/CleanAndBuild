@@ -36,10 +36,11 @@
             btnMaximizar = new PictureBox();
             btnCerrar = new PictureBox();
             MenuVertical = new Panel();
+            panel9 = new Panel();
+            panel1 = new Panel();
             button1 = new Button();
             textNameEquipo = new Label();
             textName = new Label();
-            panel9 = new Panel();
             btnOtros = new Button();
             panel8 = new Panel();
             btnInstalarAplicaciones = new Button();
@@ -53,7 +54,6 @@
             btnDesfragmentarDisco = new Button();
             panel3 = new Panel();
             btnActualizarAplicaciones = new Button();
-            panel1 = new Panel();
             pictureBox2 = new PictureBox();
             btnRepararSistema = new Button();
             PanelContenedor = new Panel();
@@ -171,10 +171,11 @@
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(26, 32, 40);
+            MenuVertical.Controls.Add(panel9);
+            MenuVertical.Controls.Add(panel1);
             MenuVertical.Controls.Add(button1);
             MenuVertical.Controls.Add(textNameEquipo);
             MenuVertical.Controls.Add(textName);
-            MenuVertical.Controls.Add(panel9);
             MenuVertical.Controls.Add(btnOtros);
             MenuVertical.Controls.Add(panel8);
             MenuVertical.Controls.Add(btnInstalarAplicaciones);
@@ -188,7 +189,6 @@
             MenuVertical.Controls.Add(btnDesfragmentarDisco);
             MenuVertical.Controls.Add(panel3);
             MenuVertical.Controls.Add(btnActualizarAplicaciones);
-            MenuVertical.Controls.Add(panel1);
             MenuVertical.Controls.Add(pictureBox2);
             MenuVertical.Controls.Add(btnRepararSistema);
             MenuVertical.Dock = DockStyle.Left;
@@ -198,8 +198,27 @@
             MenuVertical.Size = new Size(333, 764);
             MenuVertical.TabIndex = 1;
             // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(0, 80, 200);
+            panel9.Location = new Point(0, 644);
+            panel9.Margin = new Padding(3, 4, 3, 4);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(5, 60);
+            panel9.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 80, 200);
+            panel1.Location = new Point(0, 160);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(5, 60);
+            panel1.TabIndex = 6;
+            // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             button1.FlatStyle = FlatStyle.Flat;
@@ -238,15 +257,6 @@
             textName.TabIndex = 18;
             textName.Text = "Nombre Usuario";
             // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(0, 80, 200);
-            panel9.Location = new Point(0, 644);
-            panel9.Margin = new Padding(3, 4, 3, 4);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(5, 42);
-            panel9.TabIndex = 17;
-            // 
             // btnOtros
             // 
             btnOtros.FlatAppearance.BorderSize = 0;
@@ -259,9 +269,10 @@
             btnOtros.Location = new Point(3, 644);
             btnOtros.Margin = new Padding(3, 4, 3, 4);
             btnOtros.Name = "btnOtros";
-            btnOtros.Size = new Size(328, 42);
+            btnOtros.Size = new Size(328, 60);
             btnOtros.TabIndex = 16;
             btnOtros.Text = "Otros...";
+            btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
             btnOtros.Click += btnOtros_Click;
             btnOtros.MouseDown += btnOtros_MouseDown;
@@ -434,15 +445,6 @@
             btnActualizarAplicaciones.UseVisualStyleBackColor = true;
             btnActualizarAplicaciones.Click += btnActualizarAplicaciones_Click;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(0, 80, 200);
-            panel1.Location = new Point(0, 178);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(5, 42);
-            panel1.TabIndex = 1;
-            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -515,6 +517,7 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonFace;
@@ -526,6 +529,7 @@
             // 
             // tb_name_usuario
             // 
+            tb_name_usuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             tb_name_usuario.BackColor = Color.FromArgb(49, 66, 82);
             tb_name_usuario.BorderStyle = BorderStyle.None;
             tb_name_usuario.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -539,6 +543,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
@@ -550,6 +555,7 @@
             // 
             // tb_name_equipo
             // 
+            tb_name_equipo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             tb_name_equipo.BackColor = Color.FromArgb(49, 66, 82);
             tb_name_equipo.BorderStyle = BorderStyle.None;
             tb_name_equipo.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -563,6 +569,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
@@ -574,6 +581,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonFace;
@@ -639,6 +647,7 @@
             btn_volver.TabIndex = 43;
             btn_volver.Text = "Volver Al Menu";
             btn_volver.UseVisualStyleBackColor = true;
+            btn_volver.Click += btn_volver_Click;
             // 
             // panel2
             // 
@@ -720,8 +729,6 @@
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Button btnRepararSistema;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnOtros;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnInstalarAplicaciones;
@@ -753,6 +760,8 @@
         private Button button1;
         private Button btn_Historial;
         private Button btn_eliminar;
+        private Panel panel9;
+        private Panel panel1;
     }
 }
 

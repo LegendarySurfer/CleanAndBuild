@@ -51,8 +51,8 @@
             panel6 = new Panel();
             panel7 = new Panel();
             panel8 = new Panel();
-            panel9 = new Panel();
             MenuVertical = new Panel();
+            panel9 = new Panel();
             textNameEquipo = new Label();
             panel1 = new Panel();
             textName = new Label();
@@ -200,6 +200,7 @@
             // 
             // dg_historial
             // 
+            dg_historial.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dg_historial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_historial.Location = new Point(66, 206);
             dg_historial.Name = "dg_historial";
@@ -364,18 +365,10 @@
             panel8.Size = new Size(5, 60);
             panel8.TabIndex = 15;
             // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(0, 80, 200);
-            panel9.Location = new Point(0, 644);
-            panel9.Margin = new Padding(3, 4, 3, 4);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(5, 42);
-            panel9.TabIndex = 17;
-            // 
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(26, 32, 40);
+            MenuVertical.Controls.Add(panel9);
             MenuVertical.Controls.Add(textNameEquipo);
             MenuVertical.Controls.Add(panel1);
             MenuVertical.Controls.Add(textName);
@@ -384,7 +377,6 @@
             MenuVertical.Controls.Add(btnOtros);
             MenuVertical.Controls.Add(btnInstalarAplicaciones);
             MenuVertical.Controls.Add(btnAntivirus);
-            MenuVertical.Controls.Add(panel9);
             MenuVertical.Controls.Add(btnLiberarEspacio);
             MenuVertical.Controls.Add(panel8);
             MenuVertical.Controls.Add(btnLimpiarSistema);
@@ -403,6 +395,15 @@
             MenuVertical.Size = new Size(333, 764);
             MenuVertical.TabIndex = 1;
             // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(0, 80, 200);
+            panel9.Location = new Point(0, 644);
+            panel9.Margin = new Padding(3, 4, 3, 4);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(5, 60);
+            panel9.TabIndex = 7;
+            // 
             // textNameEquipo
             // 
             textNameEquipo.AutoSize = true;
@@ -417,7 +418,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 80, 200);
-            panel1.Location = new Point(3, 160);
+            panel1.Location = new Point(0, 160);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(5, 60);
@@ -436,6 +437,7 @@
             // 
             // btn_salir_img
             // 
+            btn_salir_img.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btn_salir_img.FlatAppearance.BorderSize = 0;
             btn_salir_img.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_salir_img.FlatStyle = FlatStyle.Flat;
@@ -475,9 +477,10 @@
             btnOtros.Location = new Point(8, 644);
             btnOtros.Margin = new Padding(3, 4, 3, 4);
             btnOtros.Name = "btnOtros";
-            btnOtros.Size = new Size(328, 42);
+            btnOtros.Size = new Size(322, 60);
             btnOtros.TabIndex = 29;
             btnOtros.Text = "Otros...";
+            btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
             btnOtros.Click += btnOtros_Click;
             btnOtros.MouseDown += btnOtros_MouseDown;
@@ -494,7 +497,7 @@
             btnInstalarAplicaciones.Location = new Point(8, 570);
             btnInstalarAplicaciones.Margin = new Padding(3, 4, 3, 4);
             btnInstalarAplicaciones.Name = "btnInstalarAplicaciones";
-            btnInstalarAplicaciones.Size = new Size(328, 60);
+            btnInstalarAplicaciones.Size = new Size(325, 60);
             btnInstalarAplicaciones.TabIndex = 28;
             btnInstalarAplicaciones.Text = "Instalar Aplicaciones";
             btnInstalarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
@@ -513,7 +516,7 @@
             btnAntivirus.Location = new Point(8, 502);
             btnAntivirus.Margin = new Padding(3, 4, 3, 4);
             btnAntivirus.Name = "btnAntivirus";
-            btnAntivirus.Size = new Size(328, 60);
+            btnAntivirus.Size = new Size(325, 60);
             btnAntivirus.TabIndex = 27;
             btnAntivirus.Text = "Antivirus";
             btnAntivirus.TextAlign = ContentAlignment.MiddleRight;
@@ -532,7 +535,7 @@
             btnLiberarEspacio.Location = new Point(8, 435);
             btnLiberarEspacio.Margin = new Padding(3, 4, 3, 4);
             btnLiberarEspacio.Name = "btnLiberarEspacio";
-            btnLiberarEspacio.Size = new Size(328, 60);
+            btnLiberarEspacio.Size = new Size(325, 60);
             btnLiberarEspacio.TabIndex = 26;
             btnLiberarEspacio.Text = "Liberar Espacio Disco";
             btnLiberarEspacio.TextAlign = ContentAlignment.MiddleRight;
@@ -551,7 +554,7 @@
             btnLimpiarSistema.Location = new Point(8, 368);
             btnLimpiarSistema.Margin = new Padding(3, 4, 3, 4);
             btnLimpiarSistema.Name = "btnLimpiarSistema";
-            btnLimpiarSistema.Size = new Size(328, 60);
+            btnLimpiarSistema.Size = new Size(325, 60);
             btnLimpiarSistema.TabIndex = 25;
             btnLimpiarSistema.Text = "Limpiar Sistema";
             btnLimpiarSistema.TextAlign = ContentAlignment.MiddleRight;
@@ -570,7 +573,7 @@
             btnDesfragmentarDisco.Location = new Point(8, 300);
             btnDesfragmentarDisco.Margin = new Padding(3, 4, 3, 4);
             btnDesfragmentarDisco.Name = "btnDesfragmentarDisco";
-            btnDesfragmentarDisco.Size = new Size(328, 60);
+            btnDesfragmentarDisco.Size = new Size(325, 60);
             btnDesfragmentarDisco.TabIndex = 24;
             btnDesfragmentarDisco.Text = "Desfragmentar Disco";
             btnDesfragmentarDisco.TextAlign = ContentAlignment.MiddleRight;
@@ -589,7 +592,7 @@
             btnActualizarAplicaciones.Location = new Point(8, 228);
             btnActualizarAplicaciones.Margin = new Padding(3, 4, 3, 4);
             btnActualizarAplicaciones.Name = "btnActualizarAplicaciones";
-            btnActualizarAplicaciones.Size = new Size(328, 60);
+            btnActualizarAplicaciones.Size = new Size(325, 60);
             btnActualizarAplicaciones.TabIndex = 23;
             btnActualizarAplicaciones.Text = "Actualizar Aplicaciones";
             btnActualizarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
@@ -658,7 +661,6 @@
         private Panel panel6;
         private Panel panel7;
         private Panel panel8;
-        private Panel panel9;
         private Panel MenuVertical;
         private Panel panel1;
         private Button btn_salir_img;
@@ -682,6 +684,7 @@
         private ComboBox cb_historial;
         private DataGridView dg_historial;
         private Button btn_cargar;
+        private Panel panel9;
     }
 }
 

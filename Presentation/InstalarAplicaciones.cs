@@ -6,6 +6,8 @@ namespace Presentation
 {
     public partial class InstalarAplicaciones : Form
     {
+        public Panel MenuVertical2;
+
         public InstalarAplicaciones()
         {
             InitializeComponent();
@@ -13,7 +15,7 @@ namespace Presentation
 
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo
-
+            MenuVertical2 = MenuVertical;
         }
 
         //---------------------------------------------------- botones windows ----------------------------------------------------
@@ -294,6 +296,12 @@ namespace Presentation
         {
             MessageBox.Show("Vamos a instalar alguna aplicaciones,es necesario el acceso a internet.",
               "Instalar aplicaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_volver_Click_1(object sender, EventArgs e)
+        {
+            Ventana.menuPrincipal();
+            Close();
         }
     }
 }

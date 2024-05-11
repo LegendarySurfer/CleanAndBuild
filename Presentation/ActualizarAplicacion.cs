@@ -5,6 +5,7 @@ namespace Presentation
 {
     public partial class ActualizarAplicacion : Form
     {
+        public Panel MenuVertical2;
 
         public ActualizarAplicacion()
         {
@@ -13,6 +14,8 @@ namespace Presentation
 
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo 
+            MenuVertical2 = MenuVertical;
+
 
         }
 

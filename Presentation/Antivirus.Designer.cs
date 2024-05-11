@@ -37,10 +37,11 @@
             btnMaximizar = new PictureBox();
             btnCerrar = new PictureBox();
             MenuVertical = new Panel();
+            panel9 = new Panel();
+            panel1 = new Panel();
             button1 = new Button();
             textNameEquipo = new Label();
             textName = new Label();
-            panel9 = new Panel();
             btnOtros = new Button();
             panel8 = new Panel();
             btnInstalarAplicaciones = new Button();
@@ -54,11 +55,11 @@
             btnDesfragmentarDisco = new Button();
             panel3 = new Panel();
             btnActualizarAplicaciones = new Button();
-            panel1 = new Panel();
             pictureBox2 = new PictureBox();
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
+            imagen_help = new PictureBox();
             button2 = new Button();
             btn_escaner_rapido = new Button();
             btn_volver = new Button();
@@ -66,7 +67,7 @@
             btn_opciones = new Button();
             btn_Historial = new Button();
             userModelBindingSource = new BindingSource(components);
-            imagen_help = new PictureBox();
+            pictureBox1 = new PictureBox();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -76,9 +77,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnSide).BeginInit();
             PanelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imagen_help).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)imagen_help).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // BarraTitulo
@@ -168,10 +170,11 @@
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(26, 32, 40);
+            MenuVertical.Controls.Add(panel9);
+            MenuVertical.Controls.Add(panel1);
             MenuVertical.Controls.Add(button1);
             MenuVertical.Controls.Add(textNameEquipo);
             MenuVertical.Controls.Add(textName);
-            MenuVertical.Controls.Add(panel9);
             MenuVertical.Controls.Add(btnOtros);
             MenuVertical.Controls.Add(panel8);
             MenuVertical.Controls.Add(btnInstalarAplicaciones);
@@ -185,7 +188,6 @@
             MenuVertical.Controls.Add(btnDesfragmentarDisco);
             MenuVertical.Controls.Add(panel3);
             MenuVertical.Controls.Add(btnActualizarAplicaciones);
-            MenuVertical.Controls.Add(panel1);
             MenuVertical.Controls.Add(pictureBox2);
             MenuVertical.Controls.Add(btnRepararSistema);
             MenuVertical.Dock = DockStyle.Left;
@@ -195,8 +197,27 @@
             MenuVertical.Size = new Size(333, 764);
             MenuVertical.TabIndex = 1;
             // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(0, 80, 200);
+            panel9.Location = new Point(0, 644);
+            panel9.Margin = new Padding(3, 4, 3, 4);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(5, 60);
+            panel9.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 80, 200);
+            panel1.Location = new Point(0, 160);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(5, 60);
+            panel1.TabIndex = 22;
+            // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             button1.FlatStyle = FlatStyle.Flat;
@@ -234,15 +255,6 @@
             textName.Size = new Size(142, 21);
             textName.TabIndex = 18;
             textName.Text = "Nombre Usuario";
-            // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(0, 80, 200);
-            panel9.Location = new Point(0, 644);
-            panel9.Margin = new Padding(3, 4, 3, 4);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(5, 42);
-            panel9.TabIndex = 17;
             // 
             // btnOtros
             // 
@@ -431,15 +443,6 @@
             btnActualizarAplicaciones.UseVisualStyleBackColor = true;
             btnActualizarAplicaciones.Click += btnActualizarAplicaciones_Click;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(0, 80, 200);
-            panel1.Location = new Point(0, 178);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(5, 42);
-            panel1.TabIndex = 1;
-            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -486,6 +489,7 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(pictureBox1);
             PanelContenedor.Controls.Add(imagen_help);
             PanelContenedor.Controls.Add(button2);
             PanelContenedor.Controls.Add(btn_escaner_rapido);
@@ -498,9 +502,22 @@
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
             // 
+            // imagen_help
+            // 
+            imagen_help.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            imagen_help.Image = (Image)resources.GetObject("imagen_help.Image");
+            imagen_help.Location = new Point(906, 67);
+            imagen_help.Margin = new Padding(3, 4, 3, 4);
+            imagen_help.Name = "imagen_help";
+            imagen_help.Size = new Size(49, 46);
+            imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
+            imagen_help.TabIndex = 49;
+            imagen_help.TabStop = false;
+            imagen_help.MouseEnter += imagen_help_MouseEnter;
+            // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             button2.FlatStyle = FlatStyle.Flat;
@@ -517,7 +534,7 @@
             // 
             // btn_escaner_rapido
             // 
-            btn_escaner_rapido.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_escaner_rapido.Anchor = AnchorStyles.Bottom;
             btn_escaner_rapido.FlatAppearance.BorderSize = 0;
             btn_escaner_rapido.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_escaner_rapido.FlatStyle = FlatStyle.Flat;
@@ -599,18 +616,17 @@
             // 
             userModelBindingSource.DataSource = typeof(Domain.UserModel);
             // 
-            // imagen_help
+            // pictureBox1
             // 
-            imagen_help.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            imagen_help.Image = (Image)resources.GetObject("imagen_help.Image");
-            imagen_help.Location = new Point(906, 67);
-            imagen_help.Margin = new Padding(3, 4, 3, 4);
-            imagen_help.Name = "imagen_help";
-            imagen_help.Size = new Size(49, 46);
-            imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
-            imagen_help.TabIndex = 49;
-            imagen_help.TabStop = false;
-            imagen_help.MouseEnter += imagen_help_MouseEnter;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(218, 209);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(499, 258);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 50;
+            pictureBox1.TabStop = false;
             // 
             // Antivirus
             // 
@@ -635,9 +651,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnSide).EndInit();
             PanelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)imagen_help).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)imagen_help).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -652,8 +669,6 @@
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Button btnRepararSistema;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnOtros;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnInstalarAplicaciones;
@@ -680,6 +695,9 @@
         private Button btn_escaner_rapido;
         private Button button2;
         private PictureBox imagen_help;
+        private Panel panel9;
+        private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }
 

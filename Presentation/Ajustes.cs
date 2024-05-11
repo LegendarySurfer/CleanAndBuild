@@ -7,12 +7,15 @@ namespace Presentation
 {
     public partial class Ajustes : Form
     {
+        public Panel MenuVertical2;
 
         public Ajustes()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             infoUser();
+            MenuVertical2 = MenuVertical;
+
         }
 
         //---------------------------------------------------- mostrar info del usuario ----------------------------------------------------
@@ -27,7 +30,7 @@ namespace Presentation
         {
             if (tb_name_usuario.Text != "Nombre") // cambiar nombre de usuario
             {
-               UserModel usuario = new UserModel();
+                UserModel usuario = new UserModel();
                 if (!usuario.compruebaUser(tb_name_usuario.Text))//si no existe se cambia
                 {
                     usuario.cambiarNombre(MenuPrincipal.username, tb_name_usuario.Text);
@@ -177,5 +180,10 @@ namespace Presentation
             }
         }
 
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            Ventana.menuPrincipal();
+            Close();
+        }
     }
 }

@@ -5,15 +5,17 @@ namespace Presentation
 {
     public partial class RepararSistema : Form
     {
+        public Panel MenuVertical2;
 
         public RepararSistema()
         {
-            MenuVertical.Width = MenuPrincipal.menu.Width;
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo
+            MenuVertical2 = MenuVertical;
+
         }
 
         //---------------------------------------------------- botones windows ----------------------------------------------------
@@ -45,7 +47,6 @@ namespace Presentation
         private void btnSide_Click(object sender, EventArgs e)
         {
             MenuVertical = Ventana.sideBar(MenuVertical);
-            MenuPrincipal.menu = MenuVertical;
         }
 
         //----------------------------------------------------codigo para mover la ventana ----------------------------------------------------
