@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyecto\\cleanandbuild\\presentation\\instalaraplicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\instalaraplicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyecto\\cleanandbuild\\presentation\\desfragmentardisco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\desfragmentardisco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InstalarAplicaciones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\InstalarAplicaciones.cs",
+              "RelativeDocumentMoniker": "Presentation\\InstalarAplicaciones.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\InstalarAplicaciones.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentation\\InstalarAplicaciones.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T12:32:55.499Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DesfragmentarDisco.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\DesfragmentarDisco.cs",
+              "RelativeDocumentMoniker": "Presentation\\DesfragmentarDisco.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyecto\\CleanAndBuild\\Presentation\\DesfragmentarDisco.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentation\\DesfragmentarDisco.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T12:30:15.923Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

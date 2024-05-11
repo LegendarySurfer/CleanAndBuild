@@ -1,0 +1,16 @@
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\Domain.dll.config
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\Domain.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\Domain.pdb
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\DataAccess.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\Microsoft.Analytics.Interfaces.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\Microsoft.Analytics.Types.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\System.Data.SQLite.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\DataAccess.pdb
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\DataAccess.dll.config
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\bin\Release\System.Data.SQLite.xml
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\obj\Release\Domain.csproj.AssemblyReference.cache
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\obj\Release\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\obj\Release\Domain.csproj.Up2Date
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\obj\Release\Domain.dll
+C:\Users\Pablo\Desktop\TFG\Proyecto\CleanAndBuild\Domain\obj\Release\Domain.pdb
