@@ -37,7 +37,7 @@
 
 - Algunas acciones realizadas por este script pueden afectar la configuración del sistema. Asegúrate de respaldar datos importantes y entender las consecuencias de cada acción antes de ejecutarlas.
 
-## OPTIONS GUIDE - OPTIMIZATION AND CLEANUP
+## OPTIONS GUIDE - CLEAN AND BUILD
 
 ¡Important!
 
