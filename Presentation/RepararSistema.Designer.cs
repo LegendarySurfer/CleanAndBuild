@@ -635,18 +635,18 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoftToolStripMenuItem
             // 
             emisoftToolStripMenuItem.Name = "emisoftToolStripMenuItem";
-            emisoftToolStripMenuItem.Size = new Size(210, 24);
+            emisoftToolStripMenuItem.Size = new Size(184, 24);
             emisoftToolStripMenuItem.Text = "Emisoft";
             // 
             // escaneoRapidoToolStripMenuItem
             // 
             escaneoRapidoToolStripMenuItem.Name = "escaneoRapidoToolStripMenuItem";
-            escaneoRapidoToolStripMenuItem.Size = new Size(210, 24);
+            escaneoRapidoToolStripMenuItem.Size = new Size(184, 24);
             escaneoRapidoToolStripMenuItem.Text = "Escaneo Rapido";
             // 
             // RepararSistema

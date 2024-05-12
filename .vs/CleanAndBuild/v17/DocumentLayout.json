@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\menurenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\menurenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\ventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\ventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\menucolortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\menucolortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\repararsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\repararsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MenuRenderer.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuRenderer.cs",
-              "RelativeDocumentMoniker": "Presentation\\MenuRenderer.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuRenderer.cs",
-              "RelativeToolTip": "Presentation\\MenuRenderer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAoAAAA",
+              "Title": "Ventana.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ventana.cs",
+              "RelativeDocumentMoniker": "Presentation\\Ventana.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ventana.cs",
+              "RelativeToolTip": "Presentation\\Ventana.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:24:56.004Z",
+              "WhenOpened": "2024-05-12T16:30:21.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MenuPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuPrincipal.cs",
-              "RelativeDocumentMoniker": "Presentation\\MenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\MenuPrincipal.cs [Dise\u00F1o]",
+              "Title": "RepararSistema.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\RepararSistema.cs",
+              "RelativeDocumentMoniker": "Presentation\\RepararSistema.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\RepararSistema.cs",
+              "RelativeToolTip": "Presentation\\RepararSistema.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:25:05.582Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-12T16:30:08.634Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MenuColorTable.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuColorTable.cs",
-              "RelativeDocumentMoniker": "Presentation\\MenuColorTable.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuColorTable.cs",
-              "RelativeToolTip": "Presentation\\MenuColorTable.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAyAAAA",
+              "Title": "MenuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Presentation\\MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuPrincipal.cs",
+              "RelativeToolTip": "Presentation\\MenuPrincipal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:24:59.415Z",
+              "WhenOpened": "2024-05-12T16:29:56.099Z",
               "EditorCaption": ""
             }
           ]

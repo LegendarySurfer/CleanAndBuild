@@ -19,6 +19,7 @@ namespace Presentation
             StartPosition = FormStartPosition.CenterScreen; // centrar ventana
             username = name;
             infoUser(name);
+            
             MenuVertical2 = MenuVertical;
 
             Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);

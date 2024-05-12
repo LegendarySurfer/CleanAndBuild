@@ -5,7 +5,7 @@ namespace Presentation
 {
     public partial class Ventana
     {
-        public static bool PanelContraido = false;
+        public static bool PanelContraido = true;
 
         public static void salir()
         {
