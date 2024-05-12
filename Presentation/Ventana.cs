@@ -1,11 +1,12 @@
 ﻿using System.Runtime.InteropServices;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Presentation
 {
     public partial class Ventana
     {
         public static bool PanelContraido = true;
+        public static FormWindowState estadoAnterior;
+
 
         public static void salir()
         {
@@ -31,7 +32,7 @@ namespace Presentation
             var historial = new Historial();
             historial.MenuVertical2.Width = PanelContraido ? 333 : 70;
             historial.Show();
-        }
+        }   
 
         public static void opciones()
         {
@@ -39,7 +40,6 @@ namespace Presentation
             opciones.MenuVertical2.Width = PanelContraido ? 333 : 70;
             opciones.Show();
         }
-
         public static void repararSistema()
         {
             var reparar = new RepararSistema();
@@ -109,6 +109,9 @@ namespace Presentation
             };
         }
 
-
+        public static FormWindowState compuebaEstadoVentana()
+        {
+            return estadoAnterior == FormWindowState.Normal ? FormWindowState.Normal : FormWindowState.Maximized;
+        }
     }
 }

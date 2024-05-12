@@ -23,6 +23,7 @@ namespace Presentation
             MenuVertical2 = MenuVertical;
 
             Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
+            WindowState = Ventana.compuebaEstadoVentana();
         }
 
         //---------------------------------------------------- mostrar informacion de usuario ----------------------------------------------------
@@ -83,6 +84,7 @@ namespace Presentation
         //---------------------------------------------------- Botones laterales ----------------------------------------------------
         private void btn_Historial_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
             Ventana.historial();
             Close();
 
@@ -90,30 +92,40 @@ namespace Presentation
 
         private void btn_opciones_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
+
             Ventana.opciones();
             Close();
         }
 
         private void btnRepararSistema_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
+
             Ventana.repararSistema();
             Close();
         }
 
         private void btnActualizarAplicaciones_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
+
             Ventana.actualziarAplicaciones();
             Close();
         }
 
         private void btnDesfragmentarDisco_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
+
             Ventana.desfragmentarDisco();
             Close();
         }
 
         private void btnLimpiarSistema_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState;
+
             Ventana.limpiarSistema();
             Close();
         }
@@ -131,6 +143,8 @@ namespace Presentation
 
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
+            Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
+
             Ventana.instalarAplicaciones();
             Close();
         }
@@ -142,18 +156,16 @@ namespace Presentation
 
         private void btnOtros_MouseDown(object sender, MouseEventArgs e)
         {
+
             //antes se tendra que comprobar que el usuario sea admin, si no no deja
             if (username.Equals("admin") && e.Button == MouseButtons.Right)
             {
+                Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
+
                 var addComand = new AgregarComando();
                 addComand.Show();
                 Close();
             }
-        }
-
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

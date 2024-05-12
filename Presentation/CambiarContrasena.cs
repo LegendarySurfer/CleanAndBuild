@@ -1,15 +1,37 @@
 ﻿using Domain;
+using System.Drawing.Drawing2D;
 
 namespace Presentation
 {
     public partial class CambiarContrasena : Form
     {
-        //main
+
+        // Tamaño del borde redondeado
+        private const int BORDER_RADIUS = 25;
+
         public CambiarContrasena()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;//aparecer centrado
 
+            StartPosition = FormStartPosition.CenterScreen;//aparecer centrado
+            // Establecer el estilo del borde del formulario
+            this.FormBorderStyle = FormBorderStyle.None;
+            // Suscribirse al evento Paint del formulario
+            this.Paint += Form1_Paint;
+        }
+
+        // Dibujar los bordes redondeados
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                path.AddArc(0, 0, BORDER_RADIUS, BORDER_RADIUS, 180, 90);
+                path.AddArc(this.Width - BORDER_RADIUS, 0, BORDER_RADIUS, BORDER_RADIUS, 270, 90);
+                path.AddArc(this.Width - BORDER_RADIUS, this.Height - BORDER_RADIUS, BORDER_RADIUS, BORDER_RADIUS, 0, 90);
+                path.AddArc(0, this.Height - BORDER_RADIUS, BORDER_RADIUS, BORDER_RADIUS, 90, 90);
+                path.CloseFigure();
+                this.Region = new Region(path);
+            }
         }
 
         //control de los botones
