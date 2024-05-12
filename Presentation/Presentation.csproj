@@ -34,9 +34,6 @@
     <Compile Update="ActualizarAplicacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Antivirus.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="LiberarEspacio.cs">
       <SubType>Form</SubType>
     </Compile>

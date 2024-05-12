@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historial));
             BarraTitulo = new Panel();
             label7 = new Label();
@@ -66,6 +67,9 @@
             btnDesfragmentarDisco = new Button();
             btnActualizarAplicaciones = new Button();
             btnRepararSistema = new Button();
+            dropDownMenu1 = new DropDownMenu(components);
+            emisoftToolStripMenuItem = new ToolStripMenuItem();
+            escaneoRapidoToolStripMenuItem = new ToolStripMenuItem();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
@@ -77,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)btnSide).BeginInit();
             MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            dropDownMenu1.SuspendLayout();
             SuspendLayout();
             // 
             // BarraTitulo
@@ -618,6 +623,29 @@
             btnRepararSistema.UseVisualStyleBackColor = true;
             btnRepararSistema.Click += btnRepararSistema_Click;
             // 
+            // dropDownMenu1
+            // 
+            dropDownMenu1.ImageScalingSize = new Size(20, 20);
+            dropDownMenu1.IsMainMenu = false;
+            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoftToolStripMenuItem, escaneoRapidoToolStripMenuItem });
+            dropDownMenu1.MenuItemHeight = 25;
+            dropDownMenu1.MenuItemTextColor = Color.DimGray;
+            dropDownMenu1.Name = "dropDownMenu1";
+            dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
+            dropDownMenu1.Size = new Size(211, 80);
+            // 
+            // emisoftToolStripMenuItem
+            // 
+            emisoftToolStripMenuItem.Name = "emisoftToolStripMenuItem";
+            emisoftToolStripMenuItem.Size = new Size(210, 24);
+            emisoftToolStripMenuItem.Text = "Emisoft";
+            // 
+            // escaneoRapidoToolStripMenuItem
+            // 
+            escaneoRapidoToolStripMenuItem.Name = "escaneoRapidoToolStripMenuItem";
+            escaneoRapidoToolStripMenuItem.Size = new Size(210, 24);
+            escaneoRapidoToolStripMenuItem.Text = "Escaneo Rapido";
+            // 
             // Historial
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -643,6 +671,7 @@
             MenuVertical.ResumeLayout(false);
             MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            dropDownMenu1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -685,6 +714,9 @@
         private DataGridView dg_historial;
         private Button btn_cargar;
         private Panel panel9;
+        private DropDownMenu dropDownMenu1;
+        private ToolStripMenuItem emisoftToolStripMenuItem;
+        private ToolStripMenuItem escaneoRapidoToolStripMenuItem;
     }
 }
 

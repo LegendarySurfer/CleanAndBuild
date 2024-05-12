@@ -7,6 +7,9 @@
     <Compile Update="CambiarContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="InstalarAplicaciones.cs">
       <SubType>Form</SubType>
     </Compile>

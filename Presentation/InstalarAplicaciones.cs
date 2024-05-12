@@ -16,10 +16,12 @@ namespace Presentation
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo
             MenuVertical2 = MenuVertical;
+
+            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
         }
 
-        //---------------------------------------------------- botones windows ----------------------------------------------------
-        private void btnCerrar_Click(object sender, EventArgs e)
+            //---------------------------------------------------- botones windows ----------------------------------------------------
+            private void btnCerrar_Click(object sender, EventArgs e)
         {
             Ventana.salir();
         }
@@ -217,8 +219,6 @@ namespace Presentation
             }
         }
 
-
-
         //---------------------------------------------------- botones laterales ----------------------------------------------------
         private void btn_volver_Click(object sender, EventArgs e)
         {
@@ -265,8 +265,7 @@ namespace Presentation
 
         private void btnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.antivirus();
-            Close();
+            Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
 
         private void btnLiberarEspacio_Click(object sender, EventArgs e)

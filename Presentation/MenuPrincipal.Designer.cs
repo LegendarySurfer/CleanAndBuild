@@ -60,12 +60,17 @@
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
+            label3 = new Label();
+            dataGridView1 = new DataGridView();
             label2 = new Label();
             dataUser = new DataGridView();
             panel2 = new Panel();
             btn_opciones = new Button();
             btn_Historial = new Button();
             userModelBindingSource = new BindingSource(components);
+            dropDownMenu1 = new DropDownMenu(components);
+            emisoftToolStripMenuItem = new ToolStripMenuItem();
+            escaneoRapidoToolStripMenuItem = new ToolStripMenuItem();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -76,9 +81,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnSide).BeginInit();
             PanelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataUser).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).BeginInit();
+            dropDownMenu1.SuspendLayout();
             SuspendLayout();
             // 
             // BarraTitulo
@@ -192,7 +199,7 @@
             MenuVertical.Location = new Point(0, 48);
             MenuVertical.Margin = new Padding(3, 4, 3, 4);
             MenuVertical.Name = "MenuVertical";
-            MenuVertical.Size = new Size(333, 764);
+            MenuVertical.Size = new Size(333, 765);
             MenuVertical.TabIndex = 1;
             // 
             // panel10
@@ -233,7 +240,7 @@
             btn_salir_img.ForeColor = Color.White;
             btn_salir_img.Image = (Image)resources.GetObject("btn_salir_img.Image");
             btn_salir_img.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_salir_img.Location = new Point(0, 708);
+            btn_salir_img.Location = new Point(0, 705);
             btn_salir_img.Margin = new Padding(3, 4, 3, 4);
             btn_salir_img.Name = "btn_salir_img";
             btn_salir_img.Size = new Size(333, 56);
@@ -498,6 +505,8 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(label3);
+            PanelContenedor.Controls.Add(dataGridView1);
             PanelContenedor.Controls.Add(label2);
             PanelContenedor.Controls.Add(dataUser);
             PanelContenedor.Controls.Add(panel2);
@@ -505,15 +514,35 @@
             PanelContenedor.Location = new Point(333, 48);
             PanelContenedor.Margin = new Padding(3, 4, 3, 4);
             PanelContenedor.Name = "PanelContenedor";
-            PanelContenedor.Size = new Size(967, 764);
+            PanelContenedor.Size = new Size(967, 765);
             PanelContenedor.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(620, 108);
+            label3.Name = "label3";
+            label3.Size = new Size(202, 37);
+            label3.TabIndex = 25;
+            label3.Text = "COMANDOS";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(537, 172);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(375, 304);
+            dataGridView1.TabIndex = 24;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(205, 101);
+            label2.Location = new Point(130, 108);
             label2.Name = "label2";
             label2.Size = new Size(160, 37);
             label2.TabIndex = 23;
@@ -522,10 +551,10 @@
             // dataUser
             // 
             dataUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataUser.Location = new Point(16, 151);
+            dataUser.Location = new Point(23, 172);
             dataUser.Name = "dataUser";
             dataUser.RowHeadersWidth = 51;
-            dataUser.Size = new Size(872, 188);
+            dataUser.Size = new Size(375, 304);
             dataUser.TabIndex = 2;
             // 
             // panel2
@@ -577,11 +606,34 @@
             // 
             userModelBindingSource.DataSource = typeof(Domain.UserModel);
             // 
+            // dropDownMenu1
+            // 
+            dropDownMenu1.ImageScalingSize = new Size(20, 20);
+            dropDownMenu1.IsMainMenu = false;
+            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoftToolStripMenuItem, escaneoRapidoToolStripMenuItem });
+            dropDownMenu1.MenuItemHeight = 25;
+            dropDownMenu1.MenuItemTextColor = Color.DimGray;
+            dropDownMenu1.Name = "dropDownMenu1";
+            dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
+            dropDownMenu1.Size = new Size(185, 52);
+            // 
+            // emisoftToolStripMenuItem
+            // 
+            emisoftToolStripMenuItem.Name = "emisoftToolStripMenuItem";
+            emisoftToolStripMenuItem.Size = new Size(184, 24);
+            emisoftToolStripMenuItem.Text = "Emisoft";
+            // 
+            // escaneoRapidoToolStripMenuItem
+            // 
+            escaneoRapidoToolStripMenuItem.Name = "escaneoRapidoToolStripMenuItem";
+            escaneoRapidoToolStripMenuItem.Size = new Size(184, 24);
+            escaneoRapidoToolStripMenuItem.Text = "Escaneo Rapido";
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 812);
+            ClientSize = new Size(1300, 813);
             Controls.Add(PanelContenedor);
             Controls.Add(MenuVertical);
             Controls.Add(BarraTitulo);
@@ -602,9 +654,11 @@
             ((System.ComponentModel.ISupportInitialize)btnSide).EndInit();
             PanelContenedor.ResumeLayout(false);
             PanelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataUser).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).EndInit();
+            dropDownMenu1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -646,6 +700,11 @@
         private Panel panel1;
         private Panel panel10;
         private Panel panel9;
+        private Label label3;
+        private DataGridView dataGridView1;
+        private DropDownMenu dropDownMenu1;
+        private ToolStripMenuItem emisoftToolStripMenuItem;
+        private ToolStripMenuItem escaneoRapidoToolStripMenuItem;
     }
 }
 

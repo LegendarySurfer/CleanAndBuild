@@ -15,8 +15,10 @@ namespace Presentation
 
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo 
-
             MenuVertical2 = MenuVertical;
+
+            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
+
         }
 
         //---------------------------------------------------- muestra las operaciones realizadas ----------------------------------------------------
@@ -74,6 +76,8 @@ namespace Presentation
         private void btnSide_Click(object sender, EventArgs e)
         {
             MenuVertical = Ventana.sideBar(MenuVertical);
+            btnAntivirus.Width = MenuVertical.Width;
+            btnAntivirus.Text = btnAntivirus.Width < 333 ? "" : "Antivirus";
         }
 
 
@@ -130,8 +134,7 @@ namespace Presentation
 
         private void btnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.antivirus();
-            Close();
+            Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
 
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)

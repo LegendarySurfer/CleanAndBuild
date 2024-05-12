@@ -75,11 +75,9 @@ namespace Presentation
             liberar.Show();
         }
 
-        public static void antivirus()
+        public static void antivirus(Button btnAntivirus, DropDownMenu dropDownMenu1)
         {
-            var antivirus = new Antivirus();
-            antivirus.MenuVertical2.Width = PanelContraido ? 333 : 70;
-            antivirus.Show();
+            dropDownMenu1.Show(btnAntivirus, btnAntivirus.Width,0);
         }
 
         public static void instalarAplicaciones()
@@ -95,6 +93,22 @@ namespace Presentation
             a.MenuVertical2.Width = PanelContraido ? 333 : 70;
             a.Show();
         }
+
+        public static void cambiarBtnAntivirus(Button btnAntivirus, Panel MenuVertical2,DropDownMenu dropDownMenu1)
+        {
+            dropDownMenu1.IsMainMenu = true;
+            // Ajustar el ancho del botón según el ancho del panel
+            btnAntivirus.Width = MenuVertical2.Width;
+            btnAntivirus.Text = MenuVertical2.Width < 333 ? "" : "Antivirus";
+
+            // Suscribirse al evento SizeChanged del panel para actualizar el ancho del botón
+            MenuVertical2.SizeChanged += (sender, e) =>
+            {
+                btnAntivirus.Width = MenuVertical2.Width;
+                btnAntivirus.Text = MenuVertical2.Width < 333 ? "" : "Antivirus";
+            };
+        }
+
 
     }
 }

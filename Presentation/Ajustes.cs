@@ -16,6 +16,8 @@ namespace Presentation
             infoUser();
             MenuVertical2 = MenuVertical;
 
+            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
+
         }
 
         //---------------------------------------------------- mostrar info del usuario ----------------------------------------------------
@@ -97,6 +99,8 @@ namespace Presentation
         private void btnSide_Click(object sender, EventArgs e)
         {
             MenuVertical = Ventana.sideBar(MenuVertical);
+            btnAntivirus.Width = MenuVertical.Width;
+            btnAntivirus.Text = btnAntivirus.Width < 333 ? "" : "Antivirus";
         }
 
 
@@ -154,8 +158,7 @@ namespace Presentation
 
         private void btnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.antivirus();
-            Close();
+            Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
 
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)

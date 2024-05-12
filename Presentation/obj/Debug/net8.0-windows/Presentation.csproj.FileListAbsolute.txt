@@ -126,7 +126,6 @@ C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presen
 C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.ActualizarAplicacion.resources
 C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.AgregarComando.resources
 C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.Ajustes.resources
-C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.Antivirus.resources
 C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.CambiarContrasena.resources
 C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.DesfragmentarDisco.resources
 C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\obj\Debug\net8.0-windows\Presentation.Historial.resources
