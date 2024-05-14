@@ -1,17 +1,20 @@
+using Presentation;
+
 namespace Presentation
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+
+            // Crear el formulario de inicio (Login) con el icono asignado
+            Login loginForm = new Login();
+            // Ejecutar la aplicación con el formulario de inicio
+            Application.Run(loginForm);
         }
     }
 }
