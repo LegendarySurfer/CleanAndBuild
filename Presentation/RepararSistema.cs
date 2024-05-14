@@ -1,4 +1,5 @@
 ﻿using Domain;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Presentation
@@ -156,7 +157,7 @@ namespace Presentation
             Close();
         }
 
-        // imagen de help
+        //---------------------------------------------------- imagen de help ----------------------------------------------------
         private void imagen_help_MouseEnter(object sender, EventArgs e)
         {
             MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows. " +
@@ -166,5 +167,42 @@ namespace Presentation
                 "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        //---------------------------------------------------- Logica para reparar el sistema ----------------------------------------------------
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\repair.bat");
+
+            Process p = new Process();
+            p.StartInfo.FileName = pathToBatchFile;
+            p.EnableRaisingEvents = true; // Habilitar eventos para detectar cuando el proceso termine
+
+            // Evento para manejar cuando el proceso termine
+            p.Exited += (s, args) =>
+            {
+                bool todoBien = p.ExitCode == 0;
+
+                // Actualizar el RichTextBox según si todo fue bien o no
+                richi.Invoke((MethodInvoker)delegate
+                {
+                    if (todoBien)
+                    {
+                        richi.AppendText("¡TODO HA SALIDO PERFECTO!\n\n");
+                        richi.AppendText("Esta opción se ha ejecutado con el comando sfc /scannow, que ejecuta el \"System File Checker\" (SFC).\n");
+                        richi.AppendText("El SFC es una herramienta de diagnóstico de Windows que permite a los usuarios escanear y reparar archivos del sistema dañados.\n\n");
+
+                        richi.AppendText("El comando DISM /Online /Cleanup-Image /RestoreHealth se utiliza para restaurar la integridad del sistema de archivos.\n");
+                        richi.AppendText("DISM significa \"Deployment Image Servicing and Management\" y es útil cuando SFC no puede reparar algunos archivos de sistema o cuando hay problemas más profundos con la imagen de Windows.\n\n");
+
+                    }
+                    else
+                    {
+                        richi.Text = "Algo ha ido mal...";
+                    }
+                });
+            };
+
+            // Iniciar el proceso
+            p.Start();
+        }
     }
 }

@@ -61,7 +61,6 @@
             PanelContenedor = new Panel();
             imagen_help = new PictureBox();
             label2 = new Label();
-            textBox2 = new TextBox();
             btn_Guardar = new Button();
             btn_volver = new Button();
             panel2 = new Panel();
@@ -71,6 +70,7 @@
             dropDownMenu1 = new DropDownMenu(components);
             emisoftToolStripMenuItem = new ToolStripMenuItem();
             escaneoRapidoToolStripMenuItem = new ToolStripMenuItem();
+            richi = new RichTextBox();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -493,9 +493,9 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(richi);
             PanelContenedor.Controls.Add(imagen_help);
             PanelContenedor.Controls.Add(label2);
-            PanelContenedor.Controls.Add(textBox2);
             PanelContenedor.Controls.Add(btn_Guardar);
             PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(panel2);
@@ -531,17 +531,6 @@
             label2.TabIndex = 51;
             label2.Text = "REPARA TU EQUIPO AQUI";
             // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(71, 183);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(841, 312);
-            textBox2.TabIndex = 50;
-            textBox2.Text = "Esperando a iniciar la reparacion...";
-            // 
             // btn_Guardar
             // 
             btn_Guardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -558,6 +547,7 @@
             btn_Guardar.TabIndex = 46;
             btn_Guardar.Text = "Reparar Sistema";
             btn_Guardar.UseVisualStyleBackColor = true;
+            btn_Guardar.Click += btn_Guardar_Click;
             // 
             // btn_volver
             // 
@@ -649,6 +639,17 @@
             escaneoRapidoToolStripMenuItem.Size = new Size(184, 24);
             escaneoRapidoToolStripMenuItem.Text = "Escaneo Rapido";
             // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Enabled = false;
+            richi.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(84, 168);
+            richi.Name = "richi";
+            richi.Size = new Size(784, 354);
+            richi.TabIndex = 52;
+            richi.Text = "";
+            // 
             // RepararSistema
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -715,7 +716,6 @@
         private Button btn_Historial;
         private Button btn_Guardar;
         private Button btn_volver;
-        private TextBox textBox2;
         private PictureBox imagen_help;
         private Label label2;
         private Panel panel9;
@@ -723,6 +723,7 @@
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoftToolStripMenuItem;
         private ToolStripMenuItem escaneoRapidoToolStripMenuItem;
+        private RichTextBox richi;
     }
 }
 
