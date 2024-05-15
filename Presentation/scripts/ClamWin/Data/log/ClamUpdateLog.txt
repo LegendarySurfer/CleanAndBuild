@@ -1,0 +1,33 @@
+--------------------------------------
+ClamAV update process started at Wed Jan 10 13:38:04 2024
+daily database available for download (remote version: 27150)
+Testing database: 'E:\temp\CleanAndBuild\herramientas\ClamWin\Data\db\tmp.101c2c0531\clamav-c9fe08511487f2f1ac160944d74a3238.tmp-daily.cvd' ...
+Database test passed.
+daily.cvd updated (version: 27150, sigs: 2050637, f-level: 90, builder: raynman)
+main database available for download (remote version: 62)
+Testing database: 'E:\temp\CleanAndBuild\herramientas\ClamWin\Data\db\tmp.101c2c0531\clamav-3530d0c894c707811d9934e52a46a6c5.tmp-main.cvd' ...
+Database test passed.
+main.cvd updated (version: 62, sigs: 6647427, f-level: 90, builder: sigmgr)
+bytecode database available for download (remote version: 334)
+Testing database: 'E:\temp\CleanAndBuild\herramientas\ClamWin\Data\db\tmp.101c2c0531\clamav-03003a954ffd59f42bc3ddb77bddf6d3.tmp-bytecode.cvd' ...
+Database test passed.
+bytecode.cvd updated (version: 334, sigs: 91, f-level: 90, builder: anvilleg)
+--------------------------------------
+ClamAV update process started at Wed May 15 12:13:09 2024
+daily database available for update (local version: 27150, remote version: 27276)
+WARNING: downloadFile: file not found: https://database.clamav.net/daily-27151.cdiff
+WARNING: downloadPatch: Can't download daily-27151.cdiff from https://database.clamav.net/daily-27151.cdiff
+WARNING: downloadFile: file not found: https://database.clamav.net/daily-27151.cdiff
+WARNING: downloadPatch: Can't download daily-27151.cdiff from https://database.clamav.net/daily-27151.cdiff
+WARNING: downloadFile: file not found: https://database.clamav.net/daily-27151.cdiff
+WARNING: downloadPatch: Can't download daily-27151.cdiff from https://database.clamav.net/daily-27151.cdiff
+WARNING: Incremental update failed, trying to download daily.cvd
+WARNING: Received an older daily CVD than was advertised. Incremental updates either failed or are disabled, so we'll have to settle for a slightly out-of-date database.
+Testing database: 'C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\scripts\ClamWin\Data\db\tmp.be78928b1e\clamav-4c7d8c39045a5ebdf5a126d14aac01f8.tmp-daily.cvd' ...
+Database test passed.
+daily.cvd updated (version: 27275, sigs: 2061211, f-level: 90, builder: raynman)
+main.cvd database is up-to-date (version: 62, sigs: 6647427, f-level: 90, builder: sigmgr)
+bytecode database available for update (local version: 334, remote version: 335)
+Testing database: 'C:\Users\Pablo\Desktop\TFG\Proyectos\CleanAndBuild-Interfaz\CleanAndBuild\Presentation\scripts\ClamWin\Data\db\tmp.be78928b1e\clamav-351399e912c3a41ae3b6c1bf0efc26f9.tmp-bytecode.cld' ...
+Database test passed.
+bytecode.cld updated (version: 335, sigs: 86, f-level: 90, builder: raynman)
