@@ -1,4 +1,5 @@
 ﻿using Domain;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Presentation
@@ -170,14 +171,74 @@ namespace Presentation
         //---------------------------------------------------- logica del boton ----------------------------------------------------
         private void btn_Actualizar_Click(object sender, EventArgs e)
         {
-            if (cb_aplicaciones.Checked)
+            Process p = new Process();
+
+            if (cb_comando.Checked)
             {
-                //logica para actualizar comandos
+                MessageBox.Show("Espere un momento mientras se termina de actualizar todo.",
+                "Time", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\update.bat");
+
+                p.StartInfo.FileName = "cmd.exe";
+                p.StartInfo.Arguments = "/c \"" + pathToBatchFile + "\"";
+                p.StartInfo.UseShellExecute = false;
+                p.StartInfo.RedirectStandardOutput = true;
+                p.StartInfo.CreateNoWindow = true;
+                p.EnableRaisingEvents = true;
+
+                p.Exited += (s, args) =>
+                {
+                    bool todoBien = p.ExitCode == 0;
+                    richi.Invoke((MethodInvoker)delegate
+                    {
+                        richi.AppendText(todoBien ? "¡TODO HA SALIDO PERFECTO!\n\n" : "Algo ha ido mal...\n\n");
+                        richi.AppendText(p.StandardOutput.ReadToEnd());
+                    });
+                };
+
+                p.Start();
             }
-            else
+
+            if(cb_aplicaciones.Checked)
             {
-                //logica para actualizar aplicaciones
+                string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\winget.bat");
+                p.StartInfo.FileName = pathToBatchFile;
+                p.EnableRaisingEvents = true; // Habilitar eventos para detectar cuando el proceso termine
+
+                // Evento para manejar cuando el proceso termine
+                p.Exited += (s, args) =>
+                {
+                    bool todoBien = p.ExitCode == 0;
+
+                    // Actualizar el RichTextBox según si todo fue bien o no
+                    richi.Invoke((MethodInvoker)delegate
+                    {
+                        if (todoBien)
+                        {
+                            richi.AppendText("¡TUS APLICACIONES SE HAN INSTALADO TU!\n\n");
+
+                        }
+                        else
+                        {
+                            richi.Text = "Algo ha ido mal...";
+                        }
+                    });
+                };
+
+                // Iniciar el proceso
+                p.Start();
+
             }
+
+            if (!cb_aplicaciones.Checked && !cb_comando.Checked)
+            {
+                MessageBox.Show("Tiene que seleccionar una opcion.",
+                    "Opcion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            cb_comando.Checked = false;
+            cb_aplicaciones.Checked = false;
+
 
         }
 

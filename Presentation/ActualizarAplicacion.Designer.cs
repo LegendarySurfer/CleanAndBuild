@@ -59,11 +59,11 @@
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
+            richi = new RichTextBox();
             imagen_help = new PictureBox();
             label2 = new Label();
             cb_aplicaciones = new CheckBox();
             cb_comando = new CheckBox();
-            textBox2 = new TextBox();
             btn_Actualizar = new Button();
             btn_volver = new Button();
             panel2 = new Panel();
@@ -496,11 +496,11 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(richi);
             PanelContenedor.Controls.Add(imagen_help);
             PanelContenedor.Controls.Add(label2);
             PanelContenedor.Controls.Add(cb_aplicaciones);
             PanelContenedor.Controls.Add(cb_comando);
-            PanelContenedor.Controls.Add(textBox2);
             PanelContenedor.Controls.Add(btn_Actualizar);
             PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(panel2);
@@ -510,6 +510,16 @@
             PanelContenedor.Name = "PanelContenedor";
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
+            // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(331, 195);
+            richi.Name = "richi";
+            richi.Size = new Size(602, 324);
+            richi.TabIndex = 54;
+            richi.Text = "";
             // 
             // imagen_help
             // 
@@ -563,17 +573,6 @@
             cb_comando.TabIndex = 51;
             cb_comando.Text = "Actualizar Comandos";
             cb_comando.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(406, 183);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(506, 312);
-            textBox2.TabIndex = 50;
-            textBox2.Text = "...";
             // 
             // btn_Actualizar
             // 
@@ -669,19 +668,19 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
             // 
@@ -751,7 +750,6 @@
         private Button btn_Historial;
         private Button btn_Actualizar;
         private Button btn_volver;
-        private TextBox textBox2;
         private CheckBox cb_aplicaciones;
         private CheckBox cb_comando;
         private Label label2;
@@ -762,6 +760,7 @@
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaner_rapido;
+        private RichTextBox richi;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using Domain;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Presentation
@@ -174,6 +175,32 @@ namespace Presentation
                "Limpieza", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Espere un momento mientras se termina de actualizar todo.",
+    "Time", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\limpiar_archivos.bat");
+            Process p = new Process();
 
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.Arguments = "/c \"" + pathToBatchFile + "\"";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.EnableRaisingEvents = true;
+            p.StartInfo.CreateNoWindow = true;
+
+
+            p.Exited += (s, args) =>
+            {
+                bool todoBien = p.ExitCode == 0;
+                richi.Invoke((MethodInvoker)delegate
+                {
+                    richi.AppendText(todoBien ? "¡TODO HA SALIDO PERFECTO!\n\n" : "Algo ha ido mal...\n\n");
+                    richi.AppendText(p.StandardOutput.ReadToEnd());
+                });
+            };
+
+            p.Start();
+        }
     }
 }

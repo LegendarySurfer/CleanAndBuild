@@ -61,7 +61,6 @@
             PanelContenedor = new Panel();
             imagen_help = new PictureBox();
             label2 = new Label();
-            textBox2 = new TextBox();
             btn_limpiar = new Button();
             btn_volver = new Button();
             panel2 = new Panel();
@@ -71,6 +70,7 @@
             dropDownMenu1 = new DropDownMenu(components);
             emisoft = new ToolStripMenuItem();
             escaner_rapido = new ToolStripMenuItem();
+            richi = new RichTextBox();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -491,9 +491,9 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(richi);
             PanelContenedor.Controls.Add(imagen_help);
             PanelContenedor.Controls.Add(label2);
-            PanelContenedor.Controls.Add(textBox2);
             PanelContenedor.Controls.Add(btn_limpiar);
             PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(panel2);
@@ -529,17 +529,6 @@
             label2.TabIndex = 53;
             label2.Text = "LIMPIEZA DE ARCHIVOS BASURA";
             // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(71, 183);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(841, 312);
-            textBox2.TabIndex = 50;
-            textBox2.Text = "Limpiando...";
-            // 
             // btn_limpiar
             // 
             btn_limpiar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -556,6 +545,7 @@
             btn_limpiar.TabIndex = 46;
             btn_limpiar.Text = "Limpiar Sistema";
             btn_limpiar.UseVisualStyleBackColor = true;
+            btn_limpiar.Click += btn_limpiar_Click;
             // 
             // btn_volver
             // 
@@ -633,21 +623,31 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
+            // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(70, 187);
+            richi.Name = "richi";
+            richi.Size = new Size(828, 408);
+            richi.TabIndex = 54;
+            richi.Text = "";
             // 
             // LimpiarSistema
             // 
@@ -715,7 +715,6 @@
         private Button btn_Historial;
         private Button btn_limpiar;
         private Button btn_volver;
-        private TextBox textBox2;
         private PictureBox imagen_help;
         private Label label2;
         private Panel panel9;
@@ -723,6 +722,7 @@
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaner_rapido;
+        private RichTextBox richi;
     }
 }
 
