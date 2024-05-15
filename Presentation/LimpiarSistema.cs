@@ -123,6 +123,16 @@ namespace Presentation
             Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
 
+        private void emisoft_Click(object sender, EventArgs e)
+        {
+            Ventana.emisoft();
+        }
+
+        private void escaner_rapido_Click(object sender, EventArgs e)
+        {
+            Ventana.escanerRapido();
+        }
+
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
@@ -163,5 +173,7 @@ namespace Presentation
             MessageBox.Show("Limpieza los archivos temporales y la papelera entre otros.",
                "Limpieza", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
     }
 }

@@ -69,8 +69,8 @@
             btn_Historial = new Button();
             userModelBindingSource = new BindingSource(components);
             dropDownMenu1 = new DropDownMenu(components);
-            emisoftToolStripMenuItem = new ToolStripMenuItem();
-            escaneoRapidoToolStripMenuItem = new ToolStripMenuItem();
+            emisoft = new ToolStripMenuItem();
+            escaneo_rapido = new ToolStripMenuItem();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -610,24 +610,26 @@
             // 
             dropDownMenu1.ImageScalingSize = new Size(20, 20);
             dropDownMenu1.IsMainMenu = false;
-            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoftToolStripMenuItem, escaneoRapidoToolStripMenuItem });
+            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoft, escaneo_rapido });
             dropDownMenu1.MenuItemHeight = 25;
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
             dropDownMenu1.Size = new Size(185, 52);
             // 
-            // emisoftToolStripMenuItem
+            // emisoft
             // 
-            emisoftToolStripMenuItem.Name = "emisoftToolStripMenuItem";
-            emisoftToolStripMenuItem.Size = new Size(184, 24);
-            emisoftToolStripMenuItem.Text = "Emisoft";
+            emisoft.Name = "emisoft";
+            emisoft.Size = new Size(184, 24);
+            emisoft.Text = "Emisoft";
+            emisoft.Click += emisoft_Click;
             // 
-            // escaneoRapidoToolStripMenuItem
+            // escaneo_rapido
             // 
-            escaneoRapidoToolStripMenuItem.Name = "escaneoRapidoToolStripMenuItem";
-            escaneoRapidoToolStripMenuItem.Size = new Size(184, 24);
-            escaneoRapidoToolStripMenuItem.Text = "Escaneo Rapido";
+            escaneo_rapido.Name = "escaneo_rapido";
+            escaneo_rapido.Size = new Size(184, 24);
+            escaneo_rapido.Text = "Escaneo Rapido";
+            escaneo_rapido.Click += escaneo_rapido_Click;
             // 
             // MenuPrincipal
             // 
@@ -703,8 +705,8 @@
         private Label label3;
         private DataGridView dataGridView1;
         private DropDownMenu dropDownMenu1;
-        private ToolStripMenuItem emisoftToolStripMenuItem;
-        private ToolStripMenuItem escaneoRapidoToolStripMenuItem;
+        private ToolStripMenuItem emisoft;
+        private ToolStripMenuItem escaneo_rapido;
     }
 }
 

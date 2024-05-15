@@ -16,7 +16,7 @@ namespace Presentation
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo 
             MenuVertical2 = MenuVertical;
 
-            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2,dropDownMenu1);
+            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
             WindowState = Ventana.compuebaEstadoVentana();
 
         }
@@ -122,6 +122,15 @@ namespace Presentation
         {
             Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
+        private void emisoft_Click(object sender, EventArgs e)
+        {
+            Ventana.emisoft();
+        }
+
+        private void escaner_rapido_Click(object sender, EventArgs e)
+        {
+            Ventana.escanerRapido();
+        }
 
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
@@ -157,7 +166,7 @@ namespace Presentation
             Close();
         }
 
-       
+
         //---------------------------------------------------- logica del boton ----------------------------------------------------
         private void btn_Actualizar_Click(object sender, EventArgs e)
         {
@@ -177,5 +186,7 @@ namespace Presentation
             MessageBox.Show("Actualiza tus aplicaciones y comandos",
                 "Actualiza ahora", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
     }
 }

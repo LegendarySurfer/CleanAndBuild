@@ -41,10 +41,12 @@
             btn_minimizar = new PictureBox();
             lblErrorMessage = new Label();
             label3 = new Label();
+            imagen_help = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_cerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btn_minimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imagen_help).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -201,12 +203,26 @@
             label3.TabIndex = 12;
             label3.Text = "─────────────────────────────────────────";
             // 
+            // imagen_help
+            // 
+            imagen_help.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            imagen_help.Image = (Image)resources.GetObject("imagen_help.Image");
+            imagen_help.Location = new Point(253, 11);
+            imagen_help.Margin = new Padding(3, 4, 3, 4);
+            imagen_help.Name = "imagen_help";
+            imagen_help.Size = new Size(49, 46);
+            imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
+            imagen_help.TabIndex = 23;
+            imagen_help.TabStop = false;
+            imagen_help.Click += imagen_help_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(780, 412);
+            Controls.Add(imagen_help);
             Controls.Add(label3);
             Controls.Add(lblErrorMessage);
             Controls.Add(btn_minimizar);
@@ -228,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_cerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btn_minimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imagen_help).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,6 +263,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblErrorMessage;
         private Label label3;
+        private PictureBox imagen_help;
     }
 }
 

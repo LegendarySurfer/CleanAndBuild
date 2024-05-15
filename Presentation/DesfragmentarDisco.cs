@@ -11,7 +11,7 @@ namespace Presentation
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen; // Centrar ventana
-           
+
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo
             MenuVertical2 = MenuVertical;
@@ -124,6 +124,16 @@ namespace Presentation
             Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
 
+        private void emisoft_Click(object sender, EventArgs e)
+        {
+            Ventana.emisoft();
+        }
+
+        private void escaner_rapido_Click(object sender, EventArgs e)
+        {
+            Ventana.escanerRapido();
+        }
+
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
@@ -170,6 +180,7 @@ namespace Presentation
         "Siguiendo estas precauciones, puedes desfragmentar tus discos de manera segura y eficiente.",
         "Precauciones al Desfragmentar el Disco", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
     }
 }

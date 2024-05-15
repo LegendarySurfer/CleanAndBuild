@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\presentation.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\presentation.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\limpiarsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\limpiarsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\icon\\logosinfondo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:icon\\logosinfondo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,25 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Presentation",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Presentation.csproj",
-              "RelativeDocumentMoniker": "Presentation\\Presentation.csproj",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Presentation.csproj",
-              "RelativeToolTip": "Presentation\\Presentation.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-14T20:11:05.991Z",
+              "Title": "LimpiarSistema.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\LimpiarSistema.cs",
+              "RelativeDocumentMoniker": "Presentation\\LimpiarSistema.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\LimpiarSistema.cs",
+              "RelativeToolTip": "Presentation\\LimpiarSistema.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T15:35:08.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "logosinfondo.png - PNG [616x405, 32 bits, PNG]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\icon\\logosinfondo.png",
-              "RelativeDocumentMoniker": "icon\\logosinfondo.png",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\icon\\logosinfondo.png - PNG [616x405, 32 bits, PNG]",
-              "RelativeToolTip": "icon\\logosinfondo.png - PNG [616x405, 32 bits, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-05-14T20:05:51.193Z"
+              "Title": "MenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Presentation\\MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\MenuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentation\\MenuPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T15:30:22.697Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

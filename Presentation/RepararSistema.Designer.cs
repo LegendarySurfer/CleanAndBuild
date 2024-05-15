@@ -59,6 +59,7 @@
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
+            richi = new RichTextBox();
             imagen_help = new PictureBox();
             label2 = new Label();
             btn_Guardar = new Button();
@@ -68,9 +69,8 @@
             btn_Historial = new Button();
             userModelBindingSource = new BindingSource(components);
             dropDownMenu1 = new DropDownMenu(components);
-            emisoftToolStripMenuItem = new ToolStripMenuItem();
-            escaneoRapidoToolStripMenuItem = new ToolStripMenuItem();
-            richi = new RichTextBox();
+            emisoft = new ToolStripMenuItem();
+            escaner_rapido = new ToolStripMenuItem();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -506,6 +506,17 @@
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
             // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Enabled = false;
+            richi.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(84, 168);
+            richi.Name = "richi";
+            richi.Size = new Size(784, 354);
+            richi.TabIndex = 52;
+            richi.Text = "";
+            // 
             // imagen_help
             // 
             imagen_help.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -620,35 +631,26 @@
             // 
             dropDownMenu1.ImageScalingSize = new Size(20, 20);
             dropDownMenu1.IsMainMenu = false;
-            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoftToolStripMenuItem, escaneoRapidoToolStripMenuItem });
+            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoft, escaner_rapido });
             dropDownMenu1.MenuItemHeight = 25;
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(185, 52);
+            dropDownMenu1.Size = new Size(211, 80);
             // 
-            // emisoftToolStripMenuItem
+            // emisoft
             // 
-            emisoftToolStripMenuItem.Name = "emisoftToolStripMenuItem";
-            emisoftToolStripMenuItem.Size = new Size(184, 24);
-            emisoftToolStripMenuItem.Text = "Emisoft";
+            emisoft.Name = "emisoft";
+            emisoft.Size = new Size(210, 24);
+            emisoft.Text = "Emisoft";
+            emisoft.Click += emisoft_Click;
             // 
-            // escaneoRapidoToolStripMenuItem
+            // escaner_rapido
             // 
-            escaneoRapidoToolStripMenuItem.Name = "escaneoRapidoToolStripMenuItem";
-            escaneoRapidoToolStripMenuItem.Size = new Size(184, 24);
-            escaneoRapidoToolStripMenuItem.Text = "Escaneo Rapido";
-            // 
-            // richi
-            // 
-            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richi.Enabled = false;
-            richi.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richi.Location = new Point(84, 168);
-            richi.Name = "richi";
-            richi.Size = new Size(784, 354);
-            richi.TabIndex = 52;
-            richi.Text = "";
+            escaner_rapido.Name = "escaner_rapido";
+            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Text = "Escaneo Rapido";
+            escaner_rapido.Click += escaner_rapido_Click;
             // 
             // RepararSistema
             // 
@@ -721,8 +723,8 @@
         private Panel panel9;
         private Panel panel1;
         private DropDownMenu dropDownMenu1;
-        private ToolStripMenuItem emisoftToolStripMenuItem;
-        private ToolStripMenuItem escaneoRapidoToolStripMenuItem;
+        private ToolStripMenuItem emisoft;
+        private ToolStripMenuItem escaner_rapido;
         private RichTextBox richi;
     }
 }

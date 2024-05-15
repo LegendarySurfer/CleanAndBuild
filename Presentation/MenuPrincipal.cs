@@ -19,7 +19,7 @@ namespace Presentation
             StartPosition = FormStartPosition.CenterScreen; // centrar ventana
             username = name;
             infoUser(name);
-            
+
             MenuVertical2 = MenuVertical;
 
             Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
@@ -138,7 +138,12 @@ namespace Presentation
 
         private void btnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.antivirus(btnAntivirus,dropDownMenu1);
+            Ventana.antivirus(btnAntivirus, dropDownMenu1);
+        }
+
+        private void emisoft_Click(object sender, EventArgs e)
+        {
+            Ventana.emisoft();
         }
 
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
@@ -166,6 +171,11 @@ namespace Presentation
                 addComand.Show();
                 Close();
             }
+        }
+
+        private void escaneo_rapido_Click(object sender, EventArgs e)
+        {
+            Ventana.escanerRapido();
         }
     }
 }

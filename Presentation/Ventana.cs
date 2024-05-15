@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace Presentation
 {
@@ -78,7 +79,26 @@ namespace Presentation
         public static void antivirus(Button btnAntivirus, DropDownMenu dropDownMenu1)
         {
             dropDownMenu1.Show(btnAntivirus, btnAntivirus.Width,0);
+
         }
+
+        public static void emisoft()
+        {
+            string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\ClamWin\ClamWinPortable.exe");
+            Process p = new Process();
+            p.StartInfo.FileName = pathToBatchFile;
+            p.Start();
+        }
+
+        public static void escanerRapido()
+        {
+            string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\escanerRapido.bat");
+            Process p = new Process();
+            p.StartInfo.FileName = pathToBatchFile;
+            p.Start();
+
+        }
+
 
         public static void instalarAplicaciones()
         {

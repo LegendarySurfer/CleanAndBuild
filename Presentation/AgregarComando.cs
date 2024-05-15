@@ -68,7 +68,7 @@ namespace Presentation
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
-       
+
         //---------------------------------------------------- Botones laterales ----------------------------------------------------
         private void btn_Historial_Click(object sender, EventArgs e)
         {
@@ -132,6 +132,16 @@ namespace Presentation
             Ventana.antivirus(btnAntivirus, dropDownMenu1);
         }
 
+        private void emisoft_Click(object sender, EventArgs e)
+        {
+            Ventana.emisoft();
+        }
+
+        private void escaner_rapido_Click(object sender, EventArgs e)
+        {
+            Ventana.escanerRapido();
+        }
+
         private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.instalarAplicaciones();
@@ -163,5 +173,7 @@ namespace Presentation
             Ventana.menuPrincipal();
             Close();
         }
+
+
     }
 }
