@@ -1,4 +1,5 @@
 ﻿using Domain;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Presentation
@@ -179,6 +180,42 @@ namespace Presentation
         "5. Desfragmenta tus discos de manera regular como parte de un programa de mantenimiento preventivo.\n" +
         "Siguiendo estas precauciones, puedes desfragmentar tus discos de manera segura y eficiente.",
         "Desfragmentar Disco", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_desfragmentar_Click(object sender, EventArgs e)
+        {
+            richi.Text = "";
+            Process p = new Process();
+
+            string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\desfragmentar.bat");
+            p.StartInfo.FileName = pathToBatchFile;
+            p.EnableRaisingEvents = true; // Habilitar eventos para detectar cuando el proceso termine
+            p.StartInfo.Arguments = name_disc.Text;
+
+            // Evento para manejar cuando el proceso termine
+            p.Exited += (s, args) =>
+            {
+                bool todoBien = p.ExitCode == 0;
+
+                // Actualizar el RichTextBox según si todo fue bien o no
+                richi.Invoke((MethodInvoker)delegate
+                {
+                    if (todoBien)
+                    {
+                        richi.AppendText("La desfragmentación se ha completado con éxito.\n\n" +
+                            "El script de lote realiza la desfragmentación del disco y devuelve un código de salida indicando " +
+                            "si la operación fue exitosa o no.");
+
+                    }
+                    else
+                    {
+                        richi.Text = "Algo ha ido mal...";
+                    }
+                });
+            };
+
+            // Iniciar el proceso
+            p.Start();
         }
     }
 }

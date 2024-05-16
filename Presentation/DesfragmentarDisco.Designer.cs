@@ -59,12 +59,12 @@
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
+            richi = new RichTextBox();
             imagen_help = new PictureBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            name_disc = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
-            btn_Actualizar = new Button();
+            btn_desfragmentar = new Button();
             btn_volver = new Button();
             panel2 = new Panel();
             btn_opciones = new Button();
@@ -495,12 +495,12 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(richi);
             PanelContenedor.Controls.Add(imagen_help);
             PanelContenedor.Controls.Add(label3);
-            PanelContenedor.Controls.Add(textBox1);
+            PanelContenedor.Controls.Add(name_disc);
             PanelContenedor.Controls.Add(label2);
-            PanelContenedor.Controls.Add(textBox2);
-            PanelContenedor.Controls.Add(btn_Actualizar);
+            PanelContenedor.Controls.Add(btn_desfragmentar);
             PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(panel2);
             PanelContenedor.Dock = DockStyle.Fill;
@@ -509,6 +509,16 @@
             PanelContenedor.Name = "PanelContenedor";
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
+            // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(370, 191);
+            richi.Name = "richi";
+            richi.Size = new Size(562, 324);
+            richi.TabIndex = 56;
+            richi.Text = "";
             // 
             // imagen_help
             // 
@@ -535,15 +545,15 @@
             label3.TabIndex = 54;
             label3.Text = "DESFRAGMENTAR DISCO";
             // 
-            // textBox1
+            // name_disc
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(51, 263);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(269, 25);
-            textBox1.TabIndex = 52;
-            textBox1.Text = "C:/";
+            name_disc.BorderStyle = BorderStyle.None;
+            name_disc.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            name_disc.Location = new Point(51, 263);
+            name_disc.Name = "name_disc";
+            name_disc.Size = new Size(269, 25);
+            name_disc.TabIndex = 52;
+            name_disc.Text = "D:";
             // 
             // label2
             // 
@@ -557,32 +567,23 @@
             label2.TabIndex = 51;
             label2.Text = "Introduzca la unidad del disco:";
             // 
-            // textBox2
+            // btn_desfragmentar
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(536, 183);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(376, 312);
-            textBox2.TabIndex = 50;
-            // 
-            // btn_Actualizar
-            // 
-            btn_Actualizar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Actualizar.FlatAppearance.BorderSize = 0;
-            btn_Actualizar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btn_Actualizar.FlatStyle = FlatStyle.Flat;
-            btn_Actualizar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Actualizar.ForeColor = Color.White;
-            btn_Actualizar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Actualizar.Location = new Point(582, 644);
-            btn_Actualizar.Margin = new Padding(3, 4, 3, 4);
-            btn_Actualizar.Name = "btn_Actualizar";
-            btn_Actualizar.Size = new Size(286, 60);
-            btn_Actualizar.TabIndex = 46;
-            btn_Actualizar.Text = "Desfragmentar Disco";
-            btn_Actualizar.UseVisualStyleBackColor = true;
+            btn_desfragmentar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_desfragmentar.FlatAppearance.BorderSize = 0;
+            btn_desfragmentar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btn_desfragmentar.FlatStyle = FlatStyle.Flat;
+            btn_desfragmentar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_desfragmentar.ForeColor = Color.White;
+            btn_desfragmentar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_desfragmentar.Location = new Point(582, 644);
+            btn_desfragmentar.Margin = new Padding(3, 4, 3, 4);
+            btn_desfragmentar.Name = "btn_desfragmentar";
+            btn_desfragmentar.Size = new Size(286, 60);
+            btn_desfragmentar.TabIndex = 46;
+            btn_desfragmentar.Text = "Desfragmentar Disco";
+            btn_desfragmentar.UseVisualStyleBackColor = true;
+            btn_desfragmentar.Click += btn_desfragmentar_Click;
             // 
             // btn_volver
             // 
@@ -740,10 +741,9 @@
         private BindingSource userModelBindingSource;
         private Button btn_opciones;
         private Button btn_Historial;
-        private Button btn_Actualizar;
+        private Button btn_desfragmentar;
         private Button btn_volver;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox name_disc;
         private Label label2;
         private Label label3;
         private PictureBox imagen_help;
@@ -752,6 +752,7 @@
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaner_rapido;
+        private RichTextBox richi;
     }
 }
 
