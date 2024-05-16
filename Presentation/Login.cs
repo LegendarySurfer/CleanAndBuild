@@ -160,11 +160,9 @@ namespace Presentation
 
         private void imagen_help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows. " +
-               "Primero, escanea y repara archivos dañados del sistema. Luego, realiza una verificación" +
-               " adicional y corrige problemas utilizando otra herramienta de reparación. Si ves un mensaje " +
-               "sobre la necesidad de reiniciar, asegúrate de hacerlo para completar el proceso. ",
-               "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("- Para iniciar sesion con un usuario existente ponga solo las credenciales.\n" +
+                "- Para iniciar sesion con usuario nuevo solo introduzca un nombre no existenten y una contraseña.",
+               "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

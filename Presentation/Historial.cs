@@ -20,7 +20,7 @@ namespace Presentation
             Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
             WindowState = Ventana.compuebaEstadoVentana();
 
-
+            cb_historial.Select(0, 0);
         }
 
         //---------------------------------------------------- muestra las operaciones realizadas ----------------------------------------------------

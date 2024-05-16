@@ -528,7 +528,7 @@
             imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
             imagen_help.TabIndex = 22;
             imagen_help.TabStop = false;
-            imagen_help.MouseEnter += imagen_help_MouseEnter;
+            imagen_help.Click += imagen_help_Click;
             // 
             // label2
             // 
@@ -636,19 +636,19 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
             // 

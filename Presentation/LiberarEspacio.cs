@@ -170,22 +170,21 @@ namespace Presentation
         }
 
         //imagen help
-        private void imagen_help_MouseEnter(object sender, EventArgs e)
+        private void imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Libera espacio en disco al eliminar archivos temporales, caché, " +
-                "y otros elementos innecesarios para mejorar el rendimiento del sistema.",
-               "Limpiar sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "y otros elementos innecesarios para mejorar el rendimiento del sistema.",
+                           "Liberar Espacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
+            richi.Text = "";
+
             Process p = new Process();
 
             string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\liberar_espacio.bat");
-            p.StartInfo.FileName = "cmd.exe";
-            p.StartInfo.Arguments = "/c \"" + pathToBatchFile + "\"";
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.FileName = pathToBatchFile;
             p.EnableRaisingEvents = true;
 
             // Evento para manejar cuando el proceso termine
@@ -199,7 +198,12 @@ namespace Presentation
                     if (todoBien)
                     {
                         richi.AppendText("¡TUS APLICACIONES SE HAN INSTALADO TU!\n\n");
-                        richi.AppendText(p.StandardOutput.ReadToEnd());
+                        richi.AppendText("Esta opcion de Windows funciona como un asistente de limpieza para tu computadora. " +
+                            "Empieza anunciando que va a liberar espacio de almacenamiento no utilizado. " +
+                            "Luego, se encarga de buscar y eliminar archivos temporales y otros archivos que ya no necesitas. " +
+                            "Después de la limpieza, verifica si todo salió bien y te informa sobre lo que se ha eliminado y " +
+                            "cuánto espacio se ha liberado. Si algo sale mal durante el proceso, te lo hace saber. Finalmente, " +
+                            "te da un momento para revisar la información antes de que desaparezca.");
                     }
                     else
                     {
@@ -211,5 +215,7 @@ namespace Presentation
             // Iniciar el proceso
             p.Start();
         }
+
+
     }
 }

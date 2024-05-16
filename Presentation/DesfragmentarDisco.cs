@@ -169,18 +169,16 @@ namespace Presentation
         }
 
         //imagen help
-        private void imagen_help_MouseEnter(object sender, EventArgs e)
+        private void imagen_help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Al desfragmentar el disco, ten en cuenta estas precauciones: " +
-        "1. Realiza una copia de seguridad de tus archivos importantes antes de comenzar la desfragmentación." +
-        "2. Asegúrate de tener suficiente espacio libre en disco para el proceso de desfragmentación." +
-        "3. Evita interrumpir el proceso de desfragmentación apagando o reiniciando tu computadora." +
-        "4. Cierra todos los programas y procesos en segundo plano para una desfragmentación más eficiente." +
-        "5. Desfragmenta tus discos de manera regular como parte de un programa de mantenimiento preventivo." +
+            MessageBox.Show("Al desfragmentar el disco, ten en cuenta estas precauciones:\n " +
+        "1. Realiza una copia de seguridad de tus archivos importantes antes de comenzar la desfragmentación.\n" +
+        "2. Asegúrate de tener suficiente espacio libre en disco para el proceso de desfragmentación.\n" +
+        "3. Evita interrumpir el proceso de desfragmentación apagando o reiniciando tu computadora.\n" +
+        "4. Cierra todos los programas y procesos en segundo plano para una desfragmentación más eficiente.\n" +
+        "5. Desfragmenta tus discos de manera regular como parte de un programa de mantenimiento preventivo.\n" +
         "Siguiendo estas precauciones, puedes desfragmentar tus discos de manera segura y eficiente.",
-        "Precauciones al Desfragmentar el Disco", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        "Desfragmentar Disco", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
     }
 }

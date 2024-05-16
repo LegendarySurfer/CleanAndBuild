@@ -31,9 +31,6 @@ namespace Presentation
         {
             textName.Text = name; // nombre usuario
             textNameEquipo.Text = nombreEquipo; // nombre del equipo
-
-            DataSet datos = usuario.ObtenerUsuarios();
-            dataUser.DataSource = datos.Tables[0]; // datos de todos los usuarios
         }
 
 

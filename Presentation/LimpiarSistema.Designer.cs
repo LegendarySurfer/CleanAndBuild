@@ -526,7 +526,7 @@
             imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
             imagen_help.TabIndex = 52;
             imagen_help.TabStop = false;
-            imagen_help.DragEnter += imagen_help_DragEnter;
+            imagen_help.Click += imagen_help_Click;
             // 
             // label2
             // 

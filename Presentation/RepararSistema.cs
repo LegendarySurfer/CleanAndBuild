@@ -168,18 +168,19 @@ namespace Presentation
         }
 
         //---------------------------------------------------- imagen de help ----------------------------------------------------
-        private void imagen_help_MouseEnter(object sender, EventArgs e)
+        private void imagen_help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows. " +
+            MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows.\n " +
                 "Primero, escanea y repara archivos dañados del sistema. Luego, realiza una verificación" +
                 " adicional y corrige problemas utilizando otra herramienta de reparación. Si ves un mensaje " +
                 "sobre la necesidad de reiniciar, asegúrate de hacerlo para completar el proceso. ",
-                "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //---------------------------------------------------- Logica para reparar el sistema ----------------------------------------------------
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+            richi.Text = "";
             string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\repair.bat");
 
             Process p = new Process();

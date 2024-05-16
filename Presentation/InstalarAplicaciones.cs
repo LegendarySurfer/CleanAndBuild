@@ -320,19 +320,18 @@ namespace Presentation
             }
         }
 
-        //imagen help
-        private void imagen_help_MouseEnter(object sender, EventArgs e)
-        {
-            MessageBox.Show("Vamos a instalar alguna aplicaciones,es necesario el acceso a internet.",
-              "Instalar aplicaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void btn_volver_Click_1(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
-
             Ventana.menuPrincipal();
             Close();
+        }
+
+        //imagen help
+        private void imagen_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Es necesario una conexion a internet para poder descargar las aplicaciones.",
+             "Instalar aplicaciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 

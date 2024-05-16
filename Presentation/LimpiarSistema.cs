@@ -169,15 +169,17 @@ namespace Presentation
         }
 
         //imagen help
-        private void imagen_help_DragEnter(object sender, DragEventArgs e)
+        private void imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Limpieza los archivos temporales y la papelera entre otros.",
-               "Limpieza", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                          "Limpieza", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Espere un momento mientras se termina de actualizar todo.",
+            richi.Text = "";
+
+            MessageBox.Show("Espere un momento mientras se termina de actualizar todo. Aceptar para continuar.",
     "Time", MessageBoxButtons.OK, MessageBoxIcon.Information);
             string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\limpiar_archivos.bat");
             Process p = new Process();
@@ -202,5 +204,7 @@ namespace Presentation
 
             p.Start();
         }
+
+
     }
 }

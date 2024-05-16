@@ -60,10 +60,7 @@
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
-            label3 = new Label();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
-            dataUser = new DataGridView();
+            pictureBox1 = new PictureBox();
             panel2 = new Panel();
             btn_opciones = new Button();
             btn_Historial = new Button();
@@ -81,8 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnSide).BeginInit();
             PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).BeginInit();
             dropDownMenu1.SuspendLayout();
@@ -505,10 +501,7 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
-            PanelContenedor.Controls.Add(label3);
-            PanelContenedor.Controls.Add(dataGridView1);
-            PanelContenedor.Controls.Add(label2);
-            PanelContenedor.Controls.Add(dataUser);
+            PanelContenedor.Controls.Add(pictureBox1);
             PanelContenedor.Controls.Add(panel2);
             PanelContenedor.Dock = DockStyle.Fill;
             PanelContenedor.Location = new Point(333, 48);
@@ -517,45 +510,16 @@
             PanelContenedor.Size = new Size(967, 765);
             PanelContenedor.TabIndex = 2;
             // 
-            // label3
+            // pictureBox1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(620, 108);
-            label3.Name = "label3";
-            label3.Size = new Size(202, 37);
-            label3.TabIndex = 25;
-            label3.Text = "COMANDOS";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(537, 172);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(375, 304);
-            dataGridView1.TabIndex = 24;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(130, 108);
-            label2.Name = "label2";
-            label2.Size = new Size(160, 37);
-            label2.TabIndex = 23;
-            label2.Text = "USUARIOS";
-            // 
-            // dataUser
-            // 
-            dataUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataUser.Location = new Point(23, 172);
-            dataUser.Name = "dataUser";
-            dataUser.RowHeadersWidth = 51;
-            dataUser.Size = new Size(375, 304);
-            dataUser.TabIndex = 2;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(6, 117);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(958, 621);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -655,9 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnSide).EndInit();
             PanelContenedor.ResumeLayout(false);
-            PanelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).EndInit();
             dropDownMenu1.ResumeLayout(false);
@@ -694,19 +656,16 @@
         private System.Windows.Forms.PictureBox btnSide;
         private Button btn_salir_img;
         private Label label1;
-        private DataGridView dataUser;
         private BindingSource userModelBindingSource;
-        private Label label2;
         private Button btn_opciones;
         private Button btn_Historial;
         private Panel panel1;
         private Panel panel10;
         private Panel panel9;
-        private Label label3;
-        private DataGridView dataGridView1;
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaneo_rapido;
+        private PictureBox pictureBox1;
     }
 }
 

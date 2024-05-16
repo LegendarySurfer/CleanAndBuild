@@ -171,6 +171,8 @@ namespace Presentation
         //---------------------------------------------------- logica del boton ----------------------------------------------------
         private void btn_Actualizar_Click(object sender, EventArgs e)
         {
+            richi.Text = "";
+
             Process p = new Process();
 
             if (cb_comando.Checked)
@@ -199,7 +201,7 @@ namespace Presentation
                 p.Start();
             }
 
-            if(cb_aplicaciones.Checked)
+            if (cb_aplicaciones.Checked)
             {
                 string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\winget.bat");
                 p.StartInfo.FileName = pathToBatchFile;
@@ -215,7 +217,14 @@ namespace Presentation
                     {
                         if (todoBien)
                         {
-                            richi.AppendText("¡TUS APLICACIONES SE HAN INSTALADO TU!\n\n");
+                            richi.AppendText("¡TUS APLICACIONES SE HAN INSTALADO!\n" +
+                                "Este script ejecuta el comando Winget, es como un asistente que te ayuda a " +
+                                "encontrar, instalar y mantener actualizadas todas las aplicaciones que usas en tu computadora con Windows. " +
+                                "Imagina que tienes una biblioteca con muchos libros y necesitas encontrar uno nuevo. " +
+                                "En lugar de buscar en diferentes librerías o tiendas, simplemente le dices a Winget qué libro quieres, " +
+                                "y él se encarga de buscarlo y descargarlo para ti, asegurándose de que siempre tengas la versión más reciente. " +
+                                "Además, si ya tienes algunos libros en tu biblioteca y hay nuevas ediciones disponibles, Winget también " +
+                                "puede actualizarlos automáticamente para ti, manteniéndote al día con las últimas versiones.");
 
                         }
                         else
@@ -242,12 +251,10 @@ namespace Presentation
 
         }
 
-        private void imagen_help_MouseEnter(object sender, EventArgs e)
+        private void imagen_help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Actualiza tus aplicaciones y comandos",
-                "Actualiza ahora", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Actualiza con un script tus aplicaciones o comandos.",
+                           "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
     }
 }

@@ -21,3 +21,4 @@ if %errorlevel% equ 0 (
 ) else (
     echo Ha ocurrido un error durante la limpieza de disco.
 )
+pause
