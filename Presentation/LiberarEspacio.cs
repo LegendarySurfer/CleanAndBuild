@@ -1,4 +1,5 @@
 ﻿using Domain;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Presentation
@@ -176,6 +177,39 @@ namespace Presentation
                "Limpiar sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
 
+            string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\liberar_espacio.bat");
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.Arguments = "/c \"" + pathToBatchFile + "\"";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.EnableRaisingEvents = true;
+
+            // Evento para manejar cuando el proceso termine
+            p.Exited += (s, args) =>
+            {
+                bool todoBien = p.ExitCode == 0;
+
+                // Actualizar el RichTextBox según si todo fue bien o no
+                richi.Invoke((MethodInvoker)delegate
+                {
+                    if (todoBien)
+                    {
+                        richi.AppendText("¡TUS APLICACIONES SE HAN INSTALADO TU!\n\n");
+                        richi.AppendText(p.StandardOutput.ReadToEnd());
+                    }
+                    else
+                    {
+                        richi.Text = "Algo ha ido mal...";
+                    }
+                });
+            };
+
+            // Iniciar el proceso
+            p.Start();
+        }
     }
 }

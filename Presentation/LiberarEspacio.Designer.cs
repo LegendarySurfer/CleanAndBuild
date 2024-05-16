@@ -60,7 +60,6 @@
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
             imagen_help = new PictureBox();
-            pictureBox1 = new PictureBox();
             btn_limpiar = new Button();
             btn_volver = new Button();
             panel2 = new Panel();
@@ -70,6 +69,7 @@
             dropDownMenu1 = new DropDownMenu(components);
             emisoft = new ToolStripMenuItem();
             escaner_rapido = new ToolStripMenuItem();
+            richi = new RichTextBox();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -80,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)btnSide).BeginInit();
             PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imagen_help).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).BeginInit();
             dropDownMenu1.SuspendLayout();
@@ -274,6 +273,7 @@
             btnOtros.Size = new Size(328, 60);
             btnOtros.TabIndex = 16;
             btnOtros.Text = "Otros...";
+            btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
             btnOtros.Click += btnOtros_Click;
             btnOtros.MouseDown += btnOtros_MouseDown;
@@ -492,8 +492,8 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(richi);
             PanelContenedor.Controls.Add(imagen_help);
-            PanelContenedor.Controls.Add(pictureBox1);
             PanelContenedor.Controls.Add(btn_limpiar);
             PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(panel2);
@@ -517,18 +517,6 @@
             imagen_help.TabStop = false;
             imagen_help.MouseEnter += imagen_help_MouseEnter;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(211, 198);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(499, 258);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 22;
-            pictureBox1.TabStop = false;
-            // 
             // btn_limpiar
             // 
             btn_limpiar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -545,6 +533,7 @@
             btn_limpiar.TabIndex = 46;
             btn_limpiar.Text = "Liberar Espacio";
             btn_limpiar.UseVisualStyleBackColor = true;
+            btn_limpiar.Click += btn_limpiar_Click;
             // 
             // btn_volver
             // 
@@ -622,21 +611,31 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
+            // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(84, 140);
+            richi.Name = "richi";
+            richi.Size = new Size(784, 388);
+            richi.TabIndex = 48;
+            richi.Text = "";
             // 
             // LiberarEspacio
             // 
@@ -662,7 +661,6 @@
             ((System.ComponentModel.ISupportInitialize)btnSide).EndInit();
             PanelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)imagen_help).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).EndInit();
             dropDownMenu1.ResumeLayout(false);
@@ -704,13 +702,13 @@
         private Button btn_Historial;
         private Button btn_limpiar;
         private Button btn_volver;
-        private PictureBox pictureBox1;
         private PictureBox imagen_help;
         private Panel panel9;
         private Panel panel1;
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaner_rapido;
+        private RichTextBox richi;
     }
 }
 

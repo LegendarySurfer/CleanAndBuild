@@ -59,6 +59,7 @@
             btnRepararSistema = new Button();
             btnSide = new PictureBox();
             PanelContenedor = new Panel();
+            richi = new RichTextBox();
             imagen_help = new PictureBox();
             label2 = new Label();
             btn_limpiar = new Button();
@@ -70,7 +71,6 @@
             dropDownMenu1 = new DropDownMenu(components);
             emisoft = new ToolStripMenuItem();
             escaner_rapido = new ToolStripMenuItem();
-            richi = new RichTextBox();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -273,6 +273,7 @@
             btnOtros.Size = new Size(328, 60);
             btnOtros.TabIndex = 16;
             btnOtros.Text = "Otros...";
+            btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
             btnOtros.Click += btnOtros_Click;
             btnOtros.MouseDown += btnOtros_MouseDown;
@@ -504,6 +505,16 @@
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
             // 
+            // richi
+            // 
+            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richi.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richi.Location = new Point(70, 187);
+            richi.Name = "richi";
+            richi.Size = new Size(828, 408);
+            richi.TabIndex = 54;
+            richi.Text = "";
+            // 
             // imagen_help
             // 
             imagen_help.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -638,16 +649,6 @@
             escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
-            // 
-            // richi
-            // 
-            richi.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richi.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richi.Location = new Point(70, 187);
-            richi.Name = "richi";
-            richi.Size = new Size(828, 408);
-            richi.TabIndex = 54;
-            richi.Text = "";
             // 
             // LimpiarSistema
             // 

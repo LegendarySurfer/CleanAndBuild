@@ -794,9 +794,10 @@
             btnOtros.Location = new Point(8, 644);
             btnOtros.Margin = new Padding(3, 4, 3, 4);
             btnOtros.Name = "btnOtros";
-            btnOtros.Size = new Size(328, 42);
+            btnOtros.Size = new Size(325, 42);
             btnOtros.TabIndex = 29;
             btnOtros.Text = "Otros...";
+            btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
             btnOtros.Click += btnOtros_Click;
             btnOtros.MouseDown += btnOtros_MouseDown;
@@ -943,19 +944,19 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
             // 
