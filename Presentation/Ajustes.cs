@@ -18,6 +18,8 @@ namespace Presentation
 
             Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
             WindowState = Ventana.compuebaEstadoVentana();
+            cb_idioma.Text = "Español";
+            cb_tema.Text = "Oscuro";
 
 
         }
@@ -217,6 +219,29 @@ namespace Presentation
 
             Ventana.menuPrincipal();
             Close();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if(textName.Text.Equals("admin")) {
+                MessageBox.Show("El admin no se borra.", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de que desea eliminar este usuario?", "Confirmación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                try
+                {
+                    new UserModel().eliminarUsuario(textName.Text);
+                    MessageBox.Show("Usuario eliminado exitosamente.", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new Login().Show();
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocurrió un error al intentar eliminar el usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
 

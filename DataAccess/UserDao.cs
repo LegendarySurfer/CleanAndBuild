@@ -7,7 +7,7 @@ namespace DataAccess
     public class UserDao : ConnectionToSQLite
     {
 
-        // Comprueba la conexión y los usuarios
+        //  este método se utiliza para verificar si existe un usuario
         public bool Login(string usuario, string contrasena)
         {
             using (var conexion = Conectar())
@@ -47,6 +47,7 @@ namespace DataAccess
             }
         }
 
+        //creamos un nuevo usuario
         public void CrearNuevoUsuario(string usuario, string pass)
         {
             using (var conexion = Conectar())
@@ -66,6 +67,25 @@ namespace DataAccess
             }
         }
 
+        //eliminar usuario
+        public void elimiarUsuario(string name)
+        {
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "DELETE FROM persona WHERE nombre = @nombree";
+                    comando.Parameters.AddWithValue("@nombree", name);
+
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                }
+            }
+        }
+
+        //este método se utiliza para verificar si existe al menos un usuario en la base de datos cuyo nombre coincida
+        //con el valor proporcionado en el argumento
         public bool CompruebaUsuario(string user)
         {
             using (var conexion = Conectar())
@@ -84,6 +104,7 @@ namespace DataAccess
             }
         }
 
+        //cambiar contraseña del usuario
         public bool CambiarContrasena(string user, string pass)
         {
             using (var conexion = Conectar())
@@ -103,6 +124,7 @@ namespace DataAccess
             }
         }
 
+        //cambiar nombre de la persona
         public bool CambiarNombre(string usuarioActual, string nuevoNombre)
         {
             using (var conexion = Conectar())
@@ -122,6 +144,7 @@ namespace DataAccess
             }
         }
 
+        //este método se utiliza para verificar si existe un registro en la tabla equipo que tenga el mismo nombre que el equipo local
         public bool CompEquipo()
         {
             string nombreEquipo = Environment.MachineName;
@@ -139,10 +162,10 @@ namespace DataAccess
             }
         }
 
-        public void AgregarEquipo(string nombreusuario)
+        //agregamos un equipo y en registra
+        public void AgregarEquipo()
         {
             // Llamar al método para obtener el ID de un usuario
-            int idUsuario = ObtenerIdUsuario(nombreusuario);
             string nombreEquipo = Environment.MachineName;
 
             using (var conexion = Conectar())
@@ -159,7 +182,27 @@ namespace DataAccess
                         comandoEquipo.Parameters.AddWithValue("@nombreEquipo", nombreEquipo);
                         comandoEquipo.ExecuteNonQuery();
                     }
+                }
+                catch (Exception ex)
+                {
+                    // En caso de error, manejar la excepción aquí
+                    Console.WriteLine("Error al agregar equipo: " + ex.Message);
+                }
+            }
+        }
 
+        public void AgregarEquipoEnRegistra(string nombreusuario)
+        {
+            // Llamar al método para obtener el ID de un usuario
+            int idUsuario = ObtenerIdUsuario(nombreusuario);
+            string nombreEquipo = Environment.MachineName;
+
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+
+                try
+                {
                     int idEquipo = ObtenerIdEquipo(nombreEquipo);
 
                     // Registrar la acción en la tabla 'registra'
@@ -167,8 +210,8 @@ namespace DataAccess
                     {
                         comandoRegistra.CommandText = "INSERT INTO registra (fecha_ejecutado, id_persona, id_equipo) VALUES (@fecha, @idPersona, @idEquipo)";
                         comandoRegistra.Parameters.AddWithValue("@fecha", DateTime.Now);
-                        comandoRegistra.Parameters.AddWithValue("@idPersona", idUsuario); 
-                        comandoRegistra.Parameters.AddWithValue("@idEquipo", idEquipo); 
+                        comandoRegistra.Parameters.AddWithValue("@idPersona", idUsuario);
+                        comandoRegistra.Parameters.AddWithValue("@idEquipo", idEquipo);
                         comandoRegistra.ExecuteNonQuery();
                     }
                 }
@@ -179,6 +222,7 @@ namespace DataAccess
                 }
             }
         }
+
 
         public int ObtenerIdUsuario(string nombreUsuario)
         {
@@ -281,5 +325,6 @@ namespace DataAccess
                 }
             }
         }
+    
     }
 }

@@ -58,6 +58,15 @@
             pictureBox2 = new PictureBox();
             btnRepararSistema = new Button();
             PanelContenedor = new Panel();
+            label10 = new Label();
+            checkedListBox1 = new CheckedListBox();
+            label9 = new Label();
+            cb_idioma = new ComboBox();
+            label8 = new Label();
+            cb_tema = new ComboBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            label5 = new Label();
             btn_eliminar = new Button();
             label7 = new Label();
             tb_name_usuario = new TextBox();
@@ -65,8 +74,6 @@
             tb_name_equipo = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
             btn_guardar = new Button();
             btn_volver = new Button();
             panel2 = new Panel();
@@ -83,7 +90,6 @@
             MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnSide).BeginInit();
             dropDownMenu1.SuspendLayout();
@@ -483,6 +489,15 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(label10);
+            PanelContenedor.Controls.Add(checkedListBox1);
+            PanelContenedor.Controls.Add(label9);
+            PanelContenedor.Controls.Add(cb_idioma);
+            PanelContenedor.Controls.Add(label8);
+            PanelContenedor.Controls.Add(cb_tema);
+            PanelContenedor.Controls.Add(label1);
+            PanelContenedor.Controls.Add(textBox1);
+            PanelContenedor.Controls.Add(label5);
             PanelContenedor.Controls.Add(btn_eliminar);
             PanelContenedor.Controls.Add(label7);
             PanelContenedor.Controls.Add(tb_name_usuario);
@@ -490,8 +505,6 @@
             PanelContenedor.Controls.Add(tb_name_equipo);
             PanelContenedor.Controls.Add(label3);
             PanelContenedor.Controls.Add(label2);
-            PanelContenedor.Controls.Add(label1);
-            PanelContenedor.Controls.Add(pictureBox1);
             PanelContenedor.Controls.Add(btn_guardar);
             PanelContenedor.Controls.Add(btn_volver);
             PanelContenedor.Controls.Add(panel2);
@@ -501,6 +514,115 @@
             PanelContenedor.Name = "PanelContenedor";
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 12F);
+            label10.ForeColor = SystemColors.ButtonFace;
+            label10.Location = new Point(715, 344);
+            label10.Name = "label10";
+            label10.Size = new Size(133, 25);
+            label10.TabIndex = 64;
+            label10.Text = "Accesibilidad:";
+            // 
+            // checkedListBox1
+            // 
+            checkedListBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            checkedListBox1.BackColor = Color.FromArgb(49, 66, 82);
+            checkedListBox1.Font = new Font("Microsoft Sans Serif", 12F);
+            checkedListBox1.ForeColor = Color.White;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "Texto Grande", "Alto Contraste" });
+            checkedListBox1.Location = new Point(715, 374);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(194, 54);
+            checkedListBox1.TabIndex = 63;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 12F);
+            label9.ForeColor = SystemColors.ButtonFace;
+            label9.Location = new Point(715, 242);
+            label9.Name = "label9";
+            label9.Size = new Size(184, 25);
+            label9.TabIndex = 62;
+            label9.Text = "Seleccionar Idioma:";
+            // 
+            // cb_idioma
+            // 
+            cb_idioma.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cb_idioma.Font = new Font("Microsoft Sans Serif", 12F);
+            cb_idioma.FormattingEnabled = true;
+            cb_idioma.Items.AddRange(new object[] { "Español", "Inglés", "Otros" });
+            cb_idioma.Location = new Point(715, 283);
+            cb_idioma.Name = "cb_idioma";
+            cb_idioma.Size = new Size(197, 33);
+            cb_idioma.TabIndex = 61;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 12F);
+            label8.ForeColor = SystemColors.ButtonFace;
+            label8.Location = new Point(715, 123);
+            label8.Name = "label8";
+            label8.Size = new Size(208, 25);
+            label8.TabIndex = 60;
+            label8.Text = "Tema de la aplicacion:";
+            // 
+            // cb_tema
+            // 
+            cb_tema.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cb_tema.Font = new Font("Microsoft Sans Serif", 12F);
+            cb_tema.FormattingEnabled = true;
+            cb_tema.Items.AddRange(new object[] { "Claro", "Oscuro", "Automatico" });
+            cb_tema.Location = new Point(715, 164);
+            cb_tema.Name = "cb_tema";
+            cb_tema.Size = new Size(197, 33);
+            cb_tema.TabIndex = 59;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(350, 319);
+            label1.Name = "label1";
+            label1.Size = new Size(232, 21);
+            label1.TabIndex = 58;
+            label1.Text = "-------------------------------------";
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.BackColor = Color.FromArgb(49, 66, 82);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Century Gothic", 12F);
+            textBox1.ForeColor = SystemColors.InactiveBorder;
+            textBox1.Location = new Point(350, 300);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(232, 25);
+            textBox1.TabIndex = 57;
+            textBox1.Text = "123";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 12F);
+            label5.ForeColor = SystemColors.ButtonFace;
+            label5.Location = new Point(44, 300);
+            label5.Name = "label5";
+            label5.Size = new Size(222, 23);
+            label5.TabIndex = 56;
+            label5.Text = "Cambiar Contraseña:";
             // 
             // btn_eliminar
             // 
@@ -519,14 +641,15 @@
             btn_eliminar.TabIndex = 55;
             btn_eliminar.Text = "Eliminar Usuario";
             btn_eliminar.UseVisualStyleBackColor = false;
+            btn_eliminar.Click += btn_eliminar_Click;
             // 
             // label7
             // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(632, 166);
+            label7.Location = new Point(350, 148);
             label7.Name = "label7";
             label7.Size = new Size(232, 21);
             label7.TabIndex = 54;
@@ -534,25 +657,25 @@
             // 
             // tb_name_usuario
             // 
-            tb_name_usuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            tb_name_usuario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tb_name_usuario.BackColor = Color.FromArgb(49, 66, 82);
             tb_name_usuario.BorderStyle = BorderStyle.None;
-            tb_name_usuario.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_name_usuario.Font = new Font("Century Gothic", 12F);
             tb_name_usuario.ForeColor = SystemColors.InactiveBorder;
-            tb_name_usuario.Location = new Point(636, 136);
+            tb_name_usuario.Location = new Point(350, 123);
             tb_name_usuario.Margin = new Padding(3, 4, 3, 4);
             tb_name_usuario.Name = "tb_name_usuario";
-            tb_name_usuario.Size = new Size(276, 21);
+            tb_name_usuario.Size = new Size(232, 25);
             tb_name_usuario.TabIndex = 53;
             tb_name_usuario.Text = "Nombre";
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(632, 279);
+            label6.Location = new Point(350, 248);
             label6.Name = "label6";
             label6.Size = new Size(232, 21);
             label6.TabIndex = 52;
@@ -560,63 +683,41 @@
             // 
             // tb_name_equipo
             // 
-            tb_name_equipo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            tb_name_equipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tb_name_equipo.BackColor = Color.FromArgb(49, 66, 82);
             tb_name_equipo.BorderStyle = BorderStyle.None;
-            tb_name_equipo.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tb_name_equipo.Font = new Font("Century Gothic", 12F);
             tb_name_equipo.ForeColor = SystemColors.InactiveBorder;
-            tb_name_equipo.Location = new Point(636, 245);
+            tb_name_equipo.Location = new Point(350, 229);
             tb_name_equipo.Margin = new Padding(3, 4, 3, 4);
             tb_name_equipo.Name = "tb_name_equipo";
-            tb_name_equipo.Size = new Size(276, 21);
+            tb_name_equipo.Size = new Size(232, 25);
             tb_name_equipo.TabIndex = 51;
             tb_name_equipo.Text = "Equipo123";
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Century Gothic", 12F);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(340, 242);
+            label3.Location = new Point(44, 229);
             label3.Name = "label3";
-            label3.Size = new Size(251, 21);
+            label3.Size = new Size(294, 23);
             label3.TabIndex = 46;
             label3.Text = "Cambiar Nombre De Equipo:";
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Century Gothic", 12F);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(366, 136);
+            label2.Location = new Point(44, 123);
             label2.Name = "label2";
-            label2.Size = new Size(225, 21);
+            label2.Size = new Size(262, 23);
             label2.TabIndex = 45;
             label2.Text = "Cambiar Nombre Usuario:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(25, 300);
-            label1.Name = "label1";
-            label1.Size = new Size(241, 21);
-            label1.TabIndex = 21;
-            label1.Text = "Cambiar imagen de usuario";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(59, 116);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(146, 171);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 21;
-            pictureBox1.TabStop = false;
             // 
             // btn_guardar
             // 
@@ -627,7 +728,7 @@
             btn_guardar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_guardar.ForeColor = Color.White;
             btn_guardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_guardar.Location = new Point(289, 659);
+            btn_guardar.Location = new Point(302, 659);
             btn_guardar.Margin = new Padding(3, 4, 3, 4);
             btn_guardar.Name = "btn_guardar";
             btn_guardar.Size = new Size(217, 60);
@@ -703,19 +804,19 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
             // 
@@ -742,7 +843,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             PanelContenedor.ResumeLayout(false);
             PanelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnSide).EndInit();
             dropDownMenu1.ResumeLayout(false);
@@ -781,8 +881,6 @@
         private System.Windows.Forms.Button btn_volver;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tb_name_usuario;
         private System.Windows.Forms.Label label6;
@@ -796,6 +894,15 @@
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaner_rapido;
+        private Label label9;
+        private ComboBox cb_idioma;
+        private Label label8;
+        private ComboBox cb_tema;
+        private Label label1;
+        private TextBox textBox1;
+        private Label label5;
+        private Label label10;
+        private CheckedListBox checkedListBox1;
     }
 }
 

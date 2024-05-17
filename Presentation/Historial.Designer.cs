@@ -188,6 +188,7 @@
             // btn_cargar
             // 
             btn_cargar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_cargar.BackColor = Color.Teal;
             btn_cargar.FlatAppearance.BorderSize = 0;
             btn_cargar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_cargar.FlatStyle = FlatStyle.Flat;
@@ -200,7 +201,7 @@
             btn_cargar.Size = new Size(203, 60);
             btn_cargar.TabIndex = 48;
             btn_cargar.Text = "CARGAR";
-            btn_cargar.UseVisualStyleBackColor = true;
+            btn_cargar.UseVisualStyleBackColor = false;
             btn_cargar.Click += btn_cargar_Click;
             // 
             // dg_historial
@@ -215,12 +216,13 @@
             // 
             // cb_historial
             // 
+            cb_historial.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cb_historial.FormattingEnabled = true;
             cb_historial.Items.AddRange(new object[] { "Aplicaciones", "Comandos" });
             cb_historial.Location = new Point(66, 103);
             cb_historial.Name = "cb_historial";
             cb_historial.RightToLeft = RightToLeft.No;
-            cb_historial.Size = new Size(218, 28);
+            cb_historial.Size = new Size(218, 31);
             cb_historial.TabIndex = 46;
             // 
             // button2
@@ -632,19 +634,19 @@
             dropDownMenu1.MenuItemTextColor = Color.DimGray;
             dropDownMenu1.Name = "dropDownMenu1";
             dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(211, 80);
+            dropDownMenu1.Size = new Size(185, 52);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(210, 24);
+            emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
             emisoft.Click += emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
-            escaner_rapido.Size = new Size(210, 24);
+            escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += escaner_rapido_Click;
             // 

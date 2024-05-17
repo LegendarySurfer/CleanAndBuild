@@ -38,6 +38,10 @@ namespace Domain
             return userDato.CambiarNombre(usuarioActual, nuevoNombre);
         }
     
+        public void eliminarUsuario(string name)
+        {
+            userDato.elimiarUsuario(name);
+        }
     
         //comprobar equipo
         public bool compruebaEquipo()
@@ -45,9 +49,13 @@ namespace Domain
             return userDato.CompEquipo();
         }
     
-        public void addEquipo(string nombreuser)
+        public void addEquipo()
         {
-            userDato.AgregarEquipo(nombreuser);
+            userDato.AgregarEquipo();
+        }
+        public void addEquipoEnRegistra(string nombreuser)
+        {
+            userDato.AgregarEquipoEnRegistra(nombreuser);
         }
 
 
@@ -67,5 +75,7 @@ namespace Domain
              userDato.guardarAplication(name,tipo);
 
         }
+    
+        
     }
 }

@@ -21,6 +21,7 @@ namespace Presentation
             WindowState = Ventana.compuebaEstadoVentana();
 
             cb_historial.Select(0, 0);
+            cb_historial.Text = "Aplicaciones";
         }
 
         //---------------------------------------------------- muestra las operaciones realizadas ----------------------------------------------------

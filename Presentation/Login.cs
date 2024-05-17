@@ -89,33 +89,42 @@ namespace Presentation
         {
             UserModel user = new UserModel();
 
+            //si no se introduce una persona error y nada
             if (username.Text == "USERNAME" && password.Text == "PASSWORD")
             {
                 msgError("Introduce el usuario y contraseña.");
                 return;
             }
 
-            if (user.LoginUser(username.Text, password.Text))
+            // si no existe guardo la persona y el equipo actual
+            if(!user.LoginUser(username.Text, password.Text))//comprobamos si no existe
             {
-                if (!user.compruebaEquipo())
+                //si existe un usuario con el mismo nombre no lo crea
+                if (!user.compruebaUser(username.Text))
                 {
-                    user.addEquipo(username.Text);
-                }
-                accederMenu();
-            }
-            else
-            {
-                if (user.compruebaUser(username.Text))
-                {
-                    msgError("Ese nombre de usuario ya existe.");
+                    user.CreateUser(username.Text, password.Text); //creamos usuario
+                    if (!user.compruebaEquipo()) user.addEquipo();//guardamos el equipo en equipo  si esta registrado
+                    user.addEquipoEnRegistra(username.Text);//como es la primera ve que entra se guarda si o si
+                    accederMenu(); //fin del metodo
                 }
                 else
                 {
-                    user.CreateUser(username.Text, password.Text);
-                    if (!user.compruebaEquipo())
-                    {
-                        user.addEquipo(username.Text);
-                    }
+                    msgError("Contraseña mal o usuario existente.");
+                    return;
+                }
+            }
+
+            //usuario ya registrado
+            if (user.LoginUser(username.Text, password.Text))//comprobamos si existe
+            {
+                if (user.compruebaEquipo())
+                {//si existe el equipo no hay que agregarlo otra vex
+                    accederMenu();
+                }
+                else
+                {//el equipo no esta registrado y hay que registrarlo
+                    user.addEquipo();
+                    user.addEquipoEnRegistra(username.Text);//como es la primera ve que entra se guarda si o si
                     accederMenu();
                 }
             }
