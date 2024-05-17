@@ -35,18 +35,18 @@ namespace Presentation
         }
 
         //control de los botones
-        private void btn_volver_Click(object sender, EventArgs e)
+        private void Btn_volver_Click(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Show();
             Close();
         }
 
-        private void btn_cambiar_contrasena_Click(object sender, EventArgs e)
+        private void Btn_cambiar_contrasena_Click(object sender, EventArgs e)
         {
             //primero comprobamos que existe el usuario
             UserModel us = new UserModel();
-            if (us.compruebaUser(username.Text))
+            if (us.CompruebaUser(username.Text))
             {//el usuario existe
                 us.CambiarContrasena(username.Text, password.Text);
                 MessageBox.Show("La contraseña se ha cambiado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -55,20 +55,20 @@ namespace Presentation
             }
             else
             {//el usuario no existe
-                mensajeError("No existe el usuario");
+                MensajeError("No existe el usuario");
             }
 
         }
 
         //msg error
-        public void mensajeError(string error)
+        public void MensajeError(string error)
         {
             lblErrorMessage.Text = "        " + error;
             lblErrorMessage.Visible = true;
         }
 
         //control del texto
-        private void username_Leave(object sender, EventArgs e)
+        private void Username_Leave(object sender, EventArgs e)
         {
             if (username.Text == "")
             {
@@ -77,7 +77,7 @@ namespace Presentation
             }
         }
 
-        private void username_Enter(object sender, EventArgs e)
+        private void Username_Enter(object sender, EventArgs e)
         {
             if (username.Text == "USERNAME")
             {
@@ -86,7 +86,7 @@ namespace Presentation
             }
         }
 
-        private void password_Enter(object sender, EventArgs e)
+        private void Password_Enter(object sender, EventArgs e)
         {
             if (password.Text == "NEW PASSWORD")
             {
@@ -95,7 +95,7 @@ namespace Presentation
             }
         }
 
-        private void password_Leave(object sender, EventArgs e)
+        private void Password_Leave(object sender, EventArgs e)
         {
             if (password.Text == "")
             {

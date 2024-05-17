@@ -144,7 +144,7 @@
             btnRestaurar.TabIndex = 5;
             btnRestaurar.TabStop = false;
             btnRestaurar.Visible = false;
-            btnRestaurar.Click += btnRestaurar_Click;
+            btnRestaurar.Click += BtnRestaurar_Click;
             // 
             // btnMaximizar
             // 
@@ -158,7 +158,7 @@
             btnMaximizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximizar.TabIndex = 4;
             btnMaximizar.TabStop = false;
-            btnMaximizar.Click += btnMaximizar_Click;
+            btnMaximizar.Click += BtnMaximizar_Click;
             // 
             // pictureBox1
             // 
@@ -172,7 +172,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += btnMinimizar_Click;
+            pictureBox1.Click += BtnMinimizar_Click;
             // 
             // pictureBox3
             // 
@@ -186,7 +186,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 22;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += btnCerrar_Click;
+            pictureBox3.Click += BtnCerrar_Click;
             // 
             // PanelContenedor
             // 
@@ -240,7 +240,7 @@
             btn_volver.TabIndex = 44;
             btn_volver.Text = "Volver Al Menu";
             btn_volver.UseVisualStyleBackColor = true;
-            btn_volver.Click += btn_volver_Click_1;
+            btn_volver.Click += Btn_volver_Click_1;
             // 
             // imagen_help
             // 
@@ -253,7 +253,7 @@
             imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
             imagen_help.TabIndex = 53;
             imagen_help.TabStop = false;
-            imagen_help.Click += imagen_help_Click;
+            imagen_help.Click += Imagen_help_Click;
             // 
             // label8
             // 
@@ -300,18 +300,18 @@
             btn_Instalar.TabIndex = 44;
             btn_Instalar.Text = "Instalar Aplicaciones Seleccionadas";
             btn_Instalar.UseVisualStyleBackColor = true;
-            btn_Instalar.Click += btn_Instalar_Click;
+            btn_Instalar.Click += Btn_Instalar_Click;
             // 
             // cb_steam
             // 
             cb_steam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_steam.AutoSize = true;
-            cb_steam.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_steam.Font = new Font("Century Gothic", 12F);
             cb_steam.ForeColor = SystemColors.ButtonFace;
-            cb_steam.Location = new Point(773, 507);
+            cb_steam.Location = new Point(763, 507);
             cb_steam.Margin = new Padding(3, 4, 3, 4);
             cb_steam.Name = "cb_steam";
-            cb_steam.Size = new Size(85, 25);
+            cb_steam.Size = new Size(95, 27);
             cb_steam.TabIndex = 40;
             cb_steam.Text = "Steam";
             cb_steam.UseVisualStyleBackColor = true;
@@ -320,12 +320,12 @@
             // 
             cb_vscode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_vscode.AutoSize = true;
-            cb_vscode.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_vscode.Font = new Font("Century Gothic", 12F);
             cb_vscode.ForeColor = SystemColors.ButtonFace;
-            cb_vscode.Location = new Point(773, 368);
+            cb_vscode.Location = new Point(761, 368);
             cb_vscode.Margin = new Padding(3, 4, 3, 4);
             cb_vscode.Name = "cb_vscode";
-            cb_vscode.Size = new Size(101, 25);
+            cb_vscode.Size = new Size(113, 27);
             cb_vscode.TabIndex = 39;
             cb_vscode.Text = "VSCode";
             cb_vscode.UseVisualStyleBackColor = true;
@@ -334,12 +334,12 @@
             // 
             cb_Eclipse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_Eclipse.AutoSize = true;
-            cb_Eclipse.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_Eclipse.Font = new Font("Century Gothic", 12F);
             cb_Eclipse.ForeColor = SystemColors.ButtonFace;
-            cb_Eclipse.Location = new Point(773, 314);
+            cb_Eclipse.Location = new Point(762, 314);
             cb_Eclipse.Margin = new Padding(3, 4, 3, 4);
             cb_Eclipse.Name = "cb_Eclipse";
-            cb_Eclipse.Size = new Size(88, 25);
+            cb_Eclipse.Size = new Size(99, 27);
             cb_Eclipse.TabIndex = 38;
             cb_Eclipse.Text = "Eclipse";
             cb_Eclipse.UseVisualStyleBackColor = true;
@@ -348,12 +348,12 @@
             // 
             cb_putty.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_putty.AutoSize = true;
-            cb_putty.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_putty.Font = new Font("Century Gothic", 12F);
             cb_putty.ForeColor = SystemColors.ButtonFace;
-            cb_putty.Location = new Point(773, 264);
+            cb_putty.Location = new Point(766, 264);
             cb_putty.Margin = new Padding(3, 4, 3, 4);
             cb_putty.Name = "cb_putty";
-            cb_putty.Size = new Size(74, 25);
+            cb_putty.Size = new Size(81, 27);
             cb_putty.TabIndex = 37;
             cb_putty.Text = "Putty";
             cb_putty.UseVisualStyleBackColor = true;
@@ -362,12 +362,12 @@
             // 
             cb_skype.Anchor = AnchorStyles.Top;
             cb_skype.AutoSize = true;
-            cb_skype.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_skype.Font = new Font("Century Gothic", 12F);
             cb_skype.ForeColor = SystemColors.ButtonFace;
             cb_skype.Location = new Point(407, 368);
             cb_skype.Margin = new Padding(3, 4, 3, 4);
             cb_skype.Name = "cb_skype";
-            cb_skype.Size = new Size(80, 25);
+            cb_skype.Size = new Size(90, 27);
             cb_skype.TabIndex = 36;
             cb_skype.Text = "Skype";
             cb_skype.UseVisualStyleBackColor = true;
@@ -376,12 +376,12 @@
             // 
             cb_discord.Anchor = AnchorStyles.Top;
             cb_discord.AutoSize = true;
-            cb_discord.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_discord.Font = new Font("Century Gothic", 12F);
             cb_discord.ForeColor = SystemColors.ButtonFace;
             cb_discord.Location = new Point(407, 314);
             cb_discord.Margin = new Padding(3, 4, 3, 4);
             cb_discord.Name = "cb_discord";
-            cb_discord.Size = new Size(94, 25);
+            cb_discord.Size = new Size(104, 27);
             cb_discord.TabIndex = 35;
             cb_discord.Text = "Discord";
             cb_discord.UseVisualStyleBackColor = true;
@@ -390,12 +390,12 @@
             // 
             cb_zoom.Anchor = AnchorStyles.Top;
             cb_zoom.AutoSize = true;
-            cb_zoom.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_zoom.Font = new Font("Century Gothic", 12F);
             cb_zoom.ForeColor = SystemColors.ButtonFace;
             cb_zoom.Location = new Point(407, 264);
             cb_zoom.Margin = new Padding(3, 4, 3, 4);
             cb_zoom.Name = "cb_zoom";
-            cb_zoom.Size = new Size(77, 25);
+            cb_zoom.Size = new Size(87, 27);
             cb_zoom.TabIndex = 34;
             cb_zoom.Text = "Zoom";
             cb_zoom.UseVisualStyleBackColor = true;
@@ -404,12 +404,12 @@
             // 
             cb_gimp.Anchor = AnchorStyles.Top;
             cb_gimp.AutoSize = true;
-            cb_gimp.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_gimp.Font = new Font("Century Gothic", 12F);
             cb_gimp.ForeColor = SystemColors.ButtonFace;
             cb_gimp.Location = new Point(407, 557);
             cb_gimp.Margin = new Padding(3, 4, 3, 4);
             cb_gimp.Name = "cb_gimp";
-            cb_gimp.Size = new Size(79, 25);
+            cb_gimp.Size = new Size(83, 27);
             cb_gimp.TabIndex = 32;
             cb_gimp.Text = "GIMP";
             cb_gimp.UseVisualStyleBackColor = true;
@@ -418,12 +418,12 @@
             // 
             cb_blender.Anchor = AnchorStyles.Top;
             cb_blender.AutoSize = true;
-            cb_blender.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_blender.Font = new Font("Century Gothic", 12F);
             cb_blender.ForeColor = SystemColors.ButtonFace;
             cb_blender.Location = new Point(407, 507);
             cb_blender.Margin = new Padding(3, 4, 3, 4);
             cb_blender.Name = "cb_blender";
-            cb_blender.Size = new Size(94, 25);
+            cb_blender.Size = new Size(106, 27);
             cb_blender.TabIndex = 31;
             cb_blender.Text = "Blender";
             cb_blender.UseVisualStyleBackColor = true;
@@ -432,12 +432,12 @@
             // 
             cb_winrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_winrar.AutoSize = true;
-            cb_winrar.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_winrar.Font = new Font("Century Gothic", 12F);
             cb_winrar.ForeColor = SystemColors.ButtonFace;
             cb_winrar.Location = new Point(43, 507);
             cb_winrar.Margin = new Padding(3, 4, 3, 4);
             cb_winrar.Name = "cb_winrar";
-            cb_winrar.Size = new Size(95, 25);
+            cb_winrar.Size = new Size(103, 27);
             cb_winrar.TabIndex = 29;
             cb_winrar.Text = "WinRAR";
             cb_winrar.UseVisualStyleBackColor = true;
@@ -446,12 +446,12 @@
             // 
             cb_vlc.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb_vlc.AutoSize = true;
-            cb_vlc.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_vlc.Font = new Font("Century Gothic", 12F);
             cb_vlc.ForeColor = SystemColors.ButtonFace;
-            cb_vlc.Location = new Point(773, 556);
+            cb_vlc.Location = new Point(768, 556);
             cb_vlc.Margin = new Padding(3, 4, 3, 4);
             cb_vlc.Name = "cb_vlc";
-            cb_vlc.Size = new Size(67, 25);
+            cb_vlc.Size = new Size(72, 27);
             cb_vlc.TabIndex = 28;
             cb_vlc.Text = "VLC";
             cb_vlc.UseVisualStyleBackColor = true;
@@ -460,12 +460,12 @@
             // 
             cb_opera.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_opera.AutoSize = true;
-            cb_opera.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_opera.Font = new Font("Century Gothic", 12F);
             cb_opera.ForeColor = SystemColors.ButtonFace;
             cb_opera.Location = new Point(43, 368);
             cb_opera.Margin = new Padding(3, 4, 3, 4);
             cb_opera.Name = "cb_opera";
-            cb_opera.Size = new Size(87, 25);
+            cb_opera.Size = new Size(96, 27);
             cb_opera.TabIndex = 27;
             cb_opera.Text = "Opera";
             cb_opera.UseVisualStyleBackColor = true;
@@ -474,12 +474,12 @@
             // 
             cb_firefox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_firefox.AutoSize = true;
-            cb_firefox.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_firefox.Font = new Font("Century Gothic", 12F);
             cb_firefox.ForeColor = SystemColors.ButtonFace;
             cb_firefox.Location = new Point(43, 314);
             cb_firefox.Margin = new Padding(3, 4, 3, 4);
             cb_firefox.Name = "cb_firefox";
-            cb_firefox.Size = new Size(83, 25);
+            cb_firefox.Size = new Size(93, 27);
             cb_firefox.TabIndex = 26;
             cb_firefox.Text = "Firefox";
             cb_firefox.UseVisualStyleBackColor = true;
@@ -488,12 +488,12 @@
             // 
             cb_google.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_google.AutoSize = true;
-            cb_google.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_google.Font = new Font("Century Gothic", 12F);
             cb_google.ForeColor = SystemColors.ButtonFace;
             cb_google.Location = new Point(43, 264);
             cb_google.Margin = new Padding(3, 4, 3, 4);
             cb_google.Name = "cb_google";
-            cb_google.Size = new Size(94, 25);
+            cb_google.Size = new Size(106, 27);
             cb_google.TabIndex = 25;
             cb_google.Text = "Google";
             cb_google.UseVisualStyleBackColor = true;
@@ -502,11 +502,11 @@
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Underline);
             label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(769, 454);
             label6.Name = "label6";
-            label6.Size = new Size(64, 21);
+            label6.Size = new Size(82, 27);
             label6.TabIndex = 24;
             label6.Text = "OTHER";
             // 
@@ -514,11 +514,11 @@
             // 
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Underline);
             label5.ForeColor = SystemColors.ButtonFace;
             label5.Location = new Point(403, 454);
             label5.Name = "label5";
-            label5.Size = new Size(93, 21);
+            label5.Size = new Size(117, 27);
             label5.TabIndex = 23;
             label5.Text = "IMAGING";
             // 
@@ -526,11 +526,11 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Underline);
             label4.ForeColor = SystemColors.ButtonFace;
             label4.Location = new Point(39, 454);
             label4.Name = "label4";
-            label4.Size = new Size(134, 21);
+            label4.Size = new Size(174, 27);
             label4.TabIndex = 22;
             label4.Text = "COMPRESSION";
             // 
@@ -538,11 +538,11 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Underline);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(769, 202);
+            label3.Location = new Point(723, 202);
             label3.Name = "label3";
-            label3.Size = new Size(165, 21);
+            label3.Size = new Size(211, 27);
             label3.TabIndex = 21;
             label3.Text = "DEVELOPER TOOLS";
             // 
@@ -550,11 +550,11 @@
             // 
             label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Underline);
             label2.ForeColor = SystemColors.ButtonFace;
             label2.Location = new Point(403, 202);
             label2.Name = "label2";
-            label2.Size = new Size(113, 21);
+            label2.Size = new Size(147, 27);
             label2.TabIndex = 20;
             label2.Text = "MESSAGING";
             // 
@@ -562,11 +562,11 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Underline);
             label1.ForeColor = SystemColors.ButtonFace;
             label1.Location = new Point(39, 202);
             label1.Name = "label1";
-            label1.Size = new Size(130, 21);
+            label1.Size = new Size(167, 27);
             label1.TabIndex = 19;
             label1.Text = "WEB BROWSER";
             // 
@@ -596,7 +596,7 @@
             btn_opciones.TabIndex = 32;
             btn_opciones.Text = "Opciones";
             btn_opciones.UseVisualStyleBackColor = true;
-            btn_opciones.Click += btn_opciones_Click;
+            btn_opciones.Click += Btn_opciones_Click;
             // 
             // btn_Historial
             // 
@@ -613,7 +613,7 @@
             btn_Historial.TabIndex = 31;
             btn_Historial.Text = "Historial";
             btn_Historial.UseVisualStyleBackColor = true;
-            btn_Historial.Click += btn_Historial_Click;
+            btn_Historial.Click += Btn_Historial_Click;
             // 
             // btnSide
             // 
@@ -626,7 +626,7 @@
             btnSide.SizeMode = PictureBoxSizeMode.Zoom;
             btnSide.TabIndex = 1;
             btnSide.TabStop = false;
-            btnSide.Click += btnSide_Click;
+            btnSide.Click += BtnSide_Click;
             // 
             // panel3
             // 
@@ -769,7 +769,7 @@
             button1.TabIndex = 30;
             button1.Text = "Log out";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += btnCerrar_Click;
+            button1.Click += BtnCerrar_Click;
             // 
             // pictureBox2
             // 
@@ -799,8 +799,8 @@
             btnOtros.Text = "Otros...";
             btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
-            btnOtros.Click += btnOtros_Click;
-            btnOtros.MouseDown += btnOtros_MouseDown;
+            btnOtros.Click += BtnOtros_Click;
+            btnOtros.MouseDown += BtnOtros_MouseDown;
             // 
             // btnInstalarAplicaciones
             // 
@@ -838,7 +838,7 @@
             btnAntivirus.Text = "Antivirus";
             btnAntivirus.TextAlign = ContentAlignment.MiddleRight;
             btnAntivirus.UseVisualStyleBackColor = true;
-            btnAntivirus.Click += btnAntivirus_Click;
+            btnAntivirus.Click += BtnAntivirus_Click;
             // 
             // btnLiberarEspacio
             // 
@@ -857,7 +857,7 @@
             btnLiberarEspacio.Text = "Liberar Espacio Disco";
             btnLiberarEspacio.TextAlign = ContentAlignment.MiddleRight;
             btnLiberarEspacio.UseVisualStyleBackColor = true;
-            btnLiberarEspacio.Click += btnLiberarEspacio_Click;
+            btnLiberarEspacio.Click += BtnLiberarEspacio_Click;
             // 
             // btnLimpiarSistema
             // 
@@ -876,7 +876,7 @@
             btnLimpiarSistema.Text = "Limpiar Sistema";
             btnLimpiarSistema.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiarSistema.UseVisualStyleBackColor = true;
-            btnLimpiarSistema.Click += btnLimpiarSistema_Click;
+            btnLimpiarSistema.Click += BtnLimpiarSistema_Click;
             // 
             // btnDesfragmentarDisco
             // 
@@ -895,7 +895,7 @@
             btnDesfragmentarDisco.Text = "Desfragmentar Disco";
             btnDesfragmentarDisco.TextAlign = ContentAlignment.MiddleRight;
             btnDesfragmentarDisco.UseVisualStyleBackColor = true;
-            btnDesfragmentarDisco.Click += btnDesfragmentarDisco_Click;
+            btnDesfragmentarDisco.Click += BtnDesfragmentarDisco_Click;
             // 
             // btnActualizarAplicaciones
             // 
@@ -914,7 +914,7 @@
             btnActualizarAplicaciones.Text = "Actualizar Aplicaciones";
             btnActualizarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
             btnActualizarAplicaciones.UseVisualStyleBackColor = true;
-            btnActualizarAplicaciones.Click += btnActualizarAplicaciones_Click;
+            btnActualizarAplicaciones.Click += BtnActualizarAplicaciones_Click;
             // 
             // btnRepararSistema
             // 
@@ -933,7 +933,7 @@
             btnRepararSistema.Text = "Reparar Sistema";
             btnRepararSistema.TextAlign = ContentAlignment.MiddleRight;
             btnRepararSistema.UseVisualStyleBackColor = true;
-            btnRepararSistema.Click += btnRepararSistema_Click;
+            btnRepararSistema.Click += BtnRepararSistema_Click;
             // 
             // dropDownMenu1
             // 
@@ -951,14 +951,14 @@
             emisoft.Name = "emisoft";
             emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
-            emisoft.Click += emisoft_Click;
+            emisoft.Click += Emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
             escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
-            escaner_rapido.Click += escaner_rapido_Click;
+            escaner_rapido.Click += Escaner_rapido_Click;
             // 
             // InstalarAplicaciones
             // 

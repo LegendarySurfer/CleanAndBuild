@@ -83,8 +83,8 @@
             username.Size = new Size(409, 25);
             username.TabIndex = 1;
             username.Text = "USERNAME";
-            username.Enter += username_Enter;
-            username.Leave += username_Leave;
+            username.Enter += Username_Enter;
+            username.Leave += Username_Leave;
             // 
             // password
             // 
@@ -98,8 +98,8 @@
             password.Size = new Size(409, 25);
             password.TabIndex = 2;
             password.Text = "PASSWORD";
-            password.Enter += password_Enter;
-            password.Leave += password_Leave;
+            password.Enter += Password_Enter;
+            password.Leave += Password_Leave;
             // 
             // label1
             // 
@@ -138,7 +138,7 @@
             btn_login.TabIndex = 3;
             btn_login.Text = "ACCEDER";
             btn_login.UseVisualStyleBackColor = false;
-            btn_login.Click += btn_login_Click;
+            btn_login.Click += Btn_login_Click;
             // 
             // linkpass
             // 
@@ -152,7 +152,7 @@
             linkpass.TabIndex = 0;
             linkpass.TabStop = true;
             linkpass.Text = "¿Has olvidado la contraseña?";
-            linkpass.LinkClicked += linkpass_LinkClicked;
+            linkpass.LinkClicked += Linkpass_LinkClicked;
             // 
             // btn_cerrar
             // 
@@ -164,7 +164,7 @@
             btn_cerrar.SizeMode = PictureBoxSizeMode.Zoom;
             btn_cerrar.TabIndex = 9;
             btn_cerrar.TabStop = false;
-            btn_cerrar.Click += btn_cerrar_Click;
+            btn_cerrar.Click += Btn_cerrar_Click;
             // 
             // btn_minimizar
             // 
@@ -176,7 +176,7 @@
             btn_minimizar.SizeMode = PictureBoxSizeMode.Zoom;
             btn_minimizar.TabIndex = 10;
             btn_minimizar.TabStop = false;
-            btn_minimizar.Click += btn_minimizar_Click;
+            btn_minimizar.Click += Btn_minimizar_Click;
             // 
             // lblErrorMessage
             // 
@@ -214,7 +214,7 @@
             imagen_help.SizeMode = PictureBoxSizeMode.Zoom;
             imagen_help.TabIndex = 23;
             imagen_help.TabStop = false;
-            imagen_help.Click += imagen_help_Click;
+            imagen_help.Click += Imagen_help_Click;
             // 
             // Login
             // 

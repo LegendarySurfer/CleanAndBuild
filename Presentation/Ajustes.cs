@@ -13,11 +13,11 @@ namespace Presentation
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            infoUser();
+            InfoUser();
             MenuVertical2 = MenuVertical;
 
-            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
-            WindowState = Ventana.compuebaEstadoVentana();
+            Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
+            WindowState = Ventana.CompuebaEstadoVentana();
             cb_idioma.Text = "Español";
             cb_tema.Text = "Oscuro";
 
@@ -25,23 +25,23 @@ namespace Presentation
         }
 
         //---------------------------------------------------- mostrar info del usuario ----------------------------------------------------
-        public void infoUser()
+        public void InfoUser()
         {
             textName.Text = MenuPrincipal.username; // nombre usuario
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo 
         }
 
         //---------------------------------------------------- LOGICA ----------------------------------------------------
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void Btn_guardar_Click(object sender, EventArgs e)
         {
             if (tb_name_usuario.Text != "Nombre") // cambiar nombre de usuario
             {
                 UserModel usuario = new UserModel();
-                if (!usuario.compruebaUser(tb_name_usuario.Text))//si no existe se cambia
+                if (!usuario.CompruebaUser(tb_name_usuario.Text))//si no existe se cambia
                 {
-                    usuario.cambiarNombre(MenuPrincipal.username, tb_name_usuario.Text);
+                    usuario.CambiarNombre(MenuPrincipal.username, tb_name_usuario.Text);
                     MenuPrincipal.username = tb_name_usuario.Text;
-                    infoUser();
+                    InfoUser();
                     MessageBox.Show("El nombre de usuario se ha cambiado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -76,33 +76,33 @@ namespace Presentation
 
 
         //---------------------------------------------------- botones ventana ----------------------------------------------------
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            Ventana.salir();
+            Ventana.Salir();
         }
 
-        private void btnMaximizar_Click(object sender, EventArgs e)
+        private void BtnMaximizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
             btnMaximizar.Visible = false;
             btnRestaurar.Visible = true;
         }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
+        private void BtnRestaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             btnRestaurar.Visible = false;
             btnMaximizar.Visible = true;
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
+        private void BtnMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnSide_Click(object sender, EventArgs e)
+        private void BtnSide_Click(object sender, EventArgs e)
         {
-            MenuVertical = Ventana.sideBar(MenuVertical);
+            MenuVertical = Ventana.SideBar(MenuVertical);
             btnAntivirus.Width = MenuVertical.Width;
             btnAntivirus.Text = btnAntivirus.Width < 333 ? "" : "Antivirus";
         }
@@ -123,84 +123,84 @@ namespace Presentation
 
 
         //---------------------------------------------------- botones laterales ----------------------------------------------------
-        private void btn_Historial_Click(object sender, EventArgs e)
+        private void Btn_Historial_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.historial();
+            Ventana.Historial();
             Close();
 
         }
 
-        private void btnRepararSistema_Click(object sender, EventArgs e)
+        private void BtnRepararSistema_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.repararSistema();
+            Ventana.RepararSistema();
             Close();
         }
 
-        private void btnActualizarAplicaciones_Click(object sender, EventArgs e)
+        private void BtnActualizarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.actualziarAplicaciones();
+            Ventana.ActualziarAplicaciones();
             Close();
         }
 
-        private void btnDesfragmentarDisco_Click(object sender, EventArgs e)
+        private void BtnDesfragmentarDisco_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.desfragmentarDisco();
+            Ventana.DesfragmentarDisco();
             Close();
         }
 
-        private void btnLimpiarSistema_Click(object sender, EventArgs e)
+        private void BtnLimpiarSistema_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.limpiarSistema();
+            Ventana.LimpiarSistema();
             Close();
         }
 
-        private void btnLiberarEspacio_Click(object sender, EventArgs e)
+        private void BtnLiberarEspacio_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.liberarEspacio();
+            Ventana.LiberarEspacio();
             Close();
         }
 
-        private void btnAntivirus_Click(object sender, EventArgs e)
+        private void BtnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.antivirus(btnAntivirus, dropDownMenu1);
+            Ventana.Antivirus(btnAntivirus, dropDownMenu1);
         }
 
-        private void emisoft_Click(object sender, EventArgs e)
+        private void Emisoft_Click(object sender, EventArgs e)
         {
-            Ventana.emisoft();
+            Ventana.Emisoft();
         }
 
-        private void escaner_rapido_Click(object sender, EventArgs e)
+        private void Escaner_rapido_Click(object sender, EventArgs e)
         {
-            Ventana.escanerRapido();
+            Ventana.EscanerRapido();
         }
 
-        private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
+        private void BtnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.instalarAplicaciones();
+            Ventana.InstalarAplicaciones();
             Close();
         }
 
-        private void btnOtros_Click(object sender, EventArgs e)
+        private void BtnOtros_Click(object sender, EventArgs e)
         {
             //logica para mostrar los botones que se creen
         }
 
-        private void btnOtros_MouseDown(object sender, MouseEventArgs e)
+        private void BtnOtros_MouseDown(object sender, MouseEventArgs e)
         {
             //antes se tendra que comprobar que el usuario sea admin, si no no deja
             if (MenuPrincipal.username.Equals("admin") && e.Button == MouseButtons.Right)
@@ -213,15 +213,15 @@ namespace Presentation
             }
         }
 
-        private void btn_volver_Click(object sender, EventArgs e)
+        private void Btn_volver_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.menuPrincipal();
+            Ventana.MenuPrincipal();
             Close();
         }
 
-        private void btn_eliminar_Click(object sender, EventArgs e)
+        private void Btn_eliminar_Click(object sender, EventArgs e)
         {
             if(textName.Text.Equals("admin")) {
                 MessageBox.Show("El admin no se borra.", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -232,7 +232,7 @@ namespace Presentation
             {
                 try
                 {
-                    new UserModel().eliminarUsuario(textName.Text);
+                    new UserModel().EliminarUsuario(textName.Text);
                     MessageBox.Show("Usuario eliminado exitosamente.", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     new Login().Show();
                     Close();

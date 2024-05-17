@@ -23,7 +23,7 @@ namespace Domain
             userDato.CrearNuevoUsuario(user, contrasena);
         }
 
-        public bool compruebaUser(string user)
+        public bool CompruebaUser(string user)
         {
             return userDato.CompruebaUsuario(user);
         }
@@ -33,27 +33,27 @@ namespace Domain
             return userDato.CambiarContrasena(user, passs);
         }
 
-        public bool cambiarNombre(string usuarioActual, string nuevoNombre)
+        public bool CambiarNombre(string usuarioActual, string nuevoNombre)
         {
             return userDato.CambiarNombre(usuarioActual, nuevoNombre);
         }
     
-        public void eliminarUsuario(string name)
+        public void EliminarUsuario(string name)
         {
-            userDato.elimiarUsuario(name);
+            userDato.ElimiarUsuario(name);
         }
     
         //comprobar equipo
-        public bool compruebaEquipo()
+        public bool CompruebaEquipo()
         {
             return userDato.CompEquipo();
         }
     
-        public void addEquipo()
+        public void AddEquipo()
         {
             userDato.AgregarEquipo();
         }
-        public void addEquipoEnRegistra(string nombreuser)
+        public void AddEquipoEnRegistra(string nombreuser)
         {
             userDato.AgregarEquipoEnRegistra(nombreuser);
         }
@@ -72,7 +72,7 @@ namespace Domain
         
         public void guardarAplicacion(string name, string tipo)
         {
-             userDato.guardarAplication(name,tipo);
+             userDato.GuardarAplication(name,tipo);
 
         }
     

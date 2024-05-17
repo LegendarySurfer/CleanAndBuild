@@ -10,6 +10,8 @@ namespace DataAccess
         //  este método se utiliza para verificar si existe un usuario
         public bool Login(string usuario, string contrasena)
         {
+            string contrasenaEncriptada = EncriptarContrasena(contrasena);
+
             using (var conexion = Conectar())
             {
                 conexion.Open();
@@ -17,7 +19,7 @@ namespace DataAccess
                 {
                     comando.CommandText = "SELECT * FROM persona WHERE nombre = @usuario AND contraseña = @contraseña";
                     comando.Parameters.AddWithValue("@usuario", usuario);
-                    comando.Parameters.AddWithValue("@contraseña", contrasena);
+                    comando.Parameters.AddWithValue("@contraseña", contrasenaEncriptada);
 
                     using (SQLiteDataReader reader = comando.ExecuteReader())
                     {
@@ -47,9 +49,22 @@ namespace DataAccess
             }
         }
 
+
+        // Método para encriptar la contraseña utilizando SHA-256
+        private string EncriptarContrasena(string contrasena)
+        {
+            using (var sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(contrasena));
+                return BitConverter.ToString(bytes).Replace("-", "").ToLower();
+            }
+        }
+
         //creamos un nuevo usuario
         public void CrearNuevoUsuario(string usuario, string pass)
         {
+            string contrasenaEncriptada = EncriptarContrasena(pass);
+
             using (var conexion = Conectar())
             {
                 conexion.Open();
@@ -57,7 +72,7 @@ namespace DataAccess
                 {
                     comando.CommandText = "INSERT INTO persona (nombre, contraseña, fecha_creacion_registro,es_administrador) VALUES (@nombre, @contraseña, @fecha_creacion_registro,@es_administrador)";
                     comando.Parameters.AddWithValue("@nombre", usuario);
-                    comando.Parameters.AddWithValue("@contraseña", pass);
+                    comando.Parameters.AddWithValue("@contraseña", contrasenaEncriptada);
                     comando.Parameters.AddWithValue("@fecha_creacion_registro", DateTime.Now); // Agregar la fecha actual
                     comando.Parameters.AddWithValue("@es_administrador", 0);
 
@@ -68,7 +83,7 @@ namespace DataAccess
         }
 
         //eliminar usuario
-        public void elimiarUsuario(string name)
+        public void ElimiarUsuario(string name)
         {
             using (var conexion = Conectar())
             {
@@ -93,8 +108,9 @@ namespace DataAccess
                 conexion.Open();
                 using (var comando = conexion.CreateCommand())
                 {
-                    //logica para comprobar usuario
-                    comando.CommandText = "SELECT COUNT(*) FROM persona WHERE nombre = @nombre";
+                    // Lógica para comprobar usuario
+                    // Convertimos ambos lados de la comparación a minúsculas
+                    comando.CommandText = "SELECT COUNT(*) FROM persona WHERE LOWER(nombre) = LOWER(@nombre)";
                     comando.Parameters.AddWithValue("@nombre", user);
 
                     int count = Convert.ToInt32(comando.ExecuteScalar());
@@ -107,13 +123,15 @@ namespace DataAccess
         //cambiar contraseña del usuario
         public bool CambiarContrasena(string user, string pass)
         {
+            string contrasenaEncriptada = EncriptarContrasena(pass);
+
             using (var conexion = Conectar())
             {
                 conexion.Open();
                 using (var comando = conexion.CreateCommand())
                 {
                     comando.CommandText = "UPDATE persona SET contraseña = @NuevaContraseña WHERE nombre = @Usuario";
-                    comando.Parameters.AddWithValue("@NuevaContraseña", pass);
+                    comando.Parameters.AddWithValue("@NuevaContraseña", contrasenaEncriptada);
                     comando.Parameters.AddWithValue("@Usuario", user);
 
                     int rowsAffected = comando.ExecuteNonQuery();
@@ -223,7 +241,6 @@ namespace DataAccess
             }
         }
 
-
         public int ObtenerIdUsuario(string nombreUsuario)
         {
             int idUsuario = -1; // Valor por defecto si no se encuentra el usuario
@@ -304,7 +321,7 @@ namespace DataAccess
             }
         }
 
-        public void guardarAplication(string name,string tipo)
+        public void GuardarAplication(string name,string tipo)
         {
             string nombreEquipo = Environment.MachineName;
 

@@ -17,15 +17,15 @@ namespace Presentation
             textNameEquipo.Text = MenuPrincipal.nombreEquipo; // nombre del equipo
             MenuVertical2 = MenuVertical;
 
-            Ventana.cambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
-            WindowState = Ventana.compuebaEstadoVentana();
+            Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
+            WindowState = Ventana.CompuebaEstadoVentana();
 
         }
 
         //---------------------------------------------------- botones windows ----------------------------------------------------
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            Ventana.salir();
+            Ventana.Salir();
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Presentation
 
         private void btnSide_Click(object sender, EventArgs e)
         {
-            MenuVertical = Ventana.sideBar(MenuVertical);
+            MenuVertical = Ventana.SideBar(MenuVertical);
             btnAntivirus.Width = MenuVertical.Width;
             btnAntivirus.Text = btnAntivirus.Width < 333 ? "" : "Antivirus";
         }
@@ -71,92 +71,92 @@ namespace Presentation
 
 
         //---------------------------------------------------- botones laterales ----------------------------------------------------
-        private void btn_volver_Click(object sender, EventArgs e)
+        private void Btn_volver_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.menuPrincipal();
+            Ventana.MenuPrincipal();
             Close();
         }
 
-        private void btn_Historial_Click(object sender, EventArgs e)
+        private void Btn_Historial_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.historial();
+            Ventana.Historial();
             Close();
 
         }
 
-        private void btn_opciones_Click(object sender, EventArgs e)
+        private void Btn_opciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.opciones();
+            Ventana.Opciones();
             Close();
         }
 
-        private void btnRepararSistema_Click(object sender, EventArgs e)
+        private void BtnRepararSistema_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.repararSistema();
+            Ventana.RepararSistema();
             Close();
         }
 
-        private void btnActualizarAplicaciones_Click(object sender, EventArgs e)
+        private void BtnActualizarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.actualziarAplicaciones();
+            Ventana.ActualziarAplicaciones();
             Close();
         }
 
-        private void btnDesfragmentarDisco_Click(object sender, EventArgs e)
+        private void BtnDesfragmentarDisco_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.desfragmentarDisco();
+            Ventana.DesfragmentarDisco();
             Close();
         }
 
-        private void btnLimpiarSistema_Click(object sender, EventArgs e)
+        private void BtnLimpiarSistema_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.limpiarSistema();
+            Ventana.LimpiarSistema();
             Close();
         }
 
-        private void btnAntivirus_Click(object sender, EventArgs e)
+        private void BtnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.antivirus(btnAntivirus, dropDownMenu1);
+            Ventana.Antivirus(btnAntivirus, dropDownMenu1);
         }
 
-        private void emisoft_Click(object sender, EventArgs e)
+        private void Emisoft_Click(object sender, EventArgs e)
         {
-            Ventana.emisoft();
+            Ventana.Emisoft();
         }
 
-        private void escaner_rapido_Click(object sender, EventArgs e)
+        private void Escaner_rapido_Click(object sender, EventArgs e)
         {
-            Ventana.escanerRapido();
+            Ventana.EscanerRapido();
         }
 
-        private void btnInstalarAplicaciones_Click(object sender, EventArgs e)
+        private void BtnInstalarAplicaciones_Click(object sender, EventArgs e)
         {
             Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
 
-            Ventana.instalarAplicaciones();
+            Ventana.InstalarAplicaciones();
             Close();
         }
 
-        private void btnOtros_Click(object sender, EventArgs e)
+        private void BtnOtros_Click(object sender, EventArgs e)
         {
             //logica para mostrar los botones que se creen
         }
 
-        private void btnOtros_MouseDown(object sender, MouseEventArgs e)
+        private void BtnOtros_MouseDown(object sender, MouseEventArgs e)
         {
             //antes se tendra que comprobar que el usuario sea admin, si no no deja
             if (MenuPrincipal.username.Equals("admin") && e.Button == MouseButtons.Right)
@@ -170,14 +170,14 @@ namespace Presentation
         }
 
         //imagen help
-        private void imagen_help_Click(object sender, EventArgs e)
+        private void Imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Libera espacio en disco al eliminar archivos temporales, caché, " +
                             "y otros elementos innecesarios para mejorar el rendimiento del sistema.",
                            "Liberar Espacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btn_limpiar_Click(object sender, EventArgs e)
+        private void Btn_limpiar_Click(object sender, EventArgs e)
         {
             richi.Text = "";
 
@@ -215,7 +215,5 @@ namespace Presentation
             // Iniciar el proceso
             p.Start();
         }
-
-
     }
 }

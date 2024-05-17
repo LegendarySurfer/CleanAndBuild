@@ -124,7 +124,7 @@
             btnRestaurar.TabIndex = 5;
             btnRestaurar.TabStop = false;
             btnRestaurar.Visible = false;
-            btnRestaurar.Click += btnRestaurar_Click;
+            btnRestaurar.Click += BtnRestaurar_Click;
             // 
             // btnMaximizar
             // 
@@ -138,7 +138,7 @@
             btnMaximizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximizar.TabIndex = 4;
             btnMaximizar.TabStop = false;
-            btnMaximizar.Click += btnMaximizar_Click;
+            btnMaximizar.Click += BtnMaximizar_Click;
             // 
             // btn_minimizar
             // 
@@ -152,7 +152,7 @@
             btn_minimizar.SizeMode = PictureBoxSizeMode.Zoom;
             btn_minimizar.TabIndex = 23;
             btn_minimizar.TabStop = false;
-            btn_minimizar.Click += btnMinimizar_Click;
+            btn_minimizar.Click += BtnMinimizar_Click;
             // 
             // btn_salir
             // 
@@ -166,7 +166,7 @@
             btn_salir.SizeMode = PictureBoxSizeMode.Zoom;
             btn_salir.TabIndex = 22;
             btn_salir.TabStop = false;
-            btn_salir.Click += btnCerrar_Click;
+            btn_salir.Click += BtnCerrar_Click;
             // 
             // PanelContenedor
             // 
@@ -202,7 +202,7 @@
             btn_cargar.TabIndex = 48;
             btn_cargar.Text = "CARGAR";
             btn_cargar.UseVisualStyleBackColor = false;
-            btn_cargar.Click += btn_cargar_Click;
+            btn_cargar.Click += Btn_cargar_Click;
             // 
             // dg_historial
             // 
@@ -258,7 +258,7 @@
             btn_exportar.TabIndex = 44;
             btn_exportar.Text = "Exportar";
             btn_exportar.UseVisualStyleBackColor = true;
-            btn_exportar.Click += btn_exportar_Click;
+            btn_exportar.Click += Btn_exportar_Click;
             // 
             // btn_volver
             // 
@@ -276,7 +276,7 @@
             btn_volver.TabIndex = 43;
             btn_volver.Text = "Volver Al Menu";
             btn_volver.UseVisualStyleBackColor = true;
-            btn_volver.Click += btn_volver_Click;
+            btn_volver.Click += Btn_volver_Click;
             // 
             // panel2
             // 
@@ -303,7 +303,7 @@
             btn_opciones.TabIndex = 32;
             btn_opciones.Text = "Opciones";
             btn_opciones.UseVisualStyleBackColor = true;
-            btn_opciones.Click += btn_opciones_Click;
+            btn_opciones.Click += Btn_opciones_Click;
             // 
             // btnSide
             // 
@@ -316,7 +316,7 @@
             btnSide.SizeMode = PictureBoxSizeMode.Zoom;
             btnSide.TabIndex = 1;
             btnSide.TabStop = false;
-            btnSide.Click += btnSide_Click;
+            btnSide.Click += BtnSide_Click;
             // 
             // panel3
             // 
@@ -459,7 +459,7 @@
             btn_salir_img.TabIndex = 30;
             btn_salir_img.Text = "Log out";
             btn_salir_img.UseVisualStyleBackColor = true;
-            btn_salir_img.Click += btnCerrar_Click;
+            btn_salir_img.Click += BtnCerrar_Click;
             // 
             // pictureBox2
             // 
@@ -489,8 +489,8 @@
             btnOtros.Text = "Otros...";
             btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
-            btnOtros.Click += btnOtros_Click;
-            btnOtros.MouseDown += btnOtros_MouseDown;
+            btnOtros.Click += BtnOtros_Click;
+            btnOtros.MouseDown += BtnOtros_MouseDown;
             // 
             // btnInstalarAplicaciones
             // 
@@ -509,7 +509,7 @@
             btnInstalarAplicaciones.Text = "Instalar Aplicaciones";
             btnInstalarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
             btnInstalarAplicaciones.UseVisualStyleBackColor = true;
-            btnInstalarAplicaciones.Click += btnInstalarAplicaciones_Click;
+            btnInstalarAplicaciones.Click += BtnInstalarAplicaciones_Click;
             // 
             // btnAntivirus
             // 
@@ -528,7 +528,7 @@
             btnAntivirus.Text = "Antivirus";
             btnAntivirus.TextAlign = ContentAlignment.MiddleRight;
             btnAntivirus.UseVisualStyleBackColor = true;
-            btnAntivirus.Click += btnAntivirus_Click;
+            btnAntivirus.Click += BtnAntivirus_Click;
             // 
             // btnLiberarEspacio
             // 
@@ -547,7 +547,7 @@
             btnLiberarEspacio.Text = "Liberar Espacio Disco";
             btnLiberarEspacio.TextAlign = ContentAlignment.MiddleRight;
             btnLiberarEspacio.UseVisualStyleBackColor = true;
-            btnLiberarEspacio.Click += btnLiberarEspacio_Click;
+            btnLiberarEspacio.Click += BtnLiberarEspacio_Click;
             // 
             // btnLimpiarSistema
             // 
@@ -566,7 +566,7 @@
             btnLimpiarSistema.Text = "Limpiar Sistema";
             btnLimpiarSistema.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiarSistema.UseVisualStyleBackColor = true;
-            btnLimpiarSistema.Click += btnLimpiarSistema_Click;
+            btnLimpiarSistema.Click += BtnLimpiarSistema_Click;
             // 
             // btnDesfragmentarDisco
             // 
@@ -585,7 +585,7 @@
             btnDesfragmentarDisco.Text = "Desfragmentar Disco";
             btnDesfragmentarDisco.TextAlign = ContentAlignment.MiddleRight;
             btnDesfragmentarDisco.UseVisualStyleBackColor = true;
-            btnDesfragmentarDisco.Click += btnDesfragmentarDisco_Click;
+            btnDesfragmentarDisco.Click += BtnDesfragmentarDisco_Click;
             // 
             // btnActualizarAplicaciones
             // 
@@ -604,7 +604,7 @@
             btnActualizarAplicaciones.Text = "Actualizar Aplicaciones";
             btnActualizarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
             btnActualizarAplicaciones.UseVisualStyleBackColor = true;
-            btnActualizarAplicaciones.Click += btnActualizarAplicaciones_Click;
+            btnActualizarAplicaciones.Click += BtnActualizarAplicaciones_Click;
             // 
             // btnRepararSistema
             // 
@@ -623,7 +623,7 @@
             btnRepararSistema.Text = "Reparar Sistema";
             btnRepararSistema.TextAlign = ContentAlignment.MiddleRight;
             btnRepararSistema.UseVisualStyleBackColor = true;
-            btnRepararSistema.Click += btnRepararSistema_Click;
+            btnRepararSistema.Click += BtnRepararSistema_Click;
             // 
             // dropDownMenu1
             // 
@@ -641,14 +641,14 @@
             emisoft.Name = "emisoft";
             emisoft.Size = new Size(184, 24);
             emisoft.Text = "Emisoft";
-            emisoft.Click += emisoft_Click;
+            emisoft.Click += Emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
             escaner_rapido.Size = new Size(184, 24);
             escaner_rapido.Text = "Escaneo Rapido";
-            escaner_rapido.Click += escaner_rapido_Click;
+            escaner_rapido.Click += Escaner_rapido_Click;
             // 
             // Historial
             // 

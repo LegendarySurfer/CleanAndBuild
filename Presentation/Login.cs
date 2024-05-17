@@ -37,7 +37,7 @@ namespace Presentation
         }
 
         //texto de username
-        private void username_Enter(object sender, EventArgs e)
+        private void Username_Enter(object sender, EventArgs e)
         {
             if (username.Text == "USERNAME")
             {
@@ -47,7 +47,7 @@ namespace Presentation
         }
 
         //texto de username
-        private void username_Leave(object sender, EventArgs e)
+        private void Username_Leave(object sender, EventArgs e)
         {
             if (username.Text == "")
             {
@@ -57,7 +57,7 @@ namespace Presentation
         }
 
         //texto de password
-        private void password_Enter(object sender, EventArgs e)
+        private void Password_Enter(object sender, EventArgs e)
         {
             if (password.Text == "PASSWORD")
             {
@@ -69,7 +69,7 @@ namespace Presentation
         }
 
         //texto de password
-        private void password_Leave(object sender, EventArgs e)
+        private void Password_Leave(object sender, EventArgs e)
         {
             if (password.Text == "")
             {
@@ -79,37 +79,37 @@ namespace Presentation
         }
 
         //btn que hace que la ventana pueda minimizarse
-        private void btn_minimizar_Click(object sender, EventArgs e)
+        private void Btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         //boton para el login
-        private void btn_login_Click(object sender, EventArgs e)
+        private void Btn_login_Click(object sender, EventArgs e)
         {
             UserModel user = new UserModel();
 
             //si no se introduce una persona error y nada
             if (username.Text == "USERNAME" && password.Text == "PASSWORD")
             {
-                msgError("Introduce el usuario y contraseña.");
+                MsgError("Introduce el usuario y contraseña.");
                 return;
             }
 
-            // si no existe guardo la persona y el equipo actual
+            // si no existe usuario guardo la persona y el equipo actual
             if(!user.LoginUser(username.Text, password.Text))//comprobamos si no existe
             {
                 //si existe un usuario con el mismo nombre no lo crea
-                if (!user.compruebaUser(username.Text))
+                if (!user.CompruebaUser(username.Text))
                 {
                     user.CreateUser(username.Text, password.Text); //creamos usuario
-                    if (!user.compruebaEquipo()) user.addEquipo();//guardamos el equipo en equipo  si esta registrado
-                    user.addEquipoEnRegistra(username.Text);//como es la primera ve que entra se guarda si o si
-                    accederMenu(); //fin del metodo
+                    if (!user.CompruebaEquipo()) user.AddEquipo();//guardamos el equipo en equipo  si esta registrado
+                    user.AddEquipoEnRegistra(username.Text);//como es la primera ve que entra se guarda si o si
+                    AccederMenu(); //fin del metodo
                 }
                 else
                 {
-                    msgError("Contraseña mal o usuario existente.");
+                    MsgError("Contraseña mal o usuario existente.");
                     return;
                 }
             }
@@ -117,20 +117,20 @@ namespace Presentation
             //usuario ya registrado
             if (user.LoginUser(username.Text, password.Text))//comprobamos si existe
             {
-                if (user.compruebaEquipo())
+                if (user.CompruebaEquipo())
                 {//si existe el equipo no hay que agregarlo otra vex
-                    accederMenu();
+                    AccederMenu();
                 }
                 else
                 {//el equipo no esta registrado y hay que registrarlo
-                    user.addEquipo();
-                    user.addEquipoEnRegistra(username.Text);//como es la primera ve que entra se guarda si o si
-                    accederMenu();
+                    user.AddEquipo();
+                    user.AddEquipoEnRegistra(username.Text);//como es la primera ve que entra se guarda si o si
+                    AccederMenu();
                 }
             }
         }
 
-        private void accederMenu()
+        private void AccederMenu()
         {
             MenuPrincipal main = new MenuPrincipal(username.Text);
             main.Show();
@@ -138,7 +138,7 @@ namespace Presentation
         }
 
         //mensaje de error
-        private void msgError(string msg)
+        private void MsgError(string msg)
         {
             lblErrorMessage.Text = "        " + msg;
             lblErrorMessage.Visible = true;
@@ -155,19 +155,19 @@ namespace Presentation
         }
 
         //cambiar contraseña
-        private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CambiarContrasena cambiar = new CambiarContrasena();
             cambiar.Show();
             this.Hide();
         }
 
-        private void btn_cerrar_Click(object sender, EventArgs e)
+        private void Btn_cerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void imagen_help_Click(object sender, EventArgs e)
+        private void Imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("- Para iniciar sesion con un usuario existente ponga solo las credenciales.\n" +
                 "- Para iniciar sesion con usuario nuevo solo introduzca un nombre no existenten y una contraseña.",

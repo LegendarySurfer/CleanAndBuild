@@ -13,11 +13,11 @@ namespace DataAccess
         // Constructor que detecta la ubicación del archivo y construye la ruta relativa
         public ConnectionToSQLite()
         {
-            obtenerRuta();
+            ObtenerRuta();
         }
 
         // Detecta la ruta y la asigna
-        public void obtenerRuta()
+        public void ObtenerRuta()
         {
             string assemblyLocation = Assembly.GetExecutingAssembly().Location;
             string basePath = Path.GetDirectoryName(assemblyLocation);
@@ -30,7 +30,7 @@ namespace DataAccess
         // Método para establecer la conexión
         public SQLiteConnection Conectar()
         {
-            obtenerRuta();
+            ObtenerRuta();
             return conexion;
         }
 

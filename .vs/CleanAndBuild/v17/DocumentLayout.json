@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\dropdownmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\dropdownmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\instalaraplicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\instalaraplicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\cambiarcontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\cambiarcontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\ventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\ventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Ajustes.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs",
-              "RelativeDocumentMoniker": "Presentation\\Ajustes.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs",
-              "RelativeToolTip": "Presentation\\Ajustes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAkAAAA",
+              "DocumentIndex": 1,
+              "Title": "InstalarAplicaciones.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\InstalarAplicaciones.cs",
+              "RelativeDocumentMoniker": "Presentation\\InstalarAplicaciones.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\InstalarAplicaciones.cs",
+              "RelativeToolTip": "Presentation\\InstalarAplicaciones.cs",
+              "ViewState": "AQIAAMsAAAAAAAAAAADwv9oAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:56:56.128Z",
+              "WhenOpened": "2024-05-17T21:23:27.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Ajustes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs",
-              "RelativeDocumentMoniker": "Presentation\\Ajustes.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\Ajustes.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "DropDownMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\DropDownMenu.cs",
+              "RelativeDocumentMoniker": "Presentation\\DropDownMenu.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\DropDownMenu.cs",
+              "RelativeToolTip": "Presentation\\DropDownMenu.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAArwBMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:56:11.533Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-17T21:23:03.875Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Historial.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Historial.cs",
-              "RelativeDocumentMoniker": "Presentation\\Historial.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Historial.cs",
-              "RelativeToolTip": "Presentation\\Historial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAtAAAA",
+              "Title": "CambiarContrasena.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\CambiarContrasena.cs",
+              "RelativeDocumentMoniker": "Presentation\\CambiarContrasena.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\CambiarContrasena.cs",
+              "RelativeToolTip": "Presentation\\CambiarContrasena.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:55:33.038Z",
+              "WhenOpened": "2024-05-17T21:22:42.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Historial.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Historial.cs",
-              "RelativeDocumentMoniker": "Presentation\\Historial.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Historial.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\Historial.cs [Dise\u00F1o]",
+              "Title": "Ventana.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ventana.cs",
+              "RelativeDocumentMoniker": "Presentation\\Ventana.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ventana.cs",
+              "RelativeToolTip": "Presentation\\Ventana.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAwG0AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:54:05.416Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-17T21:20:35.599Z",
+              "EditorCaption": ""
             }
           ]
         }

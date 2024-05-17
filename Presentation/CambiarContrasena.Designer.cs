@@ -89,7 +89,7 @@
             btn_volver.TabIndex = 25;
             btn_volver.Text = "VOLVER";
             btn_volver.UseVisualStyleBackColor = false;
-            btn_volver.Click += btn_volver_Click;
+            btn_volver.Click += Btn_volver_Click;
             // 
             // btn_cambiar_contrasena
             // 
@@ -106,7 +106,7 @@
             btn_cambiar_contrasena.TabIndex = 26;
             btn_cambiar_contrasena.Text = "CAMBIAR CONTRASEÑA";
             btn_cambiar_contrasena.UseVisualStyleBackColor = false;
-            btn_cambiar_contrasena.Click += btn_cambiar_contrasena_Click;
+            btn_cambiar_contrasena.Click += Btn_cambiar_contrasena_Click;
             // 
             // label3
             // 
@@ -131,8 +131,8 @@
             password.Size = new Size(334, 25);
             password.TabIndex = 28;
             password.Text = "NEW PASSWORD";
-            password.Enter += password_Enter;
-            password.Leave += password_Leave;
+            password.Enter += Password_Enter;
+            password.Leave += Password_Leave;
             // 
             // label4
             // 
@@ -157,8 +157,8 @@
             username.Size = new Size(334, 25);
             username.TabIndex = 31;
             username.Text = "USERNAME";
-            username.Enter += username_Enter;
-            username.Leave += username_Leave;
+            username.Enter += Username_Enter;
+            username.Leave += Username_Leave;
             // 
             // lblErrorMessage
             // 

@@ -15,9 +15,7 @@ namespace Presentation
 
         private Bitmap menuItemHeaderSize;
 
-        //Constructor
-        public DropDownMenu(IContainer container)
-            : base(container)
+        public DropDownMenu(IContainer container) : base(container)
         {
         }
 

@@ -128,7 +128,7 @@
             btnRestaurar.TabIndex = 3;
             btnRestaurar.TabStop = false;
             btnRestaurar.Visible = false;
-            btnRestaurar.Click += btnRestaurar_Click;
+            btnRestaurar.Click += BtnRestaurar_Click;
             // 
             // btnMinimizar
             // 
@@ -142,7 +142,7 @@
             btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMinimizar.TabIndex = 2;
             btnMinimizar.TabStop = false;
-            btnMinimizar.Click += btnMinimizar_Click;
+            btnMinimizar.Click += BtnMinimizar_Click;
             // 
             // btnMaximizar
             // 
@@ -156,7 +156,7 @@
             btnMaximizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximizar.TabIndex = 1;
             btnMaximizar.TabStop = false;
-            btnMaximizar.Click += btnMaximizar_Click;
+            btnMaximizar.Click += BtnMaximizar_Click;
             // 
             // btnCerrar
             // 
@@ -170,7 +170,7 @@
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
             btnCerrar.TabIndex = 0;
             btnCerrar.TabStop = false;
-            btnCerrar.Click += btnCerrar_Click;
+            btnCerrar.Click += BtnCerrar_Click;
             // 
             // MenuVertical
             // 
@@ -236,7 +236,7 @@
             button1.TabIndex = 21;
             button1.Text = "Log out";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += btnCerrar_Click;
+            button1.Click += BtnCerrar_Click;
             // 
             // textNameEquipo
             // 
@@ -277,8 +277,8 @@
             btnOtros.Text = "Otros...";
             btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
-            btnOtros.Click += btnOtros_Click;
-            btnOtros.MouseDown += btnOtros_MouseDown;
+            btnOtros.Click += BtnOtros_Click;
+            btnOtros.MouseDown += BtnOtros_MouseDown;
             // 
             // panel8
             // 
@@ -306,7 +306,7 @@
             btnInstalarAplicaciones.Text = "Instalar Aplicaciones";
             btnInstalarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
             btnInstalarAplicaciones.UseVisualStyleBackColor = true;
-            btnInstalarAplicaciones.Click += btnInstalarAplicaciones_Click;
+            btnInstalarAplicaciones.Click += BtnInstalarAplicaciones_Click;
             // 
             // panel7
             // 
@@ -334,7 +334,7 @@
             btnAntivirus.Text = "Antivirus";
             btnAntivirus.TextAlign = ContentAlignment.MiddleRight;
             btnAntivirus.UseVisualStyleBackColor = true;
-            btnAntivirus.Click += btnAntivirus_Click;
+            btnAntivirus.Click += BtnAntivirus_Click;
             // 
             // panel6
             // 
@@ -362,7 +362,7 @@
             btnLiberarEspacio.Text = "Liberar Espacio Disco";
             btnLiberarEspacio.TextAlign = ContentAlignment.MiddleRight;
             btnLiberarEspacio.UseVisualStyleBackColor = true;
-            btnLiberarEspacio.Click += btnLiberarEspacio_Click;
+            btnLiberarEspacio.Click += BtnLiberarEspacio_Click;
             // 
             // panel5
             // 
@@ -390,7 +390,7 @@
             btnLimpiarSistema.Text = "Limpiar Sistema";
             btnLimpiarSistema.TextAlign = ContentAlignment.MiddleRight;
             btnLimpiarSistema.UseVisualStyleBackColor = true;
-            btnLimpiarSistema.Click += btnLimpiarSistema_Click;
+            btnLimpiarSistema.Click += BtnLimpiarSistema_Click;
             // 
             // panel4
             // 
@@ -418,7 +418,7 @@
             btnDesfragmentarDisco.Text = "Desfragmentar Disco";
             btnDesfragmentarDisco.TextAlign = ContentAlignment.MiddleRight;
             btnDesfragmentarDisco.UseVisualStyleBackColor = true;
-            btnDesfragmentarDisco.Click += btnDesfragmentarDisco_Click;
+            btnDesfragmentarDisco.Click += BtnDesfragmentarDisco_Click;
             // 
             // panel3
             // 
@@ -446,7 +446,7 @@
             btnActualizarAplicaciones.Text = "Actualizar Aplicaciones";
             btnActualizarAplicaciones.TextAlign = ContentAlignment.MiddleRight;
             btnActualizarAplicaciones.UseVisualStyleBackColor = true;
-            btnActualizarAplicaciones.Click += btnActualizarAplicaciones_Click;
+            btnActualizarAplicaciones.Click += BtnActualizarAplicaciones_Click;
             // 
             // pictureBox2
             // 
@@ -476,7 +476,7 @@
             btnRepararSistema.Text = "Reparar Sistema";
             btnRepararSistema.TextAlign = ContentAlignment.MiddleRight;
             btnRepararSistema.UseVisualStyleBackColor = true;
-            btnRepararSistema.Click += btnRepararSistema_Click;
+            btnRepararSistema.Click += BtnRepararSistema_Click;
             // 
             // btnSide
             // 
@@ -489,7 +489,7 @@
             btnSide.SizeMode = PictureBoxSizeMode.Zoom;
             btnSide.TabIndex = 0;
             btnSide.TabStop = false;
-            btnSide.Click += btnSide_Click;
+            btnSide.Click += BtnSide_Click;
             // 
             // PanelContenedor
             // 
@@ -592,7 +592,7 @@
             btn_volver.TabIndex = 45;
             btn_volver.Text = "Volver Al Menu";
             btn_volver.UseVisualStyleBackColor = true;
-            btn_volver.Click += btn_volver_Click;
+            btn_volver.Click += Btn_volver_Click;
             // 
             // panel2
             // 
@@ -620,7 +620,7 @@
             btn_opciones.TabIndex = 34;
             btn_opciones.Text = "Opciones";
             btn_opciones.UseVisualStyleBackColor = true;
-            btn_opciones.Click += btn_opciones_Click;
+            btn_opciones.Click += Btn_opciones_Click;
             // 
             // btn_Historial
             // 
@@ -637,7 +637,7 @@
             btn_Historial.TabIndex = 33;
             btn_Historial.Text = "Historial";
             btn_Historial.UseVisualStyleBackColor = true;
-            btn_Historial.Click += btn_Historial_Click;
+            btn_Historial.Click += Btn_Historial_Click;
             // 
             // userModelBindingSource
             // 
@@ -659,14 +659,14 @@
             emisoft.Name = "emisoft";
             emisoft.Size = new Size(210, 24);
             emisoft.Text = "Emisoft";
-            emisoft.Click += emisoft_Click;
+            emisoft.Click += Emisoft_Click;
             // 
             // escaner_rapido
             // 
             escaner_rapido.Name = "escaner_rapido";
             escaner_rapido.Size = new Size(210, 24);
             escaner_rapido.Text = "Escaneo Rapido";
-            escaner_rapido.Click += escaner_rapido_Click;
+            escaner_rapido.Click += Escaner_rapido_Click;
             // 
             // AgregarComando
             // 
