@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Domain;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Presentation
@@ -41,6 +42,7 @@ namespace Presentation
             opciones.MenuVertical2.Width = PanelContraido ? 333 : 70;
             opciones.Show();
         }
+        
         public static void RepararSistema()
         {
             var reparar = new RepararSistema();
@@ -88,6 +90,11 @@ namespace Presentation
             Process p = new Process();
             p.StartInfo.FileName = pathToBatchFile;
             p.Start();
+
+            //guardamos en la BBDD
+            UserModel userModel = new UserModel();
+            userModel.GuardarComando("Emisoft", "ClamWinPortable");
+            userModel.GuardarEnHistorial(Presentation.MenuPrincipal.username);
         }
 
         public static void EscanerRapido()
@@ -96,6 +103,11 @@ namespace Presentation
             Process p = new Process();
             p.StartInfo.FileName = pathToBatchFile;
             p.Start();
+
+            //guardamos en la BBDD
+            UserModel userModel = new UserModel();
+            userModel.GuardarComando("Escaneo Rapido", "escanerRapido");
+            userModel.GuardarEnHistorial(Presentation.MenuPrincipal.username);
 
         }
 

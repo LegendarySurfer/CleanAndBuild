@@ -169,7 +169,7 @@ namespace Presentation
             }
         }
 
-        //imagen help
+        //---------------------------------------------------- imagen help ----------------------------------------------------
         private void Imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Libera espacio en disco al eliminar archivos temporales, caché, " +
@@ -177,6 +177,8 @@ namespace Presentation
                            "Liberar Espacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+
+        //---------------------------------------------------- logica boton ----------------------------------------------------
         private void Btn_limpiar_Click(object sender, EventArgs e)
         {
             richi.Text = "";
@@ -214,6 +216,11 @@ namespace Presentation
 
             // Iniciar el proceso
             p.Start();
+
+            //guardamos en la BBDD
+            UserModel userModel = new UserModel();
+            userModel.GuardarComando("Liberar Espacio", "liberar_espacio");
+            userModel.GuardarEnHistorial(MenuPrincipal.username);
         }
     }
 }

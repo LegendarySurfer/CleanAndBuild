@@ -214,6 +214,11 @@ namespace Presentation
 
             // Iniciar el proceso
             p.Start();
+
+            //guardamos en la BBDD
+            UserModel userModel = new UserModel();
+            userModel.GuardarComando("Reparar Sistema", "repair");
+            userModel.GuardarEnHistorial(MenuPrincipal.username);
         }
     }
 }

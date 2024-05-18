@@ -169,7 +169,7 @@ namespace Presentation
             Close();
         }
 
-        //imagen help
+        //---------------------------------------------------- imagen help ----------------------------------------------------
         private void Imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Al desfragmentar el disco, ten en cuenta estas precauciones:\n " +
@@ -182,6 +182,7 @@ namespace Presentation
         "Desfragmentar Disco", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        //---------------------------------------------------- Logica boton ----------------------------------------------------
         private void Btn_desfragmentar_Click(object sender, EventArgs e)
         {
             richi.Text = "";
@@ -216,6 +217,10 @@ namespace Presentation
 
             // Iniciar el proceso
             p.Start();
+            //guardamos en la BBDD
+            UserModel userModel = new UserModel();
+            userModel.GuardarComando("Desfragmentar Disco", "Desfragmentar");//nombre del fichero .bat
+            userModel.GuardarEnHistorial(MenuPrincipal.username);
         }
     }
 }

@@ -168,13 +168,14 @@ namespace Presentation
             Close();
         }
 
-        //imagen help
+        //---------------------------------------------------- imagen help ----------------------------------------------------
         private void Imagen_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Limpieza los archivos temporales y la papelera entre otros.",
                           "Limpieza", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        //---------------------------------------------------- botones logica ----------------------------------------------------
         private void Btn_limpiar_Click(object sender, EventArgs e)
         {
             richi.Text = "";
@@ -203,6 +204,11 @@ namespace Presentation
             };
 
             p.Start();
+
+            //guardamos en la BBDD
+            UserModel userModel = new UserModel();
+            userModel.GuardarComando("Limpiar Sistema", "limpiar_archivos");
+            userModel.GuardarEnHistorial(MenuPrincipal.username);
         }
     }
 }

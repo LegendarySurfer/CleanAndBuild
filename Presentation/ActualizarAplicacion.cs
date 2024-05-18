@@ -174,6 +174,7 @@ namespace Presentation
         {
             richi.Text = "";
 
+            UserModel userModel = new UserModel();
             Process p = new Process();
 
             if (cb_comando.Checked)
@@ -200,6 +201,9 @@ namespace Presentation
                 };
 
                 p.Start();
+                //GUARDAR EN LA BBDD COMANDOS
+                userModel.GuardarComando("Actualizar Aplicacion", "update");
+                userModel.GuardarEnHistorial(MenuPrincipal.username);
             }
 
             if (cb_aplicaciones.Checked)
@@ -227,6 +231,9 @@ namespace Presentation
                                 "Además, si ya tienes algunos libros en tu biblioteca y hay nuevas ediciones disponibles, Winget también " +
                                 "puede actualizarlos automáticamente para ti, manteniéndote al día con las últimas versiones.");
 
+                            //Guardar en la BBDD comandos
+                            userModel.GuardarComando("Actualizar Aplicacion", "winget");
+                            userModel.GuardarEnHistorial(MenuPrincipal.username);
                         }
                         else
                         {

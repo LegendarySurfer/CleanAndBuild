@@ -226,7 +226,7 @@ namespace Presentation
             }
 
             //Guardar comandos
-            aplicaciones.GuardarComando("Instalar aplicaciones", "Ninite");
+            aplicaciones.GuardarComando("Instalar aplicaciones", "installAplication");
             aplicaciones.GuardarEnHistorial(MenuPrincipal.username);
 
         }
