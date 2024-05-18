@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Xml.Linq;
 
 namespace DataAccess
 {
@@ -218,7 +219,6 @@ namespace DataAccess
             using (var conexion = Conectar())
             {
                 conexion.Open();
-
                 try
                 {
                     int idEquipo = ObtenerIdEquipo(nombreEquipo);
@@ -239,48 +239,6 @@ namespace DataAccess
                     Console.WriteLine("Error al agregar equipo: " + ex.Message);
                 }
             }
-        }
-
-        public int ObtenerIdUsuario(string nombreUsuario)
-        {
-            int idUsuario = -1; // Valor por defecto si no se encuentra el usuario
-            using (var conexion = Conectar())
-            {
-                conexion.Open();
-                using (var comando = conexion.CreateCommand())
-                {
-                    comando.CommandText = "SELECT id_usuario FROM persona WHERE nombre = @nombreUsuario";
-                    comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-
-                    object result = comando.ExecuteScalar();
-                    if (result != null)
-                    {
-                        idUsuario = Convert.ToInt32(result);
-                    }
-                }
-            }
-            return idUsuario;
-        }
-
-        public int ObtenerIdEquipo(string nombreequipo)
-        {
-            int idEquipo = -1; // Valor por defecto si no se encuentra el usuario
-            using (var conexion = Conectar())
-            {
-                conexion.Open();
-                using (var comando = conexion.CreateCommand())
-                {
-                    comando.CommandText = "SELECT id_equipo FROM equipo WHERE nombre_equipo = @nombreEquipo";
-                    comando.Parameters.AddWithValue("@nombreEquipo", nombreequipo);
-
-                    object result = comando.ExecuteScalar();
-                    if (result != null)
-                    {
-                        idEquipo = Convert.ToInt32(result);
-                    }
-                }
-            }
-            return idEquipo;
         }
 
         public DataSet ObtenerTodosLosComandos()
@@ -343,5 +301,129 @@ namespace DataAccess
             }
         }
     
+        public void GuardarComando(string nombre_comando,string logica)
+        {
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                try
+                {
+                    using (var comando = conexion.CreateCommand())
+                    {
+                        comando.CommandText = "INSERT INTO comando (nombre_comando, logica_comando) VALUES (@nombreComando, @logicaComando)";
+
+                        comando.Parameters.AddWithValue("@nombreComando", nombre_comando);
+                        comando.Parameters.AddWithValue("@logicaComando", logica);
+                        comando.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al agregar equipo: " + ex.Message);
+                }
+            }
+        }
+
+        //TODO
+        public void GuardarHistorial(string nombreUsuario)
+        {
+            int idUsuario = ObtenerIdUsuario(nombreUsuario);
+
+            int idComando = ObtenerIdComando();
+
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "INSERT INTO historial (fecha_ejecutado, id_persona, id_comando) VALUES (@fecha_ejecutado, @id_persona,@id_comando)";
+                    
+                    comando.Parameters.AddWithValue("@fecha_ejecutado", DateTime.Now); // Agregar la fecha actual
+                    comando.Parameters.AddWithValue("@id_persona", idUsuario);
+                    comando.Parameters.AddWithValue("@id_comando", idComando);
+
+
+
+
+                    comando.ExecuteNonQuery();
+
+                }
+            }
+        }
+
+
+        //-------------------- OBTENER IDS -------------------------------------------
+        
+        // La BBDD no permite tener varios con nombre iguales por lo que no hay problema 
+        public int ObtenerIdUsuario(string nombreUsuario)
+        {
+            int idUsuario = -1; // Valor por defecto si no se encuentra el usuario
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "SELECT id_usuario FROM persona WHERE nombre = @nombreUsuario";
+                    comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+
+                    object result = comando.ExecuteScalar();
+                    if (result != null)
+                    {
+                        idUsuario = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return idUsuario;
+        }
+
+        /*
+         * Puede ser que tengamos en la BBDD varios equipos con el mismo nombre(es raro)
+         * Si es el caso obtendra el nombre del equipo actual y no pasara nada
+         */
+        public int ObtenerIdEquipo(string nombreequipo)
+        {
+            int idEquipo = -1; // Valor por defecto si no se encuentra el usuario
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "SELECT id_equipo FROM equipo WHERE nombre_equipo = @nombreEquipo";
+                    comando.Parameters.AddWithValue("@nombreEquipo", nombreequipo);
+
+                    object result = comando.ExecuteScalar();
+                    if (result != null)
+                    {
+                        idEquipo = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return idEquipo;
+        }
+        
+        // Obtenemos el ultimo id de comandos
+        public int ObtenerIdComando()
+        { 
+            int idComando = -1;
+
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "SELECT id_comando FROM comando ORDER BY id_comando DESC LIMIT 1";
+
+                    object result = comando.ExecuteScalar();
+                    if (result != null)
+                    {
+                        idComando = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return idComando;
+        }
+
     }
 }

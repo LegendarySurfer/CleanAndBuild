@@ -69,6 +69,8 @@ namespace Presentation
 
 
         //---------------------------------------------------- logica para instalar todo ----------------------------------------------------
+       
+        //guardo individualmente en la bbdd la aplicacion
         private void Btn_Instalar_Click(object sender, EventArgs e)
         {
             List<string> programasSeleccionados = new List<string>();
@@ -79,6 +81,7 @@ namespace Presentation
             {
                 programasSeleccionados.Add("chrome");
                 aplicaciones.guardarAplicacion("chrome", "WEB BROWSER");
+
                 cb_google.Checked = false;
             }
 
@@ -86,6 +89,7 @@ namespace Presentation
             {
                 programasSeleccionados.Add("firefox");
                 aplicaciones.guardarAplicacion("firefox", "WEB BROWSER");
+
                 cb_firefox.Checked = false;
 
             }
@@ -94,6 +98,7 @@ namespace Presentation
             {
                 programasSeleccionados.Add("opera");
                 aplicaciones.guardarAplicacion("opera", "WEB BROWSER");
+
                 cb_opera.Checked = false;
 
             }
@@ -219,6 +224,11 @@ namespace Presentation
                 string output = process.StandardOutput.ReadToEnd();
                 process.WaitForExit();
             }
+
+            //Guardar comandos
+            aplicaciones.GuardarComando("Instalar aplicaciones", "Ninite");
+            aplicaciones.GuardarEnHistorial(MenuPrincipal.username);
+
         }
 
         //---------------------------------------------------- botones laterales ----------------------------------------------------

@@ -53,6 +53,7 @@ namespace Domain
         {
             userDato.AgregarEquipo();
         }
+        
         public void AddEquipoEnRegistra(string nombreuser)
         {
             userDato.AgregarEquipoEnRegistra(nombreuser);
@@ -76,6 +77,14 @@ namespace Domain
 
         }
     
-        
+        public void GuardarComando(string nombreComando, string logica)
+        {
+            userDato.GuardarComando(nombreComando,logica);
+        }
+
+        public void GuardarEnHistorial(string nombreUsuario)
+        {
+            userDato.GuardarHistorial(nombreUsuario);
+        }
     }
 }
