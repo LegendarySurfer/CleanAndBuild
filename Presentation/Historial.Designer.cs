@@ -198,7 +198,7 @@
             btn_cargar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_cargar.ForeColor = Color.White;
             btn_cargar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_cargar.Location = new Point(707, 85);
+            btn_cargar.Location = new Point(667, 88);
             btn_cargar.Margin = new Padding(3, 4, 3, 4);
             btn_cargar.Name = "btn_cargar";
             btn_cargar.Size = new Size(203, 60);
@@ -284,6 +284,7 @@
             // btn_exportar
             // 
             btn_exportar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_exportar.BackColor = Color.DarkSlateBlue;
             btn_exportar.FlatAppearance.BorderSize = 0;
             btn_exportar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_exportar.FlatStyle = FlatStyle.Flat;
@@ -296,12 +297,13 @@
             btn_exportar.Size = new Size(203, 60);
             btn_exportar.TabIndex = 44;
             btn_exportar.Text = "Exportar";
-            btn_exportar.UseVisualStyleBackColor = true;
+            btn_exportar.UseVisualStyleBackColor = false;
             btn_exportar.Click += Btn_exportar_Click;
             // 
             // btn_volver
             // 
             btn_volver.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_volver.BackColor = Color.Orange;
             btn_volver.FlatAppearance.BorderSize = 0;
             btn_volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_volver.FlatStyle = FlatStyle.Flat;
@@ -314,7 +316,7 @@
             btn_volver.Size = new Size(239, 60);
             btn_volver.TabIndex = 43;
             btn_volver.Text = "Volver Al Menu";
-            btn_volver.UseVisualStyleBackColor = true;
+            btn_volver.UseVisualStyleBackColor = false;
             btn_volver.Click += Btn_volver_Click;
             // 
             // panel2

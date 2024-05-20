@@ -22,6 +22,7 @@ namespace Presentation
 
             cb_historial.Select(0, 0);
             cb_historial.Text = "Aplicaciones";
+            CargarDatos();
         }
 
         //---------------------------------------------------- muestra las operaciones realizadas ----------------------------------------------------
@@ -49,7 +50,25 @@ namespace Presentation
 
         private void Btn_exportar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string origen = Path.Combine(Application.StartupPath, @"..\..\..\..\BBDD\cleandbuild.db");
+                string carpetaDestino = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "BBDD");
+                string destino = Path.Combine(carpetaDestino, "archivo.db");
 
+                // Si la carpeta de destino no existe, la creamos
+                if (!Directory.Exists(carpetaDestino))
+                {
+                    Directory.CreateDirectory(carpetaDestino);
+                }
+
+                File.Copy(origen, destino, true);
+                MessageBox.Show("El archivo se ha exportado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al copiar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //---------------------------------------------------- botones laterales ----------------------------------------------------
