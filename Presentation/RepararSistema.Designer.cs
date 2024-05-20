@@ -545,6 +545,7 @@
             // btn_Guardar
             // 
             btn_Guardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Guardar.BackColor = Color.Teal;
             btn_Guardar.FlatAppearance.BorderSize = 0;
             btn_Guardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_Guardar.FlatStyle = FlatStyle.Flat;
@@ -557,17 +558,18 @@
             btn_Guardar.Size = new Size(286, 60);
             btn_Guardar.TabIndex = 46;
             btn_Guardar.Text = "Reparar Sistema";
-            btn_Guardar.UseVisualStyleBackColor = true;
+            btn_Guardar.UseVisualStyleBackColor = false;
             btn_Guardar.Click += Btn_Guardar_Click;
             // 
             // btn_volver
             // 
             btn_volver.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_volver.BackColor = Color.Orange;
             btn_volver.FlatAppearance.BorderSize = 0;
             btn_volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_volver.FlatStyle = FlatStyle.Flat;
             btn_volver.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_volver.ForeColor = Color.White;
+            btn_volver.ForeColor = Color.Black;
             btn_volver.ImageAlign = ContentAlignment.MiddleLeft;
             btn_volver.Location = new Point(51, 644);
             btn_volver.Margin = new Padding(3, 4, 3, 4);
@@ -575,7 +577,7 @@
             btn_volver.Size = new Size(239, 60);
             btn_volver.TabIndex = 45;
             btn_volver.Text = "Volver Al Menu";
-            btn_volver.UseVisualStyleBackColor = true;
+            btn_volver.UseVisualStyleBackColor = false;
             btn_volver.Click += Btn_volver_Click;
             // 
             // panel2

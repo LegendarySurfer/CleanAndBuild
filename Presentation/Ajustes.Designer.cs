@@ -65,7 +65,7 @@
             label8 = new Label();
             cb_tema = new ComboBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            tb_contrasena = new TextBox();
             label5 = new Label();
             btn_eliminar = new Button();
             label7 = new Label();
@@ -496,7 +496,7 @@
             PanelContenedor.Controls.Add(label8);
             PanelContenedor.Controls.Add(cb_tema);
             PanelContenedor.Controls.Add(label1);
-            PanelContenedor.Controls.Add(textBox1);
+            PanelContenedor.Controls.Add(tb_contrasena);
             PanelContenedor.Controls.Add(label5);
             PanelContenedor.Controls.Add(btn_eliminar);
             PanelContenedor.Controls.Add(label7);
@@ -531,13 +531,14 @@
             // 
             checkedListBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             checkedListBox1.BackColor = Color.FromArgb(49, 66, 82);
+            checkedListBox1.BorderStyle = BorderStyle.None;
             checkedListBox1.Font = new Font("Microsoft Sans Serif", 12F);
             checkedListBox1.ForeColor = Color.White;
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Items.AddRange(new object[] { "Texto Grande", "Alto Contraste" });
             checkedListBox1.Location = new Point(715, 374);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(194, 54);
+            checkedListBox1.Size = new Size(194, 50);
             checkedListBox1.TabIndex = 63;
             // 
             // label9
@@ -598,19 +599,19 @@
             label1.TabIndex = 58;
             label1.Text = "-------------------------------------";
             // 
-            // textBox1
+            // tb_contrasena
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = Color.FromArgb(49, 66, 82);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 12F);
-            textBox1.ForeColor = SystemColors.InactiveBorder;
-            textBox1.Location = new Point(350, 300);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(232, 25);
-            textBox1.TabIndex = 57;
-            textBox1.Text = "123";
+            tb_contrasena.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tb_contrasena.BackColor = Color.FromArgb(49, 66, 82);
+            tb_contrasena.BorderStyle = BorderStyle.None;
+            tb_contrasena.Font = new Font("Century Gothic", 12F);
+            tb_contrasena.ForeColor = SystemColors.InactiveBorder;
+            tb_contrasena.Location = new Point(350, 300);
+            tb_contrasena.Margin = new Padding(3, 4, 3, 4);
+            tb_contrasena.Name = "tb_contrasena";
+            tb_contrasena.Size = new Size(232, 25);
+            tb_contrasena.TabIndex = 57;
+            tb_contrasena.Text = "123";
             // 
             // label5
             // 
@@ -627,9 +628,10 @@
             // btn_eliminar
             // 
             btn_eliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_eliminar.BackColor = Color.Red;
+            btn_eliminar.BackColor = Color.FromArgb(49, 66, 82);
+            btn_eliminar.FlatAppearance.BorderColor = Color.Red;
             btn_eliminar.FlatAppearance.BorderSize = 0;
-            btn_eliminar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btn_eliminar.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 0, 0);
             btn_eliminar.FlatStyle = FlatStyle.Flat;
             btn_eliminar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_eliminar.ForeColor = Color.White;
@@ -640,7 +642,7 @@
             btn_eliminar.Size = new Size(217, 60);
             btn_eliminar.TabIndex = 55;
             btn_eliminar.Text = "Eliminar Usuario";
-            btn_eliminar.UseVisualStyleBackColor = false;
+            btn_eliminar.UseVisualStyleBackColor = true;
             btn_eliminar.Click += Btn_eliminar_Click;
             // 
             // label7
@@ -722,29 +724,31 @@
             // btn_guardar
             // 
             btn_guardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_guardar.BackColor = Color.Teal;
             btn_guardar.FlatAppearance.BorderSize = 0;
             btn_guardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_guardar.FlatStyle = FlatStyle.Flat;
             btn_guardar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_guardar.ForeColor = Color.White;
             btn_guardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_guardar.Location = new Point(302, 659);
+            btn_guardar.Location = new Point(321, 659);
             btn_guardar.Margin = new Padding(3, 4, 3, 4);
             btn_guardar.Name = "btn_guardar";
             btn_guardar.Size = new Size(217, 60);
             btn_guardar.TabIndex = 44;
             btn_guardar.Text = "Guardar Cambios";
-            btn_guardar.UseVisualStyleBackColor = true;
+            btn_guardar.UseVisualStyleBackColor = false;
             btn_guardar.Click += Btn_guardar_Click;
             // 
             // btn_volver
             // 
             btn_volver.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_volver.BackColor = Color.Orange;
             btn_volver.FlatAppearance.BorderSize = 0;
             btn_volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_volver.FlatStyle = FlatStyle.Flat;
             btn_volver.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_volver.ForeColor = Color.White;
+            btn_volver.ForeColor = Color.Black;
             btn_volver.ImageAlign = ContentAlignment.MiddleLeft;
             btn_volver.Location = new Point(29, 659);
             btn_volver.Margin = new Padding(3, 4, 3, 4);
@@ -752,7 +756,7 @@
             btn_volver.Size = new Size(239, 60);
             btn_volver.TabIndex = 43;
             btn_volver.Text = "Volver Al Menu";
-            btn_volver.UseVisualStyleBackColor = true;
+            btn_volver.UseVisualStyleBackColor = false;
             btn_volver.Click += Btn_volver_Click;
             // 
             // panel2
@@ -899,7 +903,7 @@
         private Label label8;
         private ComboBox cb_tema;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox tb_contrasena;
         private Label label5;
         private Label label10;
         private CheckedListBox checkedListBox1;

@@ -13,9 +13,14 @@ namespace Domain
             return userDato.Login(user, pass);
         }
 
-        public DataSet ObtenerUsuarios()
+        public DataSet ObtenerAplicacionesEquipo(string nombreEquipo)
         {
-            return userDato.ObtenerTodosLosUsuarios();
+            return userDato.ObtenerAplicaciones(nombreEquipo);
+        }
+
+        public DataSet ObtenerComandosEquipo(string nombreUsuario)
+        {
+            return userDato.ObtenerComandos(nombreUsuario);
         }
 
         public void CreateUser(string user, string contrasena)
@@ -59,17 +64,6 @@ namespace Domain
             userDato.AgregarEquipoEnRegistra(nombreuser);
         }
 
-
-        //Historial
-        public DataSet ObtenerComandos()
-        {
-            return userDato.ObtenerTodosLosComandos();
-        }
-
-        public DataSet ObtenerAplicaciones()
-        {
-            return userDato.ObtenerTodasLasAplicaciones();
-        }
         
         public void guardarAplicacion(string name, string tipo)
         {

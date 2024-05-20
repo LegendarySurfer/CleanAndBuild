@@ -34,7 +34,8 @@ namespace Presentation
         //---------------------------------------------------- LOGICA ----------------------------------------------------
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            if (tb_name_usuario.Text != "Nombre") // cambiar nombre de usuario
+            // cambiar nombre de usuario
+            if (tb_name_usuario.Text != "Nombre") 
             {
                 UserModel usuario = new UserModel();
                 if (!usuario.CompruebaUser(tb_name_usuario.Text))//si no existe se cambia
@@ -47,6 +48,7 @@ namespace Presentation
 
             }
 
+            //cambiar nombre del equipo
             try
             {
                 if (tb_name_equipo.Text != "Equipo123")
@@ -69,8 +71,18 @@ namespace Presentation
             }
             catch (ManagementException ex)
             {
-                // Manejar la excepción
                 MessageBox.Show("Error al cambiar el nombre del equipo." + ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            //cambiar la contraseña
+            if (tb_contrasena.Text != "123")
+            {
+                //primero comprobamos que existe el usuario
+                UserModel us = new UserModel();
+                us.CambiarContrasena(MenuPrincipal.username, tb_contrasena.Text);
+                MessageBox.Show("La contraseña se ha cambiado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 

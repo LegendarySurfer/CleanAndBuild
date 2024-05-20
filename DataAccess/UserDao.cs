@@ -30,20 +30,59 @@ namespace DataAccess
             }
         }
 
-        // Método para obtener todos los usuarios
-        public DataSet ObtenerTodosLosUsuarios()
+        // Método para obtener todos las aplicaciones de ese equipo
+        public DataSet ObtenerAplicaciones(string nombreEquipo)
         {
+            int idEquipo = ObtenerIdEquipo(nombreEquipo);
+
             using (var conexion = Conectar())
             {
-                conexion.Open();
-                using (var comando = conexion.CreateCommand())
-                {
-                    comando.CommandText = "SELECT * FROM persona";
+                string query = @"
+            SELECT 
+                a.id_aplicacion, 
+                a.nombre_aplicacion, 
+                a.tipo, 
+                a.fecha_instalada, 
+                e.nombre_equipo
+            FROM aplicacion a
+            INNER JOIN equipo e ON a.id_equipo = e.id_equipo
+            WHERE a.id_equipo = @idEquipo";
 
-                    using (SQLiteDataAdapter adaptador = new SQLiteDataAdapter(comando))
+                using (var comando = new SQLiteCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@idEquipo", idEquipo);
+
+                    using (var adaptador = new SQLiteDataAdapter(comando))
                     {
                         DataSet datos = new DataSet();
-                        adaptador.Fill(datos, "persona");
+                        adaptador.Fill(datos, "aplicacion");
+                        return datos;
+                    }
+                }
+            }
+        }
+
+        // Método para obtener todos los comandos registrados en el historial para un usuario específico
+        public DataSet ObtenerComandos(string nombreUsuario)
+        {
+            int idUsuario = ObtenerIdUsuario(nombreUsuario);
+
+            using (var conexion = Conectar()) 
+            {
+                string query = @"
+            SELECT c.nombre_comando, c.logica_comando, h.fecha_ejecutado, p.nombre
+            FROM comando c
+            JOIN historial h ON c.id_comando = h.id_comando
+            JOIN persona p ON h.id_persona = p.id_usuario
+            WHERE h.id_persona = @idUsuario";
+
+                using (var comando = new SQLiteCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    using (var adaptador = new SQLiteDataAdapter(comando))
+                    {
+                        DataSet datos = new DataSet();
+                        adaptador.Fill(datos, "comando");
                         return datos;
                     }
                 }
@@ -254,25 +293,6 @@ namespace DataAccess
                     {
                         DataSet datos = new DataSet();
                         adaptador.Fill(datos, "historial");
-                        return datos;
-                    }
-                }
-            }
-        }
-
-        public DataSet ObtenerTodasLasAplicaciones()
-        {
-            using (var conexion = Conectar())
-            {
-                conexion.Open();
-                using (var comando = conexion.CreateCommand())
-                {
-                    comando.CommandText = "SELECT * FROM aplicacion";
-
-                    using (SQLiteDataAdapter adaptador = new SQLiteDataAdapter(comando))
-                    {
-                        DataSet datos = new DataSet();
-                        adaptador.Fill(datos, "aplicacion");
                         return datos;
                     }
                 }

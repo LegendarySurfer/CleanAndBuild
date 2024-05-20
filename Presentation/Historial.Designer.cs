@@ -30,6 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historial));
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             BarraTitulo = new Panel();
             label7 = new Label();
             btnRestaurar = new PictureBox();
@@ -206,11 +209,47 @@
             // 
             // dg_historial
             // 
+            dg_historial.AllowUserToOrderColumns = true;
             dg_historial.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dg_historial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_historial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dg_historial.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dg_historial.BackgroundColor = Color.FromArgb(45, 66, 91);
+            dg_historial.BorderStyle = BorderStyle.None;
+            dg_historial.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dg_historial.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dg_historial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dg_historial.ColumnHeadersHeight = 30;
+            dg_historial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dg_historial.EnableHeadersVisualStyles = false;
+            dg_historial.GridColor = Color.SteelBlue;
             dg_historial.Location = new Point(66, 206);
             dg_historial.Name = "dg_historial";
+            dg_historial.ReadOnly = true;
+            dg_historial.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(49, 66, 82);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dg_historial.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dg_historial.RowHeadersVisible = false;
             dg_historial.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            dg_historial.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dg_historial.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg_historial.Size = new Size(844, 424);
             dg_historial.TabIndex = 47;
             // 
@@ -267,7 +306,7 @@
             btn_volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_volver.FlatStyle = FlatStyle.Flat;
             btn_volver.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_volver.ForeColor = Color.White;
+            btn_volver.ForeColor = Color.Black;
             btn_volver.ImageAlign = ContentAlignment.MiddleLeft;
             btn_volver.Location = new Point(45, 659);
             btn_volver.Margin = new Padding(3, 4, 3, 4);

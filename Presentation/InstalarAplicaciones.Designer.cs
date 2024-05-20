@@ -227,11 +227,12 @@
             // btn_volver
             // 
             btn_volver.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_volver.BackColor = Color.Orange;
             btn_volver.FlatAppearance.BorderSize = 0;
             btn_volver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_volver.FlatStyle = FlatStyle.Flat;
             btn_volver.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_volver.ForeColor = Color.White;
+            btn_volver.ForeColor = Color.Black;
             btn_volver.ImageAlign = ContentAlignment.MiddleLeft;
             btn_volver.Location = new Point(43, 659);
             btn_volver.Margin = new Padding(3, 4, 3, 4);
@@ -239,7 +240,7 @@
             btn_volver.Size = new Size(239, 60);
             btn_volver.TabIndex = 44;
             btn_volver.Text = "Volver Al Menu";
-            btn_volver.UseVisualStyleBackColor = true;
+            btn_volver.UseVisualStyleBackColor = false;
             btn_volver.Click += Btn_volver_Click_1;
             // 
             // imagen_help
@@ -287,6 +288,7 @@
             // btn_Instalar
             // 
             btn_Instalar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Instalar.BackColor = Color.Teal;
             btn_Instalar.FlatAppearance.BorderSize = 0;
             btn_Instalar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_Instalar.FlatStyle = FlatStyle.Flat;
@@ -299,7 +301,7 @@
             btn_Instalar.Size = new Size(403, 60);
             btn_Instalar.TabIndex = 44;
             btn_Instalar.Text = "Instalar Aplicaciones Seleccionadas";
-            btn_Instalar.UseVisualStyleBackColor = true;
+            btn_Instalar.UseVisualStyleBackColor = false;
             btn_Instalar.Click += Btn_Instalar_Click;
             // 
             // cb_steam

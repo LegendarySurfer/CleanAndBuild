@@ -31,12 +31,13 @@ namespace Presentation
 
             if (cb_historial.Text == "Comandos")
             {
-                DataSet datos = historial.ObtenerComandos();
+                DataSet datos = historial.ObtenerComandosEquipo(MenuPrincipal.username);
                 dg_historial.DataSource = datos.Tables[0];
             }
             else
-            {//son aplicaciones
-                DataSet datos = historial.ObtenerAplicaciones();
+            {//obtener aplicaciones del usuario
+
+                DataSet datos = historial.ObtenerAplicacionesEquipo(MenuPrincipal.nombreEquipo);
                 dg_historial.DataSource = datos.Tables[0]; // datos de todos los usuarios
             }
         }
