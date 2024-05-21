@@ -262,6 +262,7 @@
             // 
             // btnOtros
             // 
+            btnOtros.BackColor = Color.DeepSkyBlue;
             btnOtros.FlatAppearance.BorderSize = 0;
             btnOtros.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnOtros.FlatStyle = FlatStyle.Flat;
@@ -276,7 +277,7 @@
             btnOtros.TabIndex = 16;
             btnOtros.Text = "Otros...";
             btnOtros.TextAlign = ContentAlignment.MiddleRight;
-            btnOtros.UseVisualStyleBackColor = true;
+            btnOtros.UseVisualStyleBackColor = false;
             btnOtros.Click += BtnOtros_Click;
             btnOtros.MouseDown += BtnOtros_MouseDown;
             // 

@@ -1,6 +1,7 @@
 ﻿using Domain;
 using System.Runtime.InteropServices;
 using System.Data;
+using System.Windows.Forms;
 
 
 namespace Presentation
@@ -22,7 +23,8 @@ namespace Presentation
 
             MenuVertical2 = MenuVertical;
 
-            Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
+            ddm_comando.IsMainMenu = true;
+            Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, ddm);
             WindowState = Ventana.CompuebaEstadoVentana();
         }
 
@@ -133,7 +135,7 @@ namespace Presentation
 
         private void BtnAntivirus_Click(object sender, EventArgs e)
         {
-            Ventana.Antivirus(btnAntivirus, dropDownMenu1);
+            Ventana.Antivirus(btnAntivirus, ddm);
         }
 
         private void Emisoft_Click(object sender, EventArgs e)
@@ -149,28 +151,71 @@ namespace Presentation
             Close();
         }
 
-        private void BtnOtros_Click(object sender, EventArgs e)
+        private void Escaneo_rapido_Click(object sender, EventArgs e)
         {
-            //logica para mostrar los botones que se creen
+            Ventana.EscanerRapido();
         }
 
-        private void BtnOtros_MouseDown(object sender, MouseEventArgs e)
+        private void btnOtros_Click(object sender, EventArgs e)
         {
-
-            //antes se tendra que comprobar que el usuario sea admin, si no no deja
-            if (username.Equals("admin") && e.Button == MouseButtons.Right)
+            if (username.Equals("admin"))
             {
-                Ventana.estadoAnterior = WindowState; // guarda el estado de la ventana
-
+                Ventana.estadoAnterior = WindowState;
                 var addComand = new AgregarComando();
                 addComand.Show();
                 Close();
             }
+            else
+            {
+                Ventana.MostrarComandosCreados(btnOtros, ddm_comando);
+                // Mostrar mensaje personalizado dependiendo del botón
+                string mensaje = "";
+                Button btnPresionado = sender as Button; // Obtener el botón que se presionó
+
+                // Determinar qué mensaje mostrar según el botón presionado
+                if (btnPresionado.Tag.ToString() == btn_comando_uno.Tag.ToString())
+                {
+                    mensaje = "Mensaje para el botón Comando Uno.";
+                }
+                else if (btnPresionado.Tag.ToString() == btn_comando_dos.Tag.ToString())
+                {
+                    mensaje = "Mensaje para el botón Comando Dos.";
+                }
+                else
+                {
+                    mensaje = "Mensaje para otros botones.";
+                }
+
+                // Mostrar el mensaje
+                MessageBox.Show(mensaje, "Mensaje Personalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);if (btnPresionado.Tag.ToString() == btn_comando_uno.Tag.ToString()) ;
+            }
         }
 
-        private void Escaneo_rapido_Click(object sender, EventArgs e)
+        private void btn_comando_uno_Click(object sender, EventArgs e)
         {
-            Ventana.EscanerRapido();
+            MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows.\n " +
+                "Primero, escanea y repara archivos dañados del sistema. Luego, realiza una verificación" +
+                " adicional y corrige problemas utilizando otra herramienta de reparación. Si ves un mensaje " +
+                "sobre la necesidad de reiniciar, asegúrate de hacerlo para completar el proceso. ",
+                "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_comando_dos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows.\n " +
+               "Primero, escanea y repara archivos dañados del sistema. Luego, realiza una verificación" +
+               " adicional y corrige problemas utilizando otra herramienta de reparación. Si ves un mensaje " +
+               "sobre la necesidad de reiniciar, asegúrate de hacerlo para completar el proceso. ",
+               "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_comando_tres_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows.\n " +
+               "Primero, escanea y repara archivos dañados del sistema. Luego, realiza una verificación" +
+               " adicional y corrige problemas utilizando otra herramienta de reparación. Si ves un mensaje " +
+               "sobre la necesidad de reiniciar, asegúrate de hacerlo para completar el proceso. ",
+               "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

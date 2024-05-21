@@ -65,9 +65,13 @@
             btn_opciones = new Button();
             btn_Historial = new Button();
             userModelBindingSource = new BindingSource(components);
-            dropDownMenu1 = new DropDownMenu(components);
+            ddm = new DropDownMenu(components);
             emisoft = new ToolStripMenuItem();
             escaneo_rapido = new ToolStripMenuItem();
+            ddm_comando = new DropDownMenu(components);
+            btn_comando_uno = new ToolStripMenuItem();
+            btn_comando_dos = new ToolStripMenuItem();
+            btn_comando_tres = new ToolStripMenuItem();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
@@ -81,7 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).BeginInit();
-            dropDownMenu1.SuspendLayout();
+            ddm.SuspendLayout();
+            ddm_comando.SuspendLayout();
             SuspendLayout();
             // 
             // BarraTitulo
@@ -284,8 +289,7 @@
             btnOtros.Text = "Otros...";
             btnOtros.TextAlign = ContentAlignment.MiddleRight;
             btnOtros.UseVisualStyleBackColor = true;
-            btnOtros.Click += BtnOtros_Click;
-            btnOtros.MouseDown += BtnOtros_MouseDown;
+            btnOtros.Click += btnOtros_Click;
             // 
             // panel8
             // 
@@ -570,30 +574,64 @@
             // 
             userModelBindingSource.DataSource = typeof(Domain.UserModel);
             // 
-            // dropDownMenu1
+            // ddm
             // 
-            dropDownMenu1.ImageScalingSize = new Size(20, 20);
-            dropDownMenu1.IsMainMenu = false;
-            dropDownMenu1.Items.AddRange(new ToolStripItem[] { emisoft, escaneo_rapido });
-            dropDownMenu1.MenuItemHeight = 25;
-            dropDownMenu1.MenuItemTextColor = Color.DimGray;
-            dropDownMenu1.Name = "dropDownMenu1";
-            dropDownMenu1.PrimaryColor = Color.MediumSlateBlue;
-            dropDownMenu1.Size = new Size(185, 52);
+            ddm.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ddm.ImageScalingSize = new Size(20, 20);
+            ddm.IsMainMenu = false;
+            ddm.Items.AddRange(new ToolStripItem[] { emisoft, escaneo_rapido });
+            ddm.MenuItemHeight = 25;
+            ddm.MenuItemTextColor = Color.DimGray;
+            ddm.Name = "dropDownMenu1";
+            ddm.PrimaryColor = Color.MediumSlateBlue;
+            ddm.Size = new Size(217, 56);
             // 
             // emisoft
             // 
             emisoft.Name = "emisoft";
-            emisoft.Size = new Size(184, 24);
+            emisoft.Size = new Size(216, 26);
             emisoft.Text = "Emisoft";
             emisoft.Click += Emisoft_Click;
             // 
             // escaneo_rapido
             // 
             escaneo_rapido.Name = "escaneo_rapido";
-            escaneo_rapido.Size = new Size(184, 24);
+            escaneo_rapido.Size = new Size(216, 26);
             escaneo_rapido.Text = "Escaneo Rapido";
             escaneo_rapido.Click += Escaneo_rapido_Click;
+            // 
+            // ddm_comando
+            // 
+            ddm_comando.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ddm_comando.ImageScalingSize = new Size(20, 20);
+            ddm_comando.IsMainMenu = false;
+            ddm_comando.Items.AddRange(new ToolStripItem[] { btn_comando_uno, btn_comando_dos, btn_comando_tres });
+            ddm_comando.MenuItemHeight = 25;
+            ddm_comando.MenuItemTextColor = Color.DimGray;
+            ddm_comando.Name = "ddm_comando";
+            ddm_comando.PrimaryColor = Color.MediumSlateBlue;
+            ddm_comando.Size = new Size(211, 110);
+            // 
+            // btn_comando_uno
+            // 
+            btn_comando_uno.Name = "btn_comando_uno";
+            btn_comando_uno.Size = new Size(210, 26);
+            btn_comando_uno.Text = "Comando 1";
+            btn_comando_uno.Click += btn_comando_uno_Click;
+            // 
+            // btn_comando_dos
+            // 
+            btn_comando_dos.Name = "btn_comando_dos";
+            btn_comando_dos.Size = new Size(210, 26);
+            btn_comando_dos.Text = "Comando 2";
+            btn_comando_dos.Click += btn_comando_dos_Click;
+            // 
+            // btn_comando_tres
+            // 
+            btn_comando_tres.Name = "btn_comando_tres";
+            btn_comando_tres.Size = new Size(210, 26);
+            btn_comando_tres.Text = "Comando 3";
+            btn_comando_tres.Click += btn_comando_tres_Click;
             // 
             // MenuPrincipal
             // 
@@ -622,7 +660,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)userModelBindingSource).EndInit();
-            dropDownMenu1.ResumeLayout(false);
+            ddm.ResumeLayout(false);
+            ddm_comando.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -662,10 +701,14 @@
         private Panel panel1;
         private Panel panel10;
         private Panel panel9;
-        private DropDownMenu dropDownMenu1;
+        private DropDownMenu ddm;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaneo_rapido;
         private PictureBox pictureBox1;
+        private DropDownMenu ddm_comando;
+        private ToolStripMenuItem btn_comando_uno;
+        private ToolStripMenuItem btn_comando_dos;
+        private ToolStripMenuItem btn_comando_tres;
     }
 }
 

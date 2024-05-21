@@ -80,5 +80,12 @@ namespace Domain
         {
             userDato.GuardarHistorial(nombreUsuario);
         }
+
+
+        public DataSet ObtenerComandosCreados()
+        {
+            return userDato.DevolverComandosCreados();
+        }
     }
 }
+

@@ -1,6 +1,8 @@
 ﻿using Domain;
+using System.Data;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Presentation
 {
@@ -8,7 +10,6 @@ namespace Presentation
     {
         public static bool PanelContraido = true;
         public static FormWindowState estadoAnterior;
-
 
         public static void Salir()
         {
@@ -111,7 +112,6 @@ namespace Presentation
 
         }
 
-
         public static void InstalarAplicaciones()
         {
             var instalar = new InstalarAplicaciones();
@@ -144,6 +144,23 @@ namespace Presentation
         public static FormWindowState CompuebaEstadoVentana()
         {
             return estadoAnterior == FormWindowState.Normal ? FormWindowState.Normal : FormWindowState.Maximized;
+        }
+    
+        public static void MostrarComandosCreados(Button btnOtros, DropDownMenu ddm_comando)
+        {
+            UserModel datos = new UserModel();
+            DataSet comandos = datos.ObtenerComandosCreados();
+
+            if (comandos != null && comandos.Tables.Count > 0 && comandos.Tables[0].Rows.Count > 0)
+            {
+                ddm_comando.Items.Clear();
+                foreach (DataRow row in comandos.Tables[0].Rows)
+                {
+                    string nombreComando = row["nombre_comando"].ToString().Trim();
+                    ddm_comando.Items.Add(nombreComando);
+                }
+                ddm_comando.Show(btnOtros, btnOtros.Width, 0);
+            }
         }
     }
 }

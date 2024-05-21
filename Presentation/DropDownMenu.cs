@@ -19,6 +19,7 @@ namespace Presentation
         {
         }
 
+
         [Browsable(false)]
         public bool IsMainMenu
         {

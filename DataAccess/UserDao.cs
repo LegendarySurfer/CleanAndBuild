@@ -89,7 +89,6 @@ namespace DataAccess
             }
         }
 
-
         // Método para encriptar la contraseña utilizando SHA-256
         private string EncriptarContrasena(string contrasena)
         {
@@ -321,6 +320,7 @@ namespace DataAccess
             }
         }
     
+        //Guardo un comando
         public void GuardarComando(string nombre_comando,string logica)
         {
             using (var conexion = Conectar())
@@ -330,7 +330,7 @@ namespace DataAccess
                 {
                     using (var comando = conexion.CreateCommand())
                     {
-                        comando.CommandText = "INSERT INTO comando (nombre_comando, logica_comando) VALUES (@nombreComando, @logicaComando)";
+                        comando.CommandText = "INSERT INTO comando (nombre_comando, logica_comando,comando_creado) VALUES (@nombreComando, @logicaComando, 0)";
 
                         comando.Parameters.AddWithValue("@nombreComando", nombre_comando);
                         comando.Parameters.AddWithValue("@logicaComando", logica);
@@ -344,7 +344,26 @@ namespace DataAccess
             }
         }
 
-        //TODO
+        //devuelve el nombre de los comandos creados
+        public DataSet DevolverComandosCreados()
+        {
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    //solo los 3 primeros
+                    comando.CommandText = "SELECT * FROM comando where comando_creado = 1 ORDER BY id_comando DESC LIMIT 3";
+                    using (SQLiteDataAdapter adaptador = new SQLiteDataAdapter(comando))
+                    {
+                        DataSet datos = new DataSet();
+                        adaptador.Fill(datos, "comando");
+                        return datos;
+                    }
+                }
+            }
+        }
+
         public void GuardarHistorial(string nombreUsuario)
         {
             int idUsuario = ObtenerIdUsuario(nombreUsuario);
@@ -362,15 +381,11 @@ namespace DataAccess
                     comando.Parameters.AddWithValue("@id_persona", idUsuario);
                     comando.Parameters.AddWithValue("@id_comando", idComando);
 
-
-
-
                     comando.ExecuteNonQuery();
 
                 }
             }
         }
-
 
         //-------------------- OBTENER IDS -------------------------------------------
         
