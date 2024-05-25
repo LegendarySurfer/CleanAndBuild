@@ -19,9 +19,7 @@ namespace Presentation
             Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
             WindowState = Ventana.CompuebaEstadoVentana();
             cb_idioma.Text = "Español";
-            cb_tema.Text = "Oscuro";
-
-
+            CambiarColor();
         }
 
         //---------------------------------------------------- mostrar info del usuario ----------------------------------------------------
@@ -209,7 +207,21 @@ namespace Presentation
 
         private void BtnOtros_Click(object sender, EventArgs e)
         {
-            //logica para mostrar los botones que se creen
+             else
+            {
+                Ventana.MostrarComandosCreados(btnOtros, ddm_comando);
+
+                if (sender is Button btnPresionado)
+                {
+                    string mensaje = btnPresionado.Tag?.ToString() switch
+                    {
+                        "Comando Uno" => "Mensaje para el botón Comando Uno.",
+                        "Comando Dos" => "Mensaje para el botón Comando Dos.",
+                        _ => "Mensaje para otros botones."
+                    };
+
+                }
+            }
         }
 
         private void BtnOtros_MouseDown(object sender, MouseEventArgs e)
@@ -259,8 +271,23 @@ namespace Presentation
 
         private void cb_tema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemaColores.ElegirTema(cb_tema.Text);
+            CambiarColor();
+        }
+        private void CambiarColor()
+        {
+            TemaColores.ColorSeleccionado = cb_tema.Text;
 
+            TemaColores.ElegirTema(TemaColores.ColorSeleccionado);
+
+            BarraTitulo.BackColor = TemaColores.BarraTitulo;
+            PanelContenedor.BackColor = TemaColores.PanelContenedor;
+            MenuVertical.BackColor = TemaColores.MenuVertical;
+
+            btn_eliminar.BackColor = TemaColores.btn_eliminar;
+            btn_guardar.BackColor = TemaColores.btn_guardar;
+            btn_volver.BackColor = TemaColores.btn_volver;
+
+            //guardamos el color para las demas vistas
         }
     }
 }

@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\temacolores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\temacolores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\presentation\\historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|c:\\users\\pablo\\desktop\\tfg\\proyectos\\cleanandbuild-interfaz\\cleanandbuild\\presentation\\actualizaraplicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F6724FB6-546E-4D1F-A4F1-FC4AA86A94E4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\actualizaraplicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,77 +14,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Ajustes.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs",
-              "RelativeDocumentMoniker": "Presentation\\Ajustes.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs",
-              "RelativeToolTip": "Presentation\\Ajustes.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAA/wJoAAABQAAAA",
+              "Title": "ActualizarAplicacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\ActualizarAplicacion.cs",
+              "RelativeDocumentMoniker": "Presentation\\ActualizarAplicacion.cs",
+              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\ActualizarAplicacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentation\\ActualizarAplicacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T09:26:40.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TemaColores.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\TemaColores.cs",
-              "RelativeDocumentMoniker": "Presentation\\TemaColores.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\TemaColores.cs",
-              "RelativeToolTip": "Presentation\\TemaColores.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T08:11:21.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Historial.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Historial.cs",
-              "RelativeDocumentMoniker": "Presentation\\Historial.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Historial.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\Historial.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T07:58:15.42Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "b2f91c7d-e2c5-4f15-8d23-d948e6fef58f",
-        "Display": 1,
-        "X": -5,
-        "Y": 0,
-        "Width": 1483,
-        "Height": 821,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ajustes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs",
-              "RelativeDocumentMoniker": "Presentation\\Ajustes.cs",
-              "ToolTip": "C:\\Users\\Pablo\\Desktop\\TFG\\Proyectos\\CleanAndBuild-Interfaz\\CleanAndBuild\\Presentation\\Ajustes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\Ajustes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T09:26:00.102Z",
+              "WhenOpened": "2024-05-25T11:00:05.727Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

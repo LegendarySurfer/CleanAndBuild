@@ -581,7 +581,7 @@
             cb_tema.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb_tema.Font = new Font("Microsoft Sans Serif", 12F);
             cb_tema.FormattingEnabled = true;
-            cb_tema.Items.AddRange(new object[] { "Claro", "Oscuro", "Automatico" });
+            cb_tema.Items.AddRange(new object[] { "Defecto", "Morado", "Verde", "Verano", "Blanco" });
             cb_tema.Location = new Point(715, 164);
             cb_tema.Name = "cb_tema";
             cb_tema.Size = new Size(197, 33);

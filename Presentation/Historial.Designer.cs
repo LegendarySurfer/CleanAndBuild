@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historial));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             BarraTitulo = new Panel();
             label7 = new Label();
             btnRestaurar = new PictureBox();
@@ -40,7 +40,7 @@
             btn_minimizar = new PictureBox();
             btn_salir = new PictureBox();
             PanelContenedor = new Panel();
-            btn_cargar = new Button();
+            btn_importar = new Button();
             dg_historial = new DataGridView();
             cb_historial = new ComboBox();
             button2 = new Button();
@@ -73,7 +73,6 @@
             dropDownMenu1 = new DropDownMenu(components);
             emisoft = new ToolStripMenuItem();
             escaner_rapido = new ToolStripMenuItem();
-            btn_importar = new Button();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
@@ -176,7 +175,6 @@
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
             PanelContenedor.Controls.Add(btn_importar);
-            PanelContenedor.Controls.Add(btn_cargar);
             PanelContenedor.Controls.Add(dg_historial);
             PanelContenedor.Controls.Add(cb_historial);
             PanelContenedor.Controls.Add(button2);
@@ -190,24 +188,24 @@
             PanelContenedor.Size = new Size(967, 764);
             PanelContenedor.TabIndex = 2;
             // 
-            // btn_cargar
+            // btn_importar
             // 
-            btn_cargar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_cargar.BackColor = Color.FromArgb(66, 217, 200);
-            btn_cargar.FlatAppearance.BorderSize = 0;
-            btn_cargar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btn_cargar.FlatStyle = FlatStyle.Flat;
-            btn_cargar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_cargar.ForeColor = Color.White;
-            btn_cargar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_cargar.Location = new Point(667, 88);
-            btn_cargar.Margin = new Padding(3, 4, 3, 4);
-            btn_cargar.Name = "btn_cargar";
-            btn_cargar.Size = new Size(203, 60);
-            btn_cargar.TabIndex = 48;
-            btn_cargar.Text = "CARGAR";
-            btn_cargar.UseVisualStyleBackColor = false;
-            btn_cargar.Click += Btn_cargar_Click;
+            btn_importar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_importar.BackColor = Color.FromArgb(113, 119, 68);
+            btn_importar.FlatAppearance.BorderSize = 0;
+            btn_importar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btn_importar.FlatStyle = FlatStyle.Flat;
+            btn_importar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_importar.ForeColor = Color.White;
+            btn_importar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_importar.Location = new Point(667, 88);
+            btn_importar.Margin = new Padding(3, 4, 3, 4);
+            btn_importar.Name = "btn_importar";
+            btn_importar.Size = new Size(203, 60);
+            btn_importar.TabIndex = 49;
+            btn_importar.Text = "Importar";
+            btn_importar.UseVisualStyleBackColor = false;
+            btn_importar.Click += btn_importar_Click;
             // 
             // dg_historial
             // 
@@ -219,14 +217,14 @@
             dg_historial.BorderStyle = BorderStyle.None;
             dg_historial.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dg_historial.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dg_historial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dg_historial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dg_historial.ColumnHeadersHeight = 30;
             dg_historial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dg_historial.EnableHeadersVisualStyles = false;
@@ -235,22 +233,22 @@
             dg_historial.Name = "dg_historial";
             dg_historial.ReadOnly = true;
             dg_historial.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(49, 66, 82);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dg_historial.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(49, 66, 82);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dg_historial.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dg_historial.RowHeadersVisible = false;
             dg_historial.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(45, 66, 91);
-            dataGridViewCellStyle6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dg_historial.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dg_historial.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dg_historial.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg_historial.Size = new Size(844, 424);
             dg_historial.TabIndex = 47;
@@ -263,8 +261,9 @@
             cb_historial.Location = new Point(66, 103);
             cb_historial.Name = "cb_historial";
             cb_historial.RightToLeft = RightToLeft.No;
-            cb_historial.Size = new Size(218, 31);
+            cb_historial.Size = new Size(345, 31);
             cb_historial.TabIndex = 46;
+            cb_historial.SelectedIndexChanged += cb_historial_SelectedIndexChanged;
             // 
             // button2
             // 
@@ -693,24 +692,6 @@
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += Escaner_rapido_Click;
             // 
-            // btn_importar
-            // 
-            btn_importar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_importar.BackColor = Color.FromArgb(113, 119, 68);
-            btn_importar.FlatAppearance.BorderSize = 0;
-            btn_importar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btn_importar.FlatStyle = FlatStyle.Flat;
-            btn_importar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_importar.ForeColor = Color.White;
-            btn_importar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_importar.Location = new Point(399, 659);
-            btn_importar.Margin = new Padding(3, 4, 3, 4);
-            btn_importar.Name = "btn_importar";
-            btn_importar.Size = new Size(203, 60);
-            btn_importar.TabIndex = 49;
-            btn_importar.Text = "Importar";
-            btn_importar.UseVisualStyleBackColor = false;
-            // 
             // Historial
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -777,7 +758,6 @@
         private PictureBox pictureBox2;
         private ComboBox cb_historial;
         private DataGridView dg_historial;
-        private Button btn_cargar;
         private Panel panel9;
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;

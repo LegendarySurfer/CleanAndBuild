@@ -19,9 +19,21 @@ namespace Presentation
 
             Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
             WindowState = Ventana.CompuebaEstadoVentana();
-
+            CambiarTema();
         }
 
+        private void CambiarTema()
+        {
+            TemaColores.ElegirTema(TemaColores.ColorSeleccionado);
+
+            BarraTitulo.BackColor = TemaColores.BarraTitulo;
+            PanelContenedor.BackColor = TemaColores.PanelContenedor;
+            MenuVertical.BackColor = TemaColores.MenuVertical;
+
+            btn_Instalar.BackColor = TemaColores.btn_guardar;
+            btn_volver.BackColor = TemaColores.btn_volver;
+
+        }
         //---------------------------------------------------- botones windows ----------------------------------------------------
         private void BtnCerrar_Click(object sender, EventArgs e)
         {

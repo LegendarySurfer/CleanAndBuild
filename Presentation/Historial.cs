@@ -10,6 +10,7 @@ namespace Presentation
 
         public Historial()
         {
+
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
@@ -23,6 +24,22 @@ namespace Presentation
             cb_historial.Select(0, 0);
             cb_historial.Text = "Aplicaciones";
             CargarDatos();
+            CambiarTema();
+
+        }
+
+        private void CambiarTema()
+        {
+            TemaColores.ElegirTema(TemaColores.ColorSeleccionado);
+
+            BarraTitulo.BackColor = TemaColores.BarraTitulo;
+            PanelContenedor.BackColor = TemaColores.PanelContenedor;
+            MenuVertical.BackColor = TemaColores.MenuVertical;
+
+            btn_exportar.BackColor = TemaColores.btn_guardar;
+            btn_importar.BackColor = TemaColores.btn_guardar;
+            btn_volver.BackColor = TemaColores.btn_volver;
+
         }
 
         //---------------------------------------------------- muestra las operaciones realizadas ----------------------------------------------------
@@ -70,6 +87,36 @@ namespace Presentation
                 MessageBox.Show("Error al copiar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_importar_Click(object sender, EventArgs e)
+        {
+            // Crear un cuadro de diálogo para seleccionar el archivo
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Seleccione el archivo para importar",
+                Filter = "Todos los archivos (*.*)|*.*"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string sourceFilePath = openFileDialog.FileName;
+
+                string destinationFilePath = Path.Combine(Application.StartupPath, @"..\..\..\..\BBDD\cleandbuild.db");
+
+                try
+                {
+                    // Copiar el archivo al destino, sobrescribiendo si ya existe
+                    File.Copy(sourceFilePath, destinationFilePath, true);
+                    MessageBox.Show("Archivo importado y sustituido con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    // Manejar errores si ocurre algún problema durante la copia del archivo
+                    MessageBox.Show($"Error al copiar el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
         //---------------------------------------------------- botones laterales ----------------------------------------------------
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -212,6 +259,11 @@ namespace Presentation
         {
             Ventana.MenuPrincipal();
             Close();
+        }
+
+        private void cb_historial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
     }
 }

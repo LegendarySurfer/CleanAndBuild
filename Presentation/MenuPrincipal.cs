@@ -26,6 +26,17 @@ namespace Presentation
             ddm_comando.IsMainMenu = true;
             Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, ddm);
             WindowState = Ventana.CompuebaEstadoVentana();
+            CambiarTema();
+
+        }
+
+        private void CambiarTema()
+        {
+            TemaColores.ElegirTema(TemaColores.ColorSeleccionado);
+
+            BarraTitulo.BackColor = TemaColores.BarraTitulo;
+            PanelContenedor.BackColor = TemaColores.PanelContenedor;
+            MenuVertical.BackColor = TemaColores.MenuVertical;
         }
 
         //---------------------------------------------------- mostrar informacion de usuario ----------------------------------------------------
@@ -158,38 +169,30 @@ namespace Presentation
 
         private void btnOtros_Click(object sender, EventArgs e)
         {
-            if (username.Equals("admin"))
+            if (username == "admin")
             {
                 Ventana.estadoAnterior = WindowState;
-                var addComand = new AgregarComando();
-                addComand.Show();
+                new AgregarComando().Show();
                 Close();
             }
             else
             {
                 Ventana.MostrarComandosCreados(btnOtros, ddm_comando);
-                // Mostrar mensaje personalizado dependiendo del botón
-                string mensaje = "";
-                Button btnPresionado = sender as Button; // Obtener el botón que se presionó
 
-                // Determinar qué mensaje mostrar según el botón presionado
-                if (btnPresionado.Tag.ToString() == btn_comando_uno.Tag.ToString())
+                if (sender is Button btnPresionado)
                 {
-                    mensaje = "Mensaje para el botón Comando Uno.";
-                }
-                else if (btnPresionado.Tag.ToString() == btn_comando_dos.Tag.ToString())
-                {
-                    mensaje = "Mensaje para el botón Comando Dos.";
-                }
-                else
-                {
-                    mensaje = "Mensaje para otros botones.";
-                }
+                    string mensaje = btnPresionado.Tag?.ToString() switch
+                    {
+                        "Comando Uno" => "Mensaje para el botón Comando Uno.",
+                        "Comando Dos" => "Mensaje para el botón Comando Dos.",
+                        _ => "Mensaje para otros botones."
+                    };
 
-                // Mostrar el mensaje
-                MessageBox.Show(mensaje, "Mensaje Personalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);if (btnPresionado.Tag.ToString() == btn_comando_uno.Tag.ToString()) ;
+                }
             }
         }
+
+
 
         private void btn_comando_uno_Click(object sender, EventArgs e)
         {
