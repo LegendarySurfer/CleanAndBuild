@@ -582,6 +582,7 @@
             btn_Guardar.TabIndex = 46;
             btn_Guardar.Text = "Guardar Cambios";
             btn_Guardar.UseVisualStyleBackColor = false;
+            btn_Guardar.Click += btn_Guardar_Click;
             // 
             // btn_volver
             // 

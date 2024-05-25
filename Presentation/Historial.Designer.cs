@@ -268,7 +268,7 @@
             cb_historial.RightToLeft = RightToLeft.No;
             cb_historial.Size = new Size(345, 31);
             cb_historial.TabIndex = 46;
-            cb_historial.SelectedIndexChanged += cb_historial_SelectedIndexChanged;
+            cb_historial.SelectedIndexChanged += Cb_historial_SelectedIndexChanged;
             // 
             // button2
             // 

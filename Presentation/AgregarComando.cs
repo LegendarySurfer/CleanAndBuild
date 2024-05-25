@@ -207,5 +207,10 @@ namespace Presentation
             Ventana.MenuPrincipal();
             Close();
         }
+
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -281,6 +281,7 @@ namespace Presentation
         {
             CambiarColor();
         }
+       
         private void CambiarColor()
         {
             TemaColores.ColorSeleccionado = cb_tema.Text;

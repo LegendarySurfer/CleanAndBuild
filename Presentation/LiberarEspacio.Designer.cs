@@ -130,7 +130,7 @@
             btnRestaurar.TabIndex = 3;
             btnRestaurar.TabStop = false;
             btnRestaurar.Visible = false;
-            btnRestaurar.Click += btnRestaurar_Click;
+            btnRestaurar.Click += BtnRestaurar_Click;
             // 
             // btnMinimizar
             // 
@@ -144,7 +144,7 @@
             btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMinimizar.TabIndex = 2;
             btnMinimizar.TabStop = false;
-            btnMinimizar.Click += btnMinimizar_Click;
+            btnMinimizar.Click += BtnMinimizar_Click;
             // 
             // btnMaximizar
             // 
@@ -158,7 +158,7 @@
             btnMaximizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximizar.TabIndex = 1;
             btnMaximizar.TabStop = false;
-            btnMaximizar.Click += btnMaximizar_Click;
+            btnMaximizar.Click += BtnMaximizar_Click;
             // 
             // btnCerrar
             // 
@@ -492,7 +492,7 @@
             btnSide.SizeMode = PictureBoxSizeMode.Zoom;
             btnSide.TabIndex = 0;
             btnSide.TabStop = false;
-            btnSide.Click += btnSide_Click;
+            btnSide.Click += BtnSide_Click;
             // 
             // PanelContenedor
             // 

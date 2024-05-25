@@ -42,27 +42,27 @@ namespace Presentation
             Ventana.Salir();
         }
 
-        private void btnMaximizar_Click(object sender, EventArgs e)
+        private void BtnMaximizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
             btnMaximizar.Visible = false;
             btnRestaurar.Visible = true;
         }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
+        private void BtnRestaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             btnRestaurar.Visible = false;
             btnMaximizar.Visible = true;
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
+        private void BtnMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
 
         }
 
-        private void btnSide_Click(object sender, EventArgs e)
+        private void BtnSide_Click(object sender, EventArgs e)
         {
             MenuVertical = Ventana.SideBar(MenuVertical);
             btnAntivirus.Width = MenuVertical.Width;

@@ -191,9 +191,7 @@ namespace Presentation
                 }
             }
         }
-
-
-
+       
         private void btn_comando_uno_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Este script repara problemas comunes del sistema operativo Windows.\n " +

@@ -283,7 +283,7 @@ namespace Presentation
             Close();
         }
 
-        private void cb_historial_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cb_historial_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarDatos();
         }
