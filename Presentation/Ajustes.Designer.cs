@@ -586,6 +586,7 @@
             cb_tema.Name = "cb_tema";
             cb_tema.Size = new Size(197, 33);
             cb_tema.TabIndex = 59;
+            cb_tema.SelectedIndexChanged += cb_tema_SelectedIndexChanged;
             // 
             // label1
             // 

@@ -35,7 +35,7 @@ namespace Presentation
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
             // cambiar nombre de usuario
-            if (tb_name_usuario.Text != "Nombre") 
+            if (tb_name_usuario.Text != "Nombre")
             {
                 UserModel usuario = new UserModel();
                 if (!usuario.CompruebaUser(tb_name_usuario.Text))//si no existe se cambia
@@ -235,7 +235,8 @@ namespace Presentation
 
         private void Btn_eliminar_Click(object sender, EventArgs e)
         {
-            if(textName.Text.Equals("admin")) {
+            if (textName.Text.Equals("admin"))
+            {
                 MessageBox.Show("El admin no se borra.", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -256,6 +257,10 @@ namespace Presentation
             }
         }
 
+        private void cb_tema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TemaColores.ElegirTema(cb_tema.Text);
 
+        }
     }
 }

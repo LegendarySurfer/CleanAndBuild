@@ -73,6 +73,7 @@
             dropDownMenu1 = new DropDownMenu(components);
             emisoft = new ToolStripMenuItem();
             escaner_rapido = new ToolStripMenuItem();
+            btn_importar = new Button();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
@@ -174,6 +175,7 @@
             // PanelContenedor
             // 
             PanelContenedor.BackColor = Color.FromArgb(49, 66, 82);
+            PanelContenedor.Controls.Add(btn_importar);
             PanelContenedor.Controls.Add(btn_cargar);
             PanelContenedor.Controls.Add(dg_historial);
             PanelContenedor.Controls.Add(cb_historial);
@@ -191,7 +193,7 @@
             // btn_cargar
             // 
             btn_cargar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_cargar.BackColor = Color.Teal;
+            btn_cargar.BackColor = Color.FromArgb(66, 217, 200);
             btn_cargar.FlatAppearance.BorderSize = 0;
             btn_cargar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_cargar.FlatStyle = FlatStyle.Flat;
@@ -284,7 +286,7 @@
             // btn_exportar
             // 
             btn_exportar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_exportar.BackColor = Color.DarkSlateBlue;
+            btn_exportar.BackColor = Color.FromArgb(106, 76, 147);
             btn_exportar.FlatAppearance.BorderSize = 0;
             btn_exportar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btn_exportar.FlatStyle = FlatStyle.Flat;
@@ -313,7 +315,7 @@
             btn_volver.Location = new Point(45, 659);
             btn_volver.Margin = new Padding(3, 4, 3, 4);
             btn_volver.Name = "btn_volver";
-            btn_volver.Size = new Size(239, 60);
+            btn_volver.Size = new Size(205, 60);
             btn_volver.TabIndex = 43;
             btn_volver.Text = "Volver Al Menu";
             btn_volver.UseVisualStyleBackColor = false;
@@ -691,6 +693,24 @@
             escaner_rapido.Text = "Escaneo Rapido";
             escaner_rapido.Click += Escaner_rapido_Click;
             // 
+            // btn_importar
+            // 
+            btn_importar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_importar.BackColor = Color.FromArgb(113, 119, 68);
+            btn_importar.FlatAppearance.BorderSize = 0;
+            btn_importar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btn_importar.FlatStyle = FlatStyle.Flat;
+            btn_importar.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_importar.ForeColor = Color.White;
+            btn_importar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_importar.Location = new Point(399, 659);
+            btn_importar.Margin = new Padding(3, 4, 3, 4);
+            btn_importar.Name = "btn_importar";
+            btn_importar.Size = new Size(203, 60);
+            btn_importar.TabIndex = 49;
+            btn_importar.Text = "Importar";
+            btn_importar.UseVisualStyleBackColor = false;
+            // 
             // Historial
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -762,6 +782,7 @@
         private DropDownMenu dropDownMenu1;
         private ToolStripMenuItem emisoft;
         private ToolStripMenuItem escaner_rapido;
+        private Button btn_importar;
     }
 }
 
