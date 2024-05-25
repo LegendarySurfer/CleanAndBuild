@@ -20,6 +20,8 @@ namespace Presentation
             Ventana.CambiarBtnAntivirus(btnAntivirus, MenuVertical2, dropDownMenu1);
             WindowState = Ventana.CompuebaEstadoVentana();
             CambiarTema();
+            ddm_comando.IsMainMenu = true;
+
         }
 
         private void CambiarTema()
@@ -326,7 +328,27 @@ namespace Presentation
 
         private void BtnOtros_Click(object sender, EventArgs e)
         {
-            //logica para mostrar los botones que se creen
+            if (MenuPrincipal.username == "admin")
+            {
+                Ventana.estadoAnterior = WindowState;
+                new AgregarComando().Show();
+                Close();
+            }
+            else
+            {
+                Ventana.MostrarComandosCreados(btnOtros, ddm_comando);
+
+                if (sender is Button btnPresionado)
+                {
+                    string mensaje = btnPresionado.Tag?.ToString() switch
+                    {
+                        "Comando Uno" => "Mensaje para el botón Comando Uno.",
+                        "Comando Dos" => "Mensaje para el botón Comando Dos.",
+                        _ => "Mensaje para otros botones."
+                    };
+
+                }
+            }
         }
 
         private void BtnOtros_MouseDown(object sender, MouseEventArgs e)

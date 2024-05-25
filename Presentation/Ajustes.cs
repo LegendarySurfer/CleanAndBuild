@@ -20,6 +20,8 @@ namespace Presentation
             WindowState = Ventana.CompuebaEstadoVentana();
             cb_idioma.Text = "Español";
             CambiarColor();
+            ddm_comando.IsMainMenu = true;
+
         }
 
         //---------------------------------------------------- mostrar info del usuario ----------------------------------------------------
@@ -207,7 +209,13 @@ namespace Presentation
 
         private void BtnOtros_Click(object sender, EventArgs e)
         {
-             else
+            if (MenuPrincipal.username == "admin")
+            {
+                Ventana.estadoAnterior = WindowState;
+                new AgregarComando().Show();
+                Close();
+            }
+            else
             {
                 Ventana.MostrarComandosCreados(btnOtros, ddm_comando);
 
