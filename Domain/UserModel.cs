@@ -63,14 +63,18 @@ namespace Domain
         {
             userDato.AgregarEquipoEnRegistra(nombreuser);
         }
-
-        
-        public void guardarAplicacion(string name, string tipo)
+  
+        public void GuardarAplicacion(string name, string tipo)
         {
              userDato.GuardarAplication(name,tipo);
 
         }
     
+        public void GuardarAplicacionEnIstalan()
+        {
+            userDato.GuardarEnInstalan();
+        }
+
         public void GuardarComando(string nombreComando, string logica)
         {
             userDato.GuardarComando(nombreComando,logica);
@@ -80,7 +84,6 @@ namespace Domain
         {
             userDato.GuardarHistorial(nombreUsuario);
         }
-
 
         public DataSet ObtenerComandosCreados()
         {

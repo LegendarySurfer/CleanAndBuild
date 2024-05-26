@@ -55,7 +55,7 @@ namespace Presentation
                 dg_historial.DataSource = datos.Tables[0];
             }
             else
-            {//obtener aplicaciones del usuario
+            {//obtener aplicaciones de la bbdd instalan
 
                 DataSet datos = historial.ObtenerAplicacionesEquipo(MenuPrincipal.nombreEquipo);
                 dg_historial.DataSource = datos.Tables[0]; // datos de todos los usuarios

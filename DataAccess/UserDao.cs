@@ -42,11 +42,12 @@ namespace DataAccess
                 a.id_aplicacion, 
                 a.nombre_aplicacion, 
                 a.tipo, 
-                a.fecha_instalada, 
+                i.fecha_instalada, 
                 e.nombre_equipo
-            FROM aplicacion a
-            INNER JOIN equipo e ON a.id_equipo = e.id_equipo
-            WHERE a.id_equipo = @idEquipo";
+            FROM instalan i
+            INNER JOIN aplicacion a ON i.id_aplicacion = a.id_aplicacion
+            INNER JOIN equipo e ON i.id_equipo = e.id_equipo
+            WHERE i.id_equipo = @idEquipo";
 
                 using (var comando = new SQLiteCommand(query, conexion))
                 {
@@ -300,19 +301,14 @@ namespace DataAccess
 
         public void GuardarAplication(string name,string tipo)
         {
-            string nombreEquipo = Environment.MachineName;
-
             using (var conexion = Conectar())
             {
                 conexion.Open();
                 using (var comando = conexion.CreateCommand())
                 {
-                    string id_equipo = ObtenerIdEquipo(nombreEquipo) + "";
-                    comando.CommandText = "INSERT INTO aplicacion (nombre_aplicacion, tipo, fecha_instalada, id_equipo) VALUES (@nombre_aplicacion,@tipo,@fecha_instalada,@id_equipo)";
+                    comando.CommandText = "INSERT INTO aplicacion (nombre_aplicacion, tipo) VALUES (@nombre_aplicacion,@tipo)";
                     comando.Parameters.AddWithValue("@nombre_aplicacion", name);
                     comando.Parameters.AddWithValue("@tipo", tipo);
-                    comando.Parameters.AddWithValue("@fecha_instalada", DateTime.Now); // Agregar la fecha actual
-                    comando.Parameters.AddWithValue("@id_equipo", id_equipo);
 
                     comando.ExecuteNonQuery();
 
@@ -320,6 +316,28 @@ namespace DataAccess
             }
         }
     
+        public void GuardarEnInstalan()
+        {
+            int idAplicacion = ObtenerIdAplicacion();
+            int idEquipo = ObtenerIdEquipo(Environment.MachineName);
+
+
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "INSERT INTO instalan (id_aplicacion, id_equipo, fecha_instalada) VALUES (@id_aplicacion,@id_equipo,@fecha_instalada)";
+                    comando.Parameters.AddWithValue("@id_aplicacion", idAplicacion);
+                    comando.Parameters.AddWithValue("@id_equipo", idEquipo); 
+                    comando.Parameters.AddWithValue("@fecha_instalada", DateTime.Now); 
+
+                    comando.ExecuteNonQuery();
+
+                }
+            }
+        }
+
         //Guardo un comando
         public void GuardarComando(string nombre_comando,string logica)
         {
@@ -460,5 +478,28 @@ namespace DataAccess
             return idComando;
         }
 
+        //obtener el id de la ultima aplicacion instalada
+        public int ObtenerIdAplicacion()
+        {
+            int idAplicacion = -1;
+
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = "SELECT id_aplicacion FROM aplicacion ORDER BY id_aplicacion DESC LIMIT 1";
+
+                    object result = comando.ExecuteScalar();
+                    if (result != null)
+                    {
+                        idAplicacion = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return idAplicacion;
+        }
     }
 }

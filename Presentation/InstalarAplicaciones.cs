@@ -94,7 +94,8 @@ namespace Presentation
             if (cb_google.Checked)
             {
                 programasSeleccionados.Add("chrome");
-                aplicaciones.guardarAplicacion("chrome", "WEB BROWSER");
+                aplicaciones.GuardarAplicacion("chrome", "WEB BROWSER");// creamos aplicacion
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en historial
 
                 cb_google.Checked = false;
             }
@@ -102,7 +103,8 @@ namespace Presentation
             if (cb_firefox.Checked)
             {
                 programasSeleccionados.Add("firefox");
-                aplicaciones.guardarAplicacion("firefox", "WEB BROWSER");
+                aplicaciones.GuardarAplicacion("firefox", "WEB BROWSER");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_firefox.Checked = false;
 
@@ -111,7 +113,8 @@ namespace Presentation
             if (cb_opera.Checked)
             {
                 programasSeleccionados.Add("opera");
-                aplicaciones.guardarAplicacion("opera", "WEB BROWSER");
+                aplicaciones.GuardarAplicacion("opera", "WEB BROWSER");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_opera.Checked = false;
 
@@ -120,7 +123,9 @@ namespace Presentation
             if (cb_zoom.Checked)
             {
                 programasSeleccionados.Add("zoom");
-                aplicaciones.guardarAplicacion("zoom", "MESSAGING");
+                aplicaciones.GuardarAplicacion("zoom", "MESSAGING");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
+
                 cb_zoom.Checked = false;
 
             }
@@ -128,7 +133,8 @@ namespace Presentation
             if (cb_discord.Checked)
             {
                 programasSeleccionados.Add("discord");
-                aplicaciones.guardarAplicacion("discord", "MESSAGING");
+                aplicaciones.GuardarAplicacion("discord", "MESSAGING");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_discord.Checked = false;
 
@@ -137,7 +143,8 @@ namespace Presentation
             if (cb_skype.Checked)
             {
                 programasSeleccionados.Add("skype");
-                aplicaciones.guardarAplicacion("skype", "MESSAGING");
+                aplicaciones.GuardarAplicacion("skype", "MESSAGING");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_skype.Checked = false;
 
@@ -146,7 +153,8 @@ namespace Presentation
             if (cb_putty.Checked)
             {
                 programasSeleccionados.Add("putty");
-                aplicaciones.guardarAplicacion("putty", "DEVELOPER TOOLS");
+                aplicaciones.GuardarAplicacion("putty", "DEVELOPER TOOLS");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_putty.Checked = false;
 
@@ -155,7 +163,8 @@ namespace Presentation
             if (cb_Eclipse.Checked)
             {
                 programasSeleccionados.Add("eclipse");
-                aplicaciones.guardarAplicacion("eclipse", "DEVELOPER TOOLS");
+                aplicaciones.GuardarAplicacion("eclipse", "DEVELOPER TOOLS");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_Eclipse.Checked = false;
 
@@ -164,7 +173,8 @@ namespace Presentation
             if (cb_vscode.Checked)
             {
                 programasSeleccionados.Add("vscode");
-                aplicaciones.guardarAplicacion("vscode", "DEVELOPER TOOLS");
+                aplicaciones.GuardarAplicacion("vscode", "DEVELOPER TOOLS");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
                 cb_vscode.Checked = false;
 
@@ -173,17 +183,18 @@ namespace Presentation
             if (cb_winrar.Checked)
             {
                 programasSeleccionados.Add("winrar");
-                aplicaciones.guardarAplicacion("winrar", "COMPRESSION");
+                aplicaciones.GuardarAplicacion("winrar", "COMPRESSION");
 
                 cb_winrar.Checked = false;
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
             }
 
             if (cb_blender.Checked)
             {
                 programasSeleccionados.Add("blender");
-                aplicaciones.guardarAplicacion("blender", "IMAGING");
-
+                aplicaciones.GuardarAplicacion("blender", "IMAGING");
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
                 cb_blender.Checked = false;
 
             }
@@ -191,25 +202,27 @@ namespace Presentation
             if (cb_gimp.Checked)
             {
                 programasSeleccionados.Add("gimp");
-                aplicaciones.guardarAplicacion("gimp", "IMAGING");
-
+                aplicaciones.GuardarAplicacion("gimp", "IMAGING");
                 cb_gimp.Checked = false;
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
             }
 
             if (cb_steam.Checked)
             {
                 programasSeleccionados.Add("steam");
-                aplicaciones.guardarAplicacion("steam", "OTHER");
+                aplicaciones.GuardarAplicacion("steam", "OTHER");
                 cb_steam.Checked = false;
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
             }
 
             if (cb_vlc.Checked)
             {
                 programasSeleccionados.Add("vlc");
-                aplicaciones.guardarAplicacion("vlc", "OTHER");
+                aplicaciones.GuardarAplicacion("vlc", "OTHER");
                 cb_vlc.Checked = false;
+                aplicaciones.GuardarAplicacionEnIstalan();//guardamos aplicacion en instalan
 
             }
 
@@ -240,8 +253,8 @@ namespace Presentation
             }
 
             //Guardar comandos
-            aplicaciones.GuardarComando("Instalar aplicaciones", "installAplication");
-            aplicaciones.GuardarEnHistorial(MenuPrincipal.username);
+            aplicaciones.GuardarComando("Instalar aplicaciones", "installAplication"); // creo comando
+            aplicaciones.GuardarEnHistorial(MenuPrincipal.username); //guardo comando en historial
 
         }
 
