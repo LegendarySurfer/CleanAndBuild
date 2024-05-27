@@ -213,8 +213,7 @@ namespace Presentation
 
             if (cb_comando.Checked)
             {
-                MessageBox.Show("Espere un momento mientras se termina de actualizar todo.",
-                "Time", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 string pathToBatchFile = Path.Combine(Application.StartupPath, @"..\..\..\scripts\update.bat");
 
                 p.StartInfo.FileName = "cmd.exe";
@@ -238,6 +237,8 @@ namespace Presentation
                 //GUARDAR EN LA BBDD COMANDOS
                 userModel.GuardarComando("Actualizar Aplicacion", "update");
                 userModel.GuardarEnHistorial(MenuPrincipal.username);
+                MessageBox.Show("Espere un momento mientras se termina de actualizar todo.",
+                    "Time", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             if (cb_aplicaciones.Checked)
