@@ -43,5 +43,12 @@ namespace DataAccess
                 conexion.Dispose();
             }
         }
+    
+        public string RutaBBDD()
+        {
+            ObtenerRuta();
+            return conexion.Database;
+        }
+   
     }
 }

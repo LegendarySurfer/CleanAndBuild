@@ -7,6 +7,17 @@ namespace Domain
     {
         UserDao userDato = new UserDao(); // Estancia de los usuarios 
 
+        //comprueba si hay bbdd existente
+        public bool CompruebaBD()
+        {
+            return userDato.ComprobarBBDD();
+        }
+
+        public void CrearBD()
+        {
+            userDato.CrearBBDD();
+        }
+
         // Comprobar usuario
         public bool LoginUser(string user, string pass)
         {
@@ -88,6 +99,11 @@ namespace Domain
         public DataSet ObtenerComandosCreados()
         {
             return userDato.DevolverComandosCreados();
+        }
+    
+        public void AgregarComandoCreado(string nombre_comando, string logica)
+        {
+            userDato.GuardarComandoCreado(nombre_comando,logica);
         }
     }
 }

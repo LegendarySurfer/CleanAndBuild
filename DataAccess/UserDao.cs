@@ -1,18 +1,113 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 using System.Xml.Linq;
 
 namespace DataAccess
 {
     public class UserDao : ConnectionToSQLite
     {
+        //comprueba si hay bbdd
+        public bool ComprobarBBDD()
+        {
+            return File.Exists(RutaBBDD());
+        }
+
+        //creamos las tablas de la bbdd y el usuario administrador
+        public void CrearBBDD()
+        {
+            string sql = @"
+            CREATE TABLE IF NOT EXISTS persona (
+                nombre TEXT,
+                id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
+                fecha_creacion_registro DATE NOT NULL,
+                contraseña TEXT NOT NULL,
+                es_administrador BOOLEAN NOT NULL CHECK (es_administrador IN (0, 1))
+            );
+
+            CREATE TABLE IF NOT EXISTS comando (
+                id_comando INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre_comando TEXT NOT NULL,
+                logica_comando TEXT NOT NULL,
+                comando_creado BOOLEAN NOT NULL CHECK (comando_creado IN (0, 1))
+            );
+
+            CREATE TABLE IF NOT EXISTS historial (
+                fecha_ejecutado DATE PRIMARY KEY NOT NULL,
+                id_persona INTEGER NOT NULL,
+                id_comando INTEGER NOT NULL,
+                FOREIGN KEY (id_persona) REFERENCES persona(id_usuario) ON DELETE CASCADE,
+                FOREIGN KEY (id_comando) REFERENCES comando(id_comando)
+            );
+
+            CREATE TABLE IF NOT EXISTS registra (
+                fecha_ejecutado DATE PRIMARY KEY NOT NULL,
+                id_persona INTEGER NOT NULL,
+                id_equipo INTEGER NOT NULL,
+                FOREIGN KEY (id_persona) REFERENCES persona(id_usuario) ON DELETE CASCADE,
+                FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
+            );
+
+            CREATE TABLE IF NOT EXISTS equipo (
+                id_equipo INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre_so TEXT DEFAULT 'Windows',
+                nombre_equipo TEXT
+            );
+
+            CREATE TABLE IF NOT EXISTS aplicacion (
+                id_aplicacion INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre_aplicacion TEXT,
+                tipo TEXT
+            );
+
+            CREATE TABLE IF NOT EXISTS instalan (
+                id_aplicacion INTEGER,
+                id_equipo INTEGER,
+                fecha_instalada DATE,
+                PRIMARY KEY (id_aplicacion, id_equipo),
+                FOREIGN KEY (id_aplicacion) REFERENCES aplicacion(id_aplicacion),
+                FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
+            );
+        ";
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = sql;
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+            CrearAdmin();
+        }
+
+        public void CrearAdmin()
+        {
+            string generarContrasena = EncriptarContrasena("admin");
+            string usuarioAdmin = @"
+                INSERT INTO persona (nombre, fecha_creacion_registro, contraseña, es_administrador)
+                SELECT 'admin', date('now'), @contrasena, 1
+                WHERE NOT EXISTS (SELECT 1 FROM persona WHERE nombre = 'admin' AND contraseña = @contrasena);
+             ";
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                using (var comando = conexion.CreateCommand())
+                {
+                    comando.CommandText = usuarioAdmin;
+                    comando.Parameters.AddWithValue("@contrasena", generarContrasena); // Usar el hash generado
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
 
         //  este método se utiliza para verificar si existe un usuario
         public bool Login(string usuario, string contrasena)
         {
             string contrasenaEncriptada = EncriptarContrasena(contrasena);
-
+  
             using (var conexion = Conectar())
             {
                 conexion.Open();
@@ -349,6 +444,30 @@ namespace DataAccess
                     using (var comando = conexion.CreateCommand())
                     {
                         comando.CommandText = "INSERT INTO comando (nombre_comando, logica_comando,comando_creado) VALUES (@nombreComando, @logicaComando, 0)";
+
+                        comando.Parameters.AddWithValue("@nombreComando", nombre_comando);
+                        comando.Parameters.AddWithValue("@logicaComando", logica);
+                        comando.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al agregar equipo: " + ex.Message);
+                }
+            }
+        }
+
+        //Guardo un comando
+        public void GuardarComandoCreado(string nombre_comando, string logica)
+        {
+            using (var conexion = Conectar())
+            {
+                conexion.Open();
+                try
+                {
+                    using (var comando = conexion.CreateCommand())
+                    {
+                        comando.CommandText = "INSERT INTO comando (nombre_comando, logica_comando,comando_creado) VALUES (@nombreComando, @logicaComando, 1)";
 
                         comando.Parameters.AddWithValue("@nombreComando", nombre_comando);
                         comando.Parameters.AddWithValue("@logicaComando", logica);

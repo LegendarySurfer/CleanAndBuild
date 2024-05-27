@@ -210,7 +210,8 @@ namespace Presentation
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-
+            UserModel comandos = new UserModel();
+            comandos.AgregarComandoCreado(textBox1.Text, textBox2.Text);
         }
     }
 }

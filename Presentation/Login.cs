@@ -89,6 +89,11 @@ namespace Presentation
         {
             UserModel user = new UserModel();
 
+            //primero comprobara si existe la bbdd y si no lo creara con las tablas
+            if (!user.CompruebaBD()) {//si no existe la bbdd se crea
+                user.CrearBD();// Agregamos las tablas porque la bbdd se crea sola
+            }
+
             //si no se introduce una persona error y nada
             if (username.Text == "USERNAME" && password.Text == "PASSWORD")
             {
@@ -142,16 +147,6 @@ namespace Presentation
         {
             lblErrorMessage.Text = "        " + msg;
             lblErrorMessage.Visible = true;
-        }
-
-        private void Logout(object sender, FormClosedEventArgs e)
-        {
-            password.Text = "PASSWORD";
-            password.UseSystemPasswordChar = false;
-            username.Text = "USERNAME";
-
-            lblErrorMessage.Visible = false;
-            this.Show();
         }
 
         //cambiar contraseña
